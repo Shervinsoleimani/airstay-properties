@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gold: #b8905a;
+    --gold-light: #d4ae7a;
+    --ink: #0b0a08;
+    --cream: #f4efe6;
+    --muted: #7a7468;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: #faf6ef;
+    color: #0b0a08;
+    cursor: none;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #b8905a;
+    color: #f4efe6;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #faf6ef; }
+  ::-webkit-scrollbar-thumb { background: #b8905a; border-radius: 2px; }
+}
+
+@layer components {
+  /* ─── CURSOR ─── */
+  .cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #b8905a;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  }
+  .cursor-ring {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(184,144,90,0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  }
+  .cursor-dot.hovered { width: 12px; height: 12px; background: #d4ae7a; }
+  .cursor-ring.hovered { width: 56px; height: 56px; opacity: 0.4; }
+
+  /* ─── BUTTONS ─── */
+  .btn-primary {
+    @apply inline-flex items-center gap-3 bg-ink text-cream font-body font-medium tracking-widest uppercase text-xs px-10 py-4 transition-all duration-300;
+  }
+  .btn-primary:hover { @apply bg-gold; }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-3 border border-gold text-gold font-body font-medium tracking-widest uppercase text-xs px-10 py-4 transition-all duration-300;
+  }
+  .btn-outline:hover { @apply bg-gold text-ink; }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-ink font-body font-light tracking-wider uppercase text-xs transition-all duration-300 border-b border-transparent pb-0.5;
+  }
+  .btn-ghost:hover { @apply border-gold text-gold; }
+
+  /* ─── SECTION LABELS ─── */
+  .eyebrow {
+    @apply flex items-center gap-3 text-gold tracking-[0.25em] uppercase text-xs font-medium font-body mb-5;
+  }
+  .eyebrow::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+
+  /* ─── DISPLAY HEADINGS ─── */
+  .heading-display {
+    @apply font-display font-light leading-[1.05];
+    font-size: clamp(52px, 6vw, 84px);
+  }
+  .heading-lg {
+    @apply font-display font-light leading-[1.1];
+    font-size: clamp(38px, 4.5vw, 60px);
+  }
+  .heading-md {
+    @apply font-display font-light leading-[1.2];
+    font-size: clamp(28px, 3vw, 42px);
+  }
+
+  /* ─── FORM INPUTS ─── */
+  .input-luxury {
+    @apply w-full bg-transparent border-b border-gold/30 py-3 px-0 font-body text-sm font-light text-ink placeholder-muted/50 outline-none transition-all duration-300;
+  }
+  .input-luxury:focus { @apply border-gold; }
+
+  .select-luxury {
+    @apply w-full bg-transparent border-b border-gold/30 py-3 px-0 font-body text-sm font-light text-ink outline-none appearance-none transition-all duration-300 cursor-pointer;
+  }
+  .select-luxury:focus { @apply border-gold; }
+
+  /* ─── CARDS ─── */
+  .card-property {
+    @apply relative overflow-hidden cursor-pointer;
+  }
+  .card-property-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100;
+  }
+  .card-property-content {
+    @apply absolute bottom-0 left-0 right-0 p-8 translate-y-2 transition-transform duration-500 group-hover:translate-y-0;
+  }
+
+  /* ─── NOISE TEXTURE OVERLAY ─── */
+  .noise::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+  }
+
+  /* ─── MARQUEE ─── */
+  .marquee-track {
+    display: flex;
+    gap: 0;
+    animation: marquee 28s linear infinite;
+    width: max-content;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ─── PAGE TRANSITIONS ─── */
+  .page-enter { animation: pageEnter 0.7s ease forwards; }
+  @keyframes pageEnter {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── MODAL ─── */
+  .modal-backdrop {
+    @apply fixed inset-0 bg-ink/80 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+    animation: fadeIn 0.25s ease forwards;
+  }
+  .modal-panel {
+    @apply bg-parchment max-w-xl w-full p-12 relative;
+    animation: slideUp 0.35s ease forwards;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* ─── LOADING SCREEN ─── */
+  .loader {
+    @apply fixed inset-0 bg-ink z-[100] flex flex-col items-center justify-center;
+  }
+  .loader-bar {
+    width: 200px;
+    height: 1px;
+    background: rgba(184,144,90,0.2);
+    position: relative;
+    overflow: hidden;
+    margin-top: 32px;
+  }
+  .loader-bar::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    background: #b8905a;
+    animation: loadProgress 1.8s ease forwards;
+  }
+  @keyframes loadProgress {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+}
