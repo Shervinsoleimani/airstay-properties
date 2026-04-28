@@ -29,8 +29,9 @@ export default function Navbar({ onBookNow }) {
       >
         <div className="max-w-[1440px] mx-auto px-8 md:px-16 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img src="/logo.svg" alt="Airstay Properties" className="h-10 w-auto" />
+          <Link to="/" className="font-display text-xl font-medium tracking-[0.14em] uppercase">
+            <span className={isDark ? 'text-cream' : 'text-ink'}>Air</span>
+            <span className="text-gold">stay</span>
           </Link>
 
           {/* Desktop Links */}

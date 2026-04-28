@@ -12,7 +12,9 @@ export default function Loader({ onComplete }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <img src="/logo.svg" alt="Airstay Properties" style={{ height: '60px', width: 'auto' }} />
+        <p className="font-display text-3xl font-light text-cream tracking-[0.2em] uppercase">
+          Air<span className="text-gold">stay</span>
+        </p>
       </motion.div>
 
       <div className="loader-bar" onAnimationEnd={onComplete} />
