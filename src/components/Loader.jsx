@@ -13,7 +13,7 @@ export default function Loader({ onComplete }) {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <p className="font-display text-3xl font-light text-cream tracking-[0.2em] uppercase">
-          Air<span className="text-gold">stay</span>
+          <img src="/logo.svg" alt="Airstay" style={{height:"40px",width:"auto"}} />
         </p>
       </motion.div>
 

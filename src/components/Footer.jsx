@@ -11,7 +11,7 @@ export default function Footer({ onOwnerInquiry }) {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="font-display text-2xl font-medium tracking-[0.14em] uppercase text-cream mb-4">
-              Air<span className="text-gold">stay</span>
+              <img src="/logo.svg" alt="Airstay" style={{height:"40px",width:"auto"}} />
             </div>
             <p className="text-sm font-light leading-relaxed mb-6 max-w-[220px]">
               Boutique hotels, curated rentals, and exceptional stays across Canada.
