@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Reveal } from '../components/Reveal'
 import PropertyCard from '../components/PropertyCard'
 import { DEMO_LISTINGS } from '../lib/hostaway'
@@ -7,7 +8,35 @@ export default function Properties({ onBookNow }) {
   const [city, setCity] = useState('all')
   const [type, setType] = useState('all')
 
-  const filtered = DEMO_LISTINGS.filter(l =>
+  const [listings, setListings] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    async function load() {
+      try {
+        const { getListings, DEMO_LISTINGS } = await import('../lib/hostaway.js')
+        const data = await getListings()
+        setListings(data && data.length > 0 ? data.map(l => ({
+          id: l.id, name: l.name,
+          city: l.city || 'Montreal',
+          neighbourhood: l.address?.neighborhood || '',
+          type: l.propertyType || 'Short-Term',
+          bedrooms: l.bedrooms || 1, bathrooms: l.bathrooms || 1,
+          maxGuests: l.maxGuests || 2,
+          basePrice: l.price || 200, currency: 'CAD',
+          description: l.description || '',
+          amenities: l.amenities || [], images: [],
+          rating: 4.9, reviewCount: 0,
+        })) : DEMO_LISTINGS)
+      } catch { 
+        const { DEMO_LISTINGS } = await import('../lib/hostaway.js')
+        setListings(DEMO_LISTINGS)
+      } finally { setLoading(false) }
+    }
+    load()
+  }, [])
+
+  const filtered = listings.filter(l =>
     (city === 'all' || l.city === city) &&
     (type === 'all' || l.type === type)
   )
