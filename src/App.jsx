@@ -12,6 +12,7 @@ import OwnerModal from './components/OwnerModal'
 
 import Home from './pages/Home'
 import Properties from './pages/Properties'
+import Montreal from './pages/Montreal'
 import Careers from './pages/Careers'
 import Contact from './pages/Contact'
 
@@ -57,6 +58,7 @@ export default function App() {
             />
           } />
           <Route path="/properties" element={<Properties onBookNow={() => setBookingOpen(true)} />} />
+          <Route path="/montreal" element={<Montreal onBookNow={() => setBookingOpen(true)} />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/owners" element={
