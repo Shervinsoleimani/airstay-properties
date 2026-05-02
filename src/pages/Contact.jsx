@@ -38,8 +38,8 @@ export default function Contact() {
             <Reveal delay={0.3}>
               <div className="space-y-8">
                 {[
-                  { city: 'Vancouver', email: 'info@airstayproperties.com' },
-                  { city: 'Montreal', email: 'info@airstayproperties.com' },
+                  { city: 'Vancouver', email: 'hello.van@airstayproperties.com' },
+                  { city: 'Montreal', email: 'hello.mtl@airstayproperties.com' },
                 ].map(({ city, email }) => (
                   <div key={city} className="flex gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 flex-shrink-0" />

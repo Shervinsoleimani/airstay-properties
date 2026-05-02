@@ -10,7 +10,9 @@ export default function Footer({ onOwnerInquiry }) {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <img src="/logo.svg" alt="Airstay Properties" className="h-12 w-auto mb-4" />
+            <div className="font-display text-2xl font-medium tracking-[0.14em] uppercase text-cream mb-4">
+              Air<span className="text-gold">stay</span>
+            </div>
             <p className="text-sm font-light leading-relaxed mb-6 max-w-[220px]">
               Boutique hotels, curated rentals, and exceptional stays across Canada.
             </p>
@@ -48,7 +50,7 @@ export default function Footer({ onOwnerInquiry }) {
             <p className="text-[10px] tracking-[0.2em] uppercase text-gold mb-5">Get In Touch</p>
             <div className="space-y-3 text-sm font-light">
               <p>Vancouver, BC</p>
-              <a href="mailto:info@airstayproperties.com" className="block hover:text-cream transition-colors">info@airstayproperties.com</a>
+              <a href="mailto:hello@airstayproperties.com" className="block hover:text-cream transition-colors">hello@airstayproperties.com</a>
               <button onClick={onOwnerInquiry} className="block hover:text-cream transition-colors text-left">Owner Inquiries →</button>
             </div>
           </div>
