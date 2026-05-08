@@ -2,108 +2,110 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 
-export default function Navbar({ onBookNow }) {
+const LINKS = [
+  ['Stay', '/stay'],
+  ['Own', '/own'],
+  ['Long-Term', '/longterm'],
+  ['Services', '/services'],
+  ['About', '/about'],
+  ['Careers', '/careers'],
+]
+
+export default function Navbar({ onBook }) {
   const [scrolled, setScrolled] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menu, setMenu] = useState(false)
   const location = useLocation()
+  const isHome = location.pathname === '/'
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 48)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
+    const fn = () => setScrolled(window.scrollY > 60)
+    window.addEventListener('scroll', fn)
+    return () => window.removeEventListener('scroll', fn)
   }, [])
 
-  useEffect(() => { setMenuOpen(false) }, [location])
+  useEffect(() => setMenu(false), [location])
 
-  const isDark = location.pathname === '/' && !scrolled
+  const dark = isHome && !scrolled
 
   return (
     <>
       <motion.nav
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-          scrolled ? 'bg-parchment/95 backdrop-blur-md border-b border-gold/10 py-4' : 'py-7'
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+        style={{
+          padding: scrolled ? '14px 48px' : '28px 48px',
+          background: scrolled ? 'rgba(10,9,8,0.96)' : 'transparent',
+          backdropFilter: scrolled ? 'blur(16px)' : 'none',
+          borderBottom: scrolled ? '1px solid rgba(201,169,110,0.1)' : 'none',
+        }}
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 2, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <div className="max-w-[1440px] mx-auto px-8 md:px-16 flex items-center justify-between">
+        transition={{ duration: 1, delay: 2.2, ease: [0.22, 1, 0.36, 1] }}>
+        <div className="flex items-center justify-between max-w-[1600px] mx-auto">
+
           {/* Logo */}
-          <Link to="/" className="font-display text-xl font-medium tracking-[0.14em] uppercase">
-            <span className={isDark ? 'text-cream' : 'text-ink'}>Air</span>
-            <span className="text-gold">stay</span>
+          <Link to="/">
+            <img src="/logo.svg" alt="Airstay Properties" style={{ height: 36, width: 'auto', filter: scrolled ? 'none' : 'brightness(1)' }} />
           </Link>
 
-          {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-10">
-            {[
-              ['Properties', '/properties'],
-              ['Services', '/#services'],
-              ['For Owners', '/owners'],
-              ['Careers', '/careers'],
-              ['Contact', '/contact'],
-            ].map(([label, href]) => (
-              <Link
-                key={label}
-                to={href}
-                className={`font-body text-xs tracking-[0.1em] uppercase font-light transition-colors duration-200 ${
-                  isDark ? 'text-cream/70 hover:text-cream' : 'text-ink/60 hover:text-ink'
-                }`}
-              >
+          {/* Desktop nav */}
+          <div className="hidden lg:flex items-center gap-10">
+            {LINKS.map(([label, href]) => (
+              <Link key={label} to={href}
+                className="font-body text-xs tracking-[0.12em] uppercase transition-colors duration-200"
+                style={{ color: dark || scrolled ? 'rgba(242,237,228,0.6)' : 'rgba(13,12,10,0.6)', fontWeight: 400 }}
+                onMouseEnter={e => e.target.style.color = '#C9A96E'}
+                onMouseLeave={e => e.target.style.color = dark || scrolled ? 'rgba(242,237,228,0.6)' : 'rgba(13,12,10,0.6)'}>
                 {label}
               </Link>
             ))}
           </div>
 
           {/* CTA */}
-          <div className="hidden md:flex items-center gap-4">
-            <button
-              onClick={onBookNow}
-              className="bg-gold text-cream font-body text-xs tracking-[0.12em] uppercase font-medium px-7 py-3 hover:bg-ink transition-colors duration-300"
-            >
-              Book Now
+          <div className="hidden lg:flex items-center gap-4">
+            <button onClick={onBook}
+              className="font-body text-xs tracking-[0.14em] uppercase px-8 py-3 transition-all duration-300"
+              style={{ background: '#2C3E35', color: '#F2EDE4', border: 'none', cursor: 'pointer' }}
+              onMouseEnter={e => e.currentTarget.style.background = '#C9A96E'}
+              onMouseLeave={e => e.currentTarget.style.background = '#2C3E35'}>
+              Book a Stay
             </button>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden flex flex-col gap-1.5 p-2"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <motion.span animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 8 : 0 }} className="block w-6 h-px bg-ink" />
-            <motion.span animate={{ opacity: menuOpen ? 0 : 1 }} className="block w-6 h-px bg-ink" />
-            <motion.span animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? -8 : 0 }} className="block w-6 h-px bg-ink" />
+          {/* Mobile toggle */}
+          <button className="lg:hidden p-2" onClick={() => setMenu(!menu)}>
+            <motion.span animate={{ rotate: menu ? 45 : 0, y: menu ? 7 : 0 }}
+              style={{ display: 'block', width: 24, height: 1, background: dark ? '#F2EDE4' : '#0D0C0A', marginBottom: 6 }} />
+            <motion.span animate={{ opacity: menu ? 0 : 1 }}
+              style={{ display: 'block', width: 24, height: 1, background: dark ? '#F2EDE4' : '#0D0C0A', marginBottom: 6 }} />
+            <motion.span animate={{ rotate: menu ? -45 : 0, y: menu ? -7 : 0 }}
+              style={{ display: 'block', width: 24, height: 1, background: dark ? '#F2EDE4' : '#0D0C0A' }} />
           </button>
         </div>
       </motion.nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            className="fixed inset-0 bg-ink z-30 flex flex-col items-center justify-center gap-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            {[['Properties', '/properties'], ['For Owners', '/owners'], ['Careers', '/careers'], ['Contact', '/contact']].map(([label, href], i) => (
-              <motion.div
-                key={label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08 }}
-              >
-                <Link to={href} className="font-display text-4xl font-light text-cream hover:text-gold transition-colors">
+        {menu && (
+          <motion.div className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8"
+            style={{ background: '#0D0C0A' }}
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            {LINKS.map(([label, href], i) => (
+              <motion.div key={label}
+                initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.07 }}>
+                <Link to={href}
+                  className="font-display text-5xl font-light"
+                  style={{ color: '#F2EDE4' }}
+                  onMouseEnter={e => e.target.style.color = '#C9A96E'}
+                  onMouseLeave={e => e.target.style.color = '#F2EDE4'}>
                   {label}
                 </Link>
               </motion.div>
             ))}
-            <motion.button
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
-              onClick={() => { setMenuOpen(false); onBookNow?.() }}
-              className="mt-4 bg-gold text-ink font-body text-xs tracking-[0.12em] uppercase font-medium px-10 py-4"
-            >
-              Book Now
+            <motion.button initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.45 }}
+              onClick={() => { setMenu(false); onBook?.() }}
+              style={{ background: '#2C3E35', color: '#F2EDE4', fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '16px 40px', border: 'none', cursor: 'pointer', marginTop: 16 }}>
+              Book a Stay
             </motion.button>
           </motion.div>
         )}

@@ -11,20 +11,24 @@ import BookingModal from './components/BookingModal'
 import OwnerModal from './components/OwnerModal'
 
 import Home from './pages/Home'
-import Properties from './pages/Properties'
+import Stay from './pages/Stay'
+import Own from './pages/Own'
+import LongTerm from './pages/LongTerm'
+import Services from './pages/Services'
+import About from './pages/About'
 import Careers from './pages/Careers'
 import Contact from './pages/Contact'
 
 export default function App() {
   const [loading, setLoading] = useState(true)
-  const [bookingOpen, setBookingOpen] = useState(false)
+  const [bookOpen, setBookOpen] = useState(false)
   const [ownerOpen, setOwnerOpen] = useState(false)
   const location = useLocation()
 
   if (loading) {
     return (
       <AnimatePresence>
-        <Loader onComplete={() => setTimeout(() => setLoading(false), 200)} />
+        <Loader onDone={() => setTimeout(() => setLoading(false), 200)} />
       </AnimatePresence>
     )
   }
@@ -32,58 +36,26 @@ export default function App() {
   return (
     <>
       <Cursor />
-      <Toaster
-        position="bottom-right"
-        toastOptions={{
-          style: {
-            fontFamily: 'Jost, sans-serif',
-            fontSize: '13px',
-            borderRadius: '0',
-            background: '#0b0a08',
-            color: '#f4efe6',
-            border: '0.5px solid rgba(184,144,90,0.3)',
-          },
-        }}
-      />
+      <Toaster position="bottom-right" toastOptions={{
+        style: { fontFamily: 'DM Sans', fontSize: 13, borderRadius: 0, background: '#0D0C0A', color: '#F2EDE4', border: '1px solid rgba(201,169,110,0.2)' }
+      }} />
 
-      <Navbar onBookNow={() => setBookingOpen(true)} />
+      <Navbar onBook={() => setBookOpen(true)} />
 
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={
-            <Home
-              onBookNow={() => setBookingOpen(true)}
-              onOwnerInquiry={() => setOwnerOpen(true)}
-            />
-          } />
-          <Route path="/properties" element={<Properties onBookNow={() => setBookingOpen(true)} />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/owners" element={
-            <div className="pt-32 pb-24 text-center">
-              <div className="max-w-lg mx-auto px-8">
-                <h1 className="heading-lg text-ink mb-6">For Property Owners</h1>
-                <p className="font-body text-muted mb-8">Let us manage your property and maximise your returns.</p>
-                <button onClick={() => setOwnerOpen(true)} className="btn-primary">Submit Your Property</button>
-              </div>
-            </div>
-          } />
-          <Route path="/booking-confirmed" element={
-            <div className="pt-32 pb-24 text-center">
-              <div className="max-w-lg mx-auto px-8">
-                <div className="font-display text-6xl text-gold mb-6">✦</div>
-                <h1 className="heading-lg text-ink mb-4">Booking Confirmed</h1>
-                <p className="font-body text-muted mb-8">Thank you! Check your email for confirmation details.</p>
-                <a href="/" className="btn-primary">Back to Home</a>
-              </div>
-            </div>
-          } />
-        </Routes>
-      </AnimatePresence>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home onBook={() => setBookOpen(true)} onOwner={() => setOwnerOpen(true)} />} />
+        <Route path="/stay" element={<Stay onBook={() => setBookOpen(true)} />} />
+        <Route path="/own" element={<Own onOwner={() => setOwnerOpen(true)} />} />
+        <Route path="/longterm" element={<LongTerm onBook={() => setBookOpen(true)} />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
 
-      <Footer onOwnerInquiry={() => setOwnerOpen(true)} />
+      <Footer onBook={() => setBookOpen(true)} onOwner={() => setOwnerOpen(true)} />
 
-      <BookingModal isOpen={bookingOpen} onClose={() => setBookingOpen(false)} />
+      <BookingModal isOpen={bookOpen} onClose={() => setBookOpen(false)} />
       <OwnerModal isOpen={ownerOpen} onClose={() => setOwnerOpen(false)} />
     </>
   )
