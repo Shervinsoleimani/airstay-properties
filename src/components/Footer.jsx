@@ -58,7 +58,12 @@ export default function Footer({ onBook, onOwner }) {
 
         {/* Bottom bar */}
         <div style={{ borderTop: '1px solid rgba(201,169,110,0.1)', paddingTop: 28, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
-          <p style={{ fontSize: 12, fontWeight: 300 }}>© {new Date().getFullYear()} AirStay Properties Inc. All rights reserved.</p>
+          <div>
+            <p style={{ fontSize: 12, fontWeight: 300 }}>© {new Date().getFullYear()} AirStay Properties Inc. All rights reserved.</p>
+            <p style={{ fontSize: 11, fontWeight: 300, color: 'rgba(155,149,144,0.6)', marginTop: 8, lineHeight: 1.7 }}>
+              Québec tourist accommodation registration (CITQ): 2055 Bishop 295420 · 386 Le Moyne 304411 · 380 Le Moyne 312667 · 155 Saint-Paul 316300
+            </p>
+          </div>
           <div style={{ display: 'flex', gap: 24 }}>
             {[['Privacy Policy', '/privacy'], ['Terms', '/terms']].map(([item, href]) => (
               <Link key={item} to={href} style={{ fontSize: 12, color: 'rgba(155,149,144,0.5)', textDecoration: 'none' }}
