@@ -88,13 +88,13 @@ const terms = {
 
         { h: 'Documents applicables à votre réservation', id: 'booking-documents' },
         'Chaque réservation directe est assujettie aux présentes conditions ainsi qu’au contrat d’hébergement et aux règles de la maison transmis avec votre confirmation de réservation, de même qu’à la politique d’annulation affichée au moment de la réservation. En cas d’incompatibilité entre le contrat d’hébergement et les présentes conditions, la disposition la plus favorable au voyageur s’applique.',
-        'Le contrat d’hébergement (version 2.0, la version française prévaut) de chaque établissement :',
+        'Le contrat d’hébergement, version 2.0 (la version française prévaut), de chaque établissement :',
         {
           list: [
-            '[155, rue Saint-Paul Est · CITQ 316300 (PDF)](/legal/AirStay-Contrat-v2.0-155-Saint-Paul-CITQ-316300.pdf)',
-            '[380, rue Le Moyne · CITQ 312667 (PDF)](/legal/AirStay-Contrat-v2.0-380-Le-Moyne-CITQ-312667.pdf)',
-            '[386, rue Le Moyne · CITQ 304411 (PDF)](/legal/AirStay-Contrat-v2.0-386-Le-Moyne-CITQ-304411.pdf)',
-            '[2055, rue Bishop · CITQ 295420 (PDF)](/legal/AirStay-Contrat-v2.0-Bishop-2055-CITQ-295420.pdf)',
+            '[Contrat d’hébergement, version 2.0 : 155, rue Saint-Paul Est · CITQ 316300 (PDF)](/legal/AirStay-Contrat-v2.0-155-Saint-Paul-CITQ-316300.pdf)',
+            '[Contrat d’hébergement, version 2.0 : 380, rue Le Moyne · CITQ 312667 (PDF)](/legal/AirStay-Contrat-v2.0-380-Le-Moyne-CITQ-312667.pdf)',
+            '[Contrat d’hébergement, version 2.0 : 386, rue Le Moyne · CITQ 304411 (PDF)](/legal/AirStay-Contrat-v2.0-386-Le-Moyne-CITQ-304411.pdf)',
+            '[Contrat d’hébergement, version 2.0 : 2055, rue Bishop · CITQ 295420 (PDF)](/legal/AirStay-Contrat-v2.0-Bishop-2055-CITQ-295420.pdf)',
           ],
         },
         'Votre réservation constitue un contrat d’hébergement touristique de courte durée dans un établissement enregistré auprès de la CITQ. Il ne s’agit pas d’un bail de logement au sens de l’article 1892 du Code civil du Québec, et aucune relation de locateur à locataire n’est créée.',
@@ -202,7 +202,7 @@ const terms = {
       blocks: [
         'Lorsque vous réservez l’une de nos résidences par l’intermédiaire d’une plateforme tierce, comme Airbnb, Vrbo, Booking.com, Expedia, Hotels.com ou Hopper, votre réservation est effectuée par l’intermédiaire de cette plateforme. Les conditions de la plateforme et les règles de la maison de l’annonce s’appliquent et, sauf si AirStay traite votre paiement, les paiements, remboursements et annulations sont traités par la plateforme. En cas de divergence entre les présentes conditions et celles de la plateforme pour une réservation effectuée par son intermédiaire, les conditions de la plateforme prévalent.',
         'Nous respectons les politiques de chaque plateforme. Lorsqu’une plateforme ne permet pas les contrats de location distincts, la collecte de pièces d’identité ou les amendes imposées par l’hôte, nous ne les imposons pas.',
-        'Pour les réservations Vrbo dont AirStay traite le paiement, les présentes conditions et le contrat d’hébergement joint à l’annonce Vrbo s’appliquent également, en plus des conditions de Vrbo. L’enregistrement en ligne et la vérification d’identité décrits à l’article 3 s’appliquent lorsque l’annonce Vrbo l’indique. Notre préautorisation de garantie ne s’applique pas aux réservations Vrbo : la politique d’annulation et le dépôt de garantie remboursable de Vrbo demeurent régis par les règles de Vrbo.',
+        'Pour les réservations Vrbo dont AirStay traite le paiement, les présentes conditions et le contrat d’hébergement joint à l’annonce Vrbo s’appliquent également, en plus des conditions de Vrbo. L’enregistrement en ligne et la vérification d’identité décrits à l’article 3 s’appliquent lorsque l’annonce Vrbo l’indique; aucune préautorisation n’est prise par AirStay, le dépôt de garantie remboursable de Vrbo s’appliquant selon les règles de Vrbo, tout comme la politique d’annulation.',
         'Les réservations Airbnb sont régies uniquement par les conditions d’Airbnb et les règles de la maison de l’annonce.',
       ],
     },
