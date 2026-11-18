@@ -193,7 +193,8 @@ const terms = {
       blocks: [
         'Lorsque vous réservez l’une de nos résidences par l’intermédiaire d’une plateforme tierce, comme Airbnb, Vrbo, Booking.com, Expedia, Hotels.com ou Hopper, votre réservation est effectuée par l’intermédiaire de cette plateforme. Les conditions de la plateforme et les règles de la maison de l’annonce s’appliquent et, sauf si AirStay traite votre paiement, les paiements, remboursements et annulations sont traités par la plateforme. En cas de divergence entre les présentes conditions et celles de la plateforme pour une réservation effectuée par son intermédiaire, les conditions de la plateforme prévalent.',
         'Nous respectons les politiques de chaque plateforme. Lorsqu’une plateforme ne permet pas les contrats de location distincts, la collecte de pièces d’identité ou les amendes imposées par l’hôte, nous ne les imposons pas.',
-        'Pour les réservations Vrbo dont AirStay traite le paiement, les présentes conditions et le contrat d’hébergement transmis avec votre réservation s’appliquent également, en plus des conditions de Vrbo, y compris l’enregistrement en ligne, la vérification d’identité et la préautorisation de garantie décrits à l’article 3. Les réservations Airbnb sont régies uniquement par les conditions d’Airbnb et les règles de la maison de l’annonce.',
+        'Pour les réservations Vrbo dont AirStay traite le paiement, les présentes conditions et le contrat d’hébergement joint à l’annonce Vrbo s’appliquent également, en plus des conditions de Vrbo. L’enregistrement en ligne, la vérification d’identité et la préautorisation de garantie décrits à l’article 3 s’appliquent lorsque l’annonce Vrbo l’indique. La politique d’annulation et, le cas échéant, le dépôt de garantie remboursable de Vrbo demeurent régis par les règles de Vrbo.',
+        'Les réservations Airbnb sont régies uniquement par les conditions d’Airbnb et les règles de la maison de l’annonce.',
       ],
     },
 

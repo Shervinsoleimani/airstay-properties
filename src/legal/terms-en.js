@@ -193,7 +193,8 @@ const terms = {
       blocks: [
         'When you book one of our residences through a third-party platform, such as Airbnb, Vrbo, Booking.com, Expedia, Hotels.com or Hopper, your reservation is made through that platform. The platform’s terms and the listing’s house rules apply, and, unless AirStay processes your payment, payments, refunds and cancellations are handled through the platform. If these Terms differ from the platform’s terms for a platform booking, the platform’s terms prevail.',
         'We follow each platform’s policies. Where a platform does not allow separate rental agreements, identity document collection or host fines, we do not impose them.',
-        'For Vrbo reservations for which AirStay processes the payment, these Terms and the rental agreement provided with your booking also apply, together with Vrbo’s terms, including the online check-in, identity verification and security hold described in Section 3. Airbnb reservations are governed only by Airbnb’s terms and the listing’s house rules.',
+        'For Vrbo reservations for which AirStay processes the payment, these Terms and the rental agreement attached to the Vrbo listing also apply, in addition to Vrbo’s terms. The online check-in, identity verification and security hold described in Section 3 apply where the Vrbo listing says so. Vrbo’s cancellation policy and, where applicable, Vrbo’s refundable damage deposit remain governed by Vrbo’s rules.',
+        'Airbnb reservations are governed only by Airbnb’s terms and the listing’s house rules.',
       ],
     },
 
