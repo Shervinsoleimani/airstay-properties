@@ -7,7 +7,7 @@ const mono = { fontFamily: 'DM Mono', letterSpacing: '0.2em', textTransform: 'up
 
 const DETAIL = [
   {
-    id: 'hospitality', num: '01', title: 'Boutique Hotel & Short-Term Management', image: '/images/notre-dame/4.jpg',
+    id: 'hospitality', num: '01', title: 'Boutique Hotel & Short-Term Management', image: '/images/le-moyne-modern/1.jpg',
     desc: 'We run furnished suites and boutique hotels the way a five-star house would: thoughtfully presented, precisely priced and impeccably serviced, from the first enquiry to the final review.',
     items: ['Distribution across Airbnb, Booking.com, Expedia, Hotels.com, Vrbo and our own direct-booking site', 'Dynamic revenue management with event and seasonal strategy', '24/7 guest communication and on-call support', 'Secure keyless arrival and verified direct reservations', 'Hotel-grade housekeeping, linen and amenities', 'Professional photography, listing design and brand standards', 'Front-of-house standards and training for boutique hotels', 'Monthly performance reporting and owner payouts'],
   },

@@ -125,7 +125,7 @@ export const SERVICES = [
     title: 'Boutique Hotel & Short-Term Management',
     short: 'Hotel & Short-Term',
     desc: 'Hotel-calibre operations for boutique hotels and furnished suites: global distribution, revenue management, 24/7 guest care and seamless keyless arrival.',
-    image: '/images/notre-dame/4.jpg',
+    image: '/images/le-moyne-modern/1.jpg',
     link: '/services#hospitality',
   },
   {
@@ -190,7 +190,7 @@ export const SECTORS = [
   {
     title: 'Public & Government Buildings',
     desc: 'Reliable, discreet and fully documented cleaning, grounds care, maintenance and building operations, delivered to specification.',
-    image: '/images/notre-dame/7.jpg',
+    image: '/images/le-moyne-heritage/4.jpg',
   },
 ]
 
@@ -204,16 +204,16 @@ export const PROCESS = [
 
 export const HERO_SLIDES = [
   { image: '/images/saint-paul/1.jpg', caption: 'AirStay Saint-Paul · Old Montréal', position: 'center 40%' },
-  { image: '/images/notre-dame/7.jpg', caption: 'Heritage stone · Old Montréal', position: 'center 45%' },
+  { image: '/images/bishop/2.jpg', caption: 'AirStay Bishop · Downtown Montréal', position: 'center 40%' },
   { image: '/images/le-moyne-heritage/8.jpg', caption: 'Le Moyne Heritage · Old Montréal', position: 'center' },
-  { image: '/images/notre-dame/1.jpg', caption: 'The Courtyard · Old Montréal', position: 'center' },
+  { image: '/images/services/landscaping-rooftop.jpg', caption: 'Rooftop gardens · Le Moyne, Old Montréal', position: 'center 60%' },
   { image: '/images/le-moyne-modern/6.jpg', caption: 'Le Moyne Modern · Old Montréal', position: 'center 30%' },
 ]
 
 export const GALLERY = [
   '/images/services/landscaping-rooftop.jpg', '/images/le-moyne-heritage/9.jpg', '/images/services/kitchen.jpg',
-  '/images/notre-dame/6.jpg', '/images/services/boutique-lobby.jpg', '/images/saint-paul/2.jpg',
-  '/images/services/amenities-gym.jpg', '/images/le-moyne-modern/2.jpg', '/images/notre-dame/2.jpg',
+  '/images/le-moyne-modern/3.jpg', '/images/services/boutique-lobby.jpg', '/images/saint-paul/2.jpg',
+  '/images/services/amenities-gym.jpg', '/images/le-moyne-modern/2.jpg', '/images/saint-paul/3.jpg',
   '/images/services/grounds-rooftop-aerial.jpg', '/images/bishop/4.jpg', '/images/services/housekeeping-suite.jpg',
 ]
 

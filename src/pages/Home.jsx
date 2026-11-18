@@ -341,7 +341,7 @@ function Heritage() {
       <div className="r-stack" style={{ maxWidth: 1600, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, alignItems: 'stretch' }}>
         <FadeIn>
           <div style={{ position: 'relative', minHeight: 600, height: '100%', overflow: 'hidden' }}>
-            <img src={sm('/images/le-moyne-heritage/4.jpg')} alt="A heritage stone building in Old Montréal" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src={sm('/images/bishop/5.jpg')} alt="The grand staircase at AirStay Bishop" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
         </FadeIn>
         <div style={{ padding: '120px 0 120px 80px' }} className="r-noborder">
@@ -506,7 +506,7 @@ function OwnersSection({ onOwner }) {
 function ReviewsBand() {
   return (
     <section className="r-pad" style={{ position: 'relative', overflow: 'hidden', padding: '150px 48px' }}>
-      <img src={sm('/images/notre-dame/1.jpg')} alt="" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      <img src={sm('/images/le-moyne-heritage/1.jpg')} alt="" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(13,12,10,0.78)' }} />
       <div style={{ position: 'relative', maxWidth: 1100, margin: '0 auto', textAlign: 'center' }}>
         <Reveal><div className="eyebrow" style={{ color: '#C9A96E', justifyContent: 'center', marginBottom: 24 }}>Trusted by Guests</div></Reveal>

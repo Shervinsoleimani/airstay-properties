@@ -25,7 +25,7 @@ export default function BookingModal({ isOpen, onClose }) {
           onClick={e => e.target === e.currentTarget && onClose()}>
           <motion.div className="modal-box" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 24 }}
             style={{ maxWidth: 560, padding: 0, overflow: 'hidden' }}>
-            <div style={{ height: 160, backgroundImage: 'linear-gradient(to bottom, rgba(13,12,10,0.15), rgba(13,12,10,0.75)), url(/images/notre-dame/1.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', alignItems: 'flex-end', padding: '24px 40px' }}>
+            <div style={{ height: 160, backgroundImage: 'linear-gradient(to bottom, rgba(13,12,10,0.15), rgba(13,12,10,0.75)), url(/images/sm/le-moyne-heritage-8.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', alignItems: 'flex-end', padding: '24px 40px' }}>
               <div>
                 <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: 6 }}>Reserve Direct</p>
                 <h2 style={{ fontFamily: 'Playfair Display', fontSize: 30, fontWeight: 400, color: '#F2EDE4' }}>Plan your stay</h2>
