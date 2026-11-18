@@ -12,9 +12,10 @@ export const bookingSearchUrl = ({ checkIn, checkOut, guests } = {}) => {
   return `${BOOKING_URL}/search?${q.toString()}`
 }
 
-export const PROPERTIES = [
+const ALL_PROPERTIES = [
   {
     id: 'le-moyne-heritage',
+    citq: '304411',
     name: 'Le Moyne Heritage',
     brand: 'AirStay',
     city: 'Montreal',
@@ -32,6 +33,7 @@ export const PROPERTIES = [
   },
   {
     id: 'le-moyne-modern',
+    citq: '312667',
     name: 'Le Moyne Modern',
     brand: 'AirStay',
     city: 'Montreal',
@@ -49,6 +51,7 @@ export const PROPERTIES = [
   },
   {
     id: 'bishop',
+    citq: '295420',
     name: 'Bishop',
     brand: 'AirStay',
     city: 'Montreal',
@@ -66,6 +69,7 @@ export const PROPERTIES = [
   },
   {
     id: 'saint-paul',
+    citq: '316300',
     name: 'Saint-Paul',
     brand: 'AirStay',
     city: 'Montreal',
@@ -99,6 +103,10 @@ export const PROPERTIES = [
     amenities: ['Garden Terrace', 'Four-Poster Beds', 'Stone Walls', 'Gold & Black Bathrooms'],
   },
 ]
+
+// Only residences with a CITQ registration are advertised for short stays.
+// (Notre-Dame is kept for imagery but not listed until its registration is confirmed.)
+export const PROPERTIES = ALL_PROPERTIES.filter(p => p.citq)
 
 export const STATS = [
   { value: '200+', label: 'Properties Managed' },

@@ -204,7 +204,7 @@ function FeaturedProperties({ onBook }) {
         </div>
 
         <div className="r-stack" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }}>
-          {PROPERTIES.slice(0, 5).map((p, k) => (
+          {PROPERTIES.slice(0, 4).map((p, k) => (
             <Reveal key={p.id} delay={k * 0.08}>
               <div className="prop-card" onClick={onBook} style={{ background: p.coverGradient }}>
                 <div className="prop-card-img" style={{ aspectRatio: '4/5', background: p.coverGradient, position: 'relative' }}>
@@ -219,8 +219,8 @@ function FeaturedProperties({ onBook }) {
                   <p style={{ ...mono, fontSize: 9, letterSpacing: '0.2em', color: '#C9A96E', marginBottom: 6 }}>{p.city} · {p.neighbourhood}</p>
                   <p style={{ fontFamily: 'Playfair Display', fontSize: 24, fontWeight: 400, color: '#F2EDE4', marginBottom: 4 }}>{p.brand} {p.name}</p>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 10 }}>
-                    <span style={{ fontFamily: 'DM Sans', fontSize: 12, fontWeight: 300, color: 'rgba(242,237,228,0.7)' }}>From ${p.basePrice} / night</span>
-                    <span style={{ ...mono, fontSize: 10, color: '#C9A96E' }}>Reserve →</span>
+                    <span style={{ ...mono, fontSize: 9, color: 'rgba(242,237,228,0.55)' }}>CITQ {p.citq}</span>
+                    <span style={{ ...mono, fontSize: 10, color: '#C9A96E' }}>Rates &amp; availability →</span>
                   </div>
                 </div>
               </div>
@@ -235,6 +235,17 @@ function FeaturedProperties({ onBook }) {
                 <span style={{ fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#F2EDE4', borderBottom: '1px solid rgba(242,237,228,0.35)', paddingBottom: 3 }}>Browse &amp; reserve →</span>
               </div>
             </a>
+          </Reveal>
+          <Reveal delay={0.5}>
+            <Link to="/longterm" className="svc-card" style={{ aspectRatio: '4/5', background: '#0D0C0A', minHeight: 0, height: '100%' }}>
+              <img className="svc-card-bg" src={sm('/images/saint-paul/5.jpg')} alt="A furnished long-term residence" loading="lazy" />
+              <div className="svc-card-shade" />
+              <div style={{ position: 'relative', padding: '40px 32px' }}>
+                <p style={{ ...mono, fontSize: 10, letterSpacing: '0.2em', color: '#C9A96E', marginBottom: 16 }}>Furnished or Unfurnished</p>
+                <p style={{ fontFamily: 'Playfair Display', fontSize: 34, fontWeight: 400, color: '#F2EDE4', lineHeight: 1.15, marginBottom: 24 }}>Long-term<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>residences.</em></p>
+                <span style={{ fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#F2EDE4', borderBottom: '1px solid rgba(242,237,228,0.35)', paddingBottom: 3 }}>Find your home →</span>
+              </div>
+            </Link>
           </Reveal>
         </div>
       </div>

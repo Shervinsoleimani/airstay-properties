@@ -15,7 +15,7 @@ export const OWNER_FIELDS = [
   { name: 'message', label: 'Tell Us About Your Property', type: 'textarea', span: 2, placeholder: 'Current status (vacant, tenanted, furnished), goals, timing…' },
 ]
 
-export const OWNER_FILES = { label: 'Photos, Floor Plans or Documents', hint: 'Optional · up to 5 files · JPG, PNG, HEIC, PDF, Word or Excel · photos are optimised automatically' }
+export const OWNER_FILES = { label: 'Photos, Floor Plans or Documents', hint: 'Optional · up to 5 files · JPG, PNG, HEIC, PDF, Word or Excel · photos are optimised automatically · please do not upload ID documents or payment details' }
 
 export const OWNER_SUCCESS = {
   title: 'Thank you. Your property is in good hands.',
@@ -36,7 +36,7 @@ export const CONTACT_FIELDS = [
   { name: 'message', label: 'Message', type: 'textarea', required: true, span: 2, placeholder: 'How can we help?' },
 ]
 
-export const CONTACT_FILES = { label: 'Attachments', hint: 'Optional · up to 5 files · images, PDF, Word or Excel' }
+export const CONTACT_FILES = { label: 'Attachments', hint: 'Optional · up to 5 files · images, PDF, Word or Excel · please do not upload ID documents or payment details' }
 
 export const CONTACT_SUCCESS = {
   title: 'Message received.',

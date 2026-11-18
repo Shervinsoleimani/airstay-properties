@@ -64,10 +64,10 @@ export default function Stay({ onBook }) {
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '28px 24px' }}>
                   <p style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: 6 }}>{p.city} · {p.neighbourhood}</p>
                   <p style={{ fontFamily: 'Playfair Display', fontSize: 22, fontWeight: 400, color: '#F2EDE4', marginBottom: 4 }}>{p.brand} {p.name}</p>
-                  <p style={{ fontFamily: 'DM Sans', fontSize: 12, fontWeight: 300, color: 'rgba(242,237,228,0.5)', marginBottom: 12 }}>{p.type}</p>
+                  <p style={{ fontFamily: 'DM Sans', fontSize: 12.5, fontWeight: 300, color: 'rgba(242,237,228,0.6)', marginBottom: 12, lineHeight: 1.6 }}>{p.description}</p>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontFamily: 'DM Sans', fontSize: 12, fontWeight: 300, color: 'rgba(242,237,228,0.7)' }}>From ${p.basePrice} / night</span>
-                    <span style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A96E' }}>Reserve →</span>
+                    <span style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(242,237,228,0.55)' }}>CITQ {p.citq}</span>
+                    <span style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A96E' }}>Rates &amp; availability →</span>
                   </div>
                 </div>
               </div>
