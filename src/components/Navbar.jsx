@@ -25,12 +25,13 @@ export default function Navbar({ onBook }) {
 
   useEffect(() => setMenu(false), [location])
 
-  const dark = isHome && !scrolled
+  // Every page now opens on a dark photo hero except /stay, so the nav is light-on-dark
+  const dark = scrolled || location.pathname !== '/stay'
 
   return (
     <>
       <motion.nav
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 r-pad"
         style={{
           padding: scrolled ? '14px 48px' : '28px 48px',
           background: scrolled ? 'rgba(10,9,8,0.96)' : 'transparent',

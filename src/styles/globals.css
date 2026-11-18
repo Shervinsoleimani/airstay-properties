@@ -380,3 +380,7 @@
 @media (max-width: 560px) {
   .r-two { grid-template-columns: 1fr !important; }
 }
+@media (pointer: coarse) {
+  .cursor, .cursor-dot, .cursor-ring { display: none !important; }
+  * { cursor: auto !important; }
+}

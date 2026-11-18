@@ -318,7 +318,7 @@ function OwnersSection({ onOwner }) {
 
           <Reveal delay={0.3}>
             <div style={{ position: 'relative', overflow: 'hidden', minHeight: 560, display: 'flex', alignItems: 'flex-end' }}>
-              <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/le-moyne-modern/8.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+              <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/le-moyne-heritage/9.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,12,10,0.95) 10%, rgba(13,12,10,0.4) 60%, rgba(13,12,10,0.15))' }} />
               <div style={{ position: 'relative', padding: '56px' }}>
                 <p style={{ fontFamily: 'Playfair Display', fontSize: 34, fontWeight: 400, color: '#F2EDE4', lineHeight: 1.25, marginBottom: 32 }}>
