@@ -44,7 +44,7 @@ export default function Navbar({ onBook }) {
 
           {/* Logo */}
           <Link to="/">
-            <img src="/logo.svg" alt="Airstay Properties" style={{ height: 36, width: 'auto', filter: scrolled ? 'none' : 'brightness(1)' }} />
+            <img src="/logo.svg" alt="AirStay Properties" style={{ height: 36, width: 'auto', filter: scrolled ? 'none' : 'brightness(1)' }} />
           </Link>
 
           {/* Desktop nav */}

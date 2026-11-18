@@ -73,7 +73,7 @@ export default function LongTerm({ onBook }) {
       {/* Why section */}
       <div style={{ padding: '100px 48px' }}>
         <div style={{ maxWidth: 1600, margin: '0 auto' }}>
-          <Reveal><div className="eyebrow" style={{ marginBottom: 20 }}>Why Rent with Airstay</div></Reveal>
+          <Reveal><div className="eyebrow" style={{ marginBottom: 20 }}>Why Rent with AirStay</div></Reveal>
           <Reveal delay={0.1}><h2 className="heading-lg" style={{ color: '#0D0C0A', marginBottom: 64 }}>This isn't a typical<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>rental experience.</em></h2></Reveal>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }}>
@@ -93,12 +93,12 @@ export default function LongTerm({ onBook }) {
       {/* Comparison */}
       <div style={{ padding: '0 48px 100px' }}>
         <div style={{ maxWidth: 1600, margin: '0 auto' }}>
-          <Reveal><h2 className="heading-lg" style={{ color: '#0D0C0A', marginBottom: 48 }}>Airstay vs<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>Traditional Rental</em></h2></Reveal>
+          <Reveal><h2 className="heading-lg" style={{ color: '#0D0C0A', marginBottom: 48 }}>AirStay vs<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>Traditional Rental</em></h2></Reveal>
 
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: 1 }}>
             {/* Headers */}
             <div style={{ background: '#FAF7F2', padding: '20px 24px' }} />
-            {['Traditional Rental', 'Airstay Long-Term'].map((h, i) => (
+            {['Traditional Rental', 'AirStay Long-Term'].map((h, i) => (
               <div key={h} style={{ background: i === 1 ? '#2C3E35' : '#F2EDE4', padding: '20px 24px', textAlign: 'center' }}>
                 <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: i === 1 ? '#C9A96E' : '#9B9590' }}>{h}</p>
               </div>

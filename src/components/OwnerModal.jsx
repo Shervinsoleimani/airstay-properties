@@ -28,7 +28,7 @@ export default function OwnerModal({ isOpen, onClose }) {
             {!done ? (
               <>
                 <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: 8 }}>Property Owners</p>
-                <h2 style={{ fontFamily: 'Playfair Display', fontSize: 30, fontWeight: 400, color: '#0D0C0A', marginBottom: 10 }}>Partner with Airstay</h2>
+                <h2 style={{ fontFamily: 'Playfair Display', fontSize: 30, fontWeight: 400, color: '#0D0C0A', marginBottom: 10 }}>Partner with AirStay</h2>
                 <p style={{ fontFamily: 'DM Sans', fontSize: 13, fontWeight: 300, color: '#9B9590', lineHeight: 1.7, marginBottom: 36 }}>Tell us about your property and we'll get back to you within 24 hours with a personalised revenue projection.</p>
 
                 <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>

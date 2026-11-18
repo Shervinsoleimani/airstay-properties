@@ -110,7 +110,7 @@ function FeaturedProperties({ onBook }) {
           {PROPERTIES.slice(0, 6).map((p, i) => (
             <Reveal key={p.id} delay={i * 0.08}>
               <div className="prop-card" onClick={onBook} style={{ background: p.coverGradient }}>
-                <div className="prop-card-img" style={{ aspectRatio: i < 2 ? '4/5' : '3/4', background: p.coverGradient, position: 'relative' }}>
+                <div className="prop-card-img" style={{ aspectRatio: '4/5', background: p.coverGradient, position: 'relative' }}>
                   <img src={p.images[0]} alt={`AirStay ${p.name}, ${p.neighbourhood}`} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                     onError={e => { e.target.style.display = 'none' }} />
                 </div>
@@ -129,10 +129,20 @@ function FeaturedProperties({ onBook }) {
               </div>
             </Reveal>
           ))}
+          <Reveal delay={0.4}>
+            <a href={`${BOOKING_URL}/all-listings`} style={{ position: 'relative', display: 'flex', aspectRatio: '4/5', height: '100%', alignItems: 'flex-end', textDecoration: 'none', overflow: 'hidden', background: '#0D0C0A' }} className="svc-card">
+              <div className="svc-card-bg" style={{ backgroundImage: 'url(/images/le-moyne-modern/6.jpg)', opacity: 0.35 }} />
+              <div style={{ position: 'relative', padding: '40px 32px' }}>
+                <p style={{ ...mono, fontSize: 10, letterSpacing: '0.2em', color: '#C9A96E', marginBottom: 16 }}>35 Residences · Live Availability</p>
+                <p style={{ fontFamily: 'Playfair Display', fontSize: 34, fontWeight: 400, color: '#F2EDE4', lineHeight: 1.15, marginBottom: 24 }}>View every<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>residence.</em></p>
+                <span style={{ fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#F2EDE4', borderBottom: '1px solid rgba(242,237,228,0.35)', paddingBottom: 3 }}>Browse &amp; reserve →</span>
+              </div>
+            </a>
+          </Reveal>
         </div>
 
         <Reveal delay={0.2}>
-          <div style={{ textAlign: 'center', marginTop: 48 }}>
+          <div style={{ textAlign: 'center', marginTop: 48, display: 'none' }}>
             <a href={`${BOOKING_URL}/all-listings`} style={{ display: 'inline-flex', alignItems: 'center', gap: 10, fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#2C3E35', textDecoration: 'none', borderBottom: '1px solid rgba(44,62,53,0.3)', paddingBottom: 2 }}>
               View all residences &amp; availability →
             </a>

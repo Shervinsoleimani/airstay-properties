@@ -27,7 +27,7 @@ export default function Footer({ onBook, onOwner }) {
         {/* Main footer grid */}
         <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 48, marginBottom: 64 }}>
           <div>
-            <img src="/logo.svg" alt="Airstay" style={{ height: 44, width: 'auto', marginBottom: 20 }} />
+            <img src="/logo.svg" alt="AirStay" style={{ height: 44, width: 'auto', marginBottom: 20 }} />
             <p style={{ fontSize: 13, fontWeight: 300, lineHeight: 1.8, maxWidth: 240, color: 'rgba(155,149,144,0.8)' }}>
               Luxury hospitality and property management. Short-term stays, long-term residences and full-service building care.
             </p>

@@ -16,7 +16,7 @@ export const PROPERTIES = [
   {
     id: 'le-moyne-heritage',
     name: 'Le Moyne Heritage',
-    brand: 'Airstay',
+    brand: 'AirStay',
     city: 'Montreal',
     country: 'Canada',
     neighbourhood: 'Downtown',
@@ -33,7 +33,7 @@ export const PROPERTIES = [
   {
     id: 'le-moyne-modern',
     name: 'Le Moyne Modern',
-    brand: 'Airstay',
+    brand: 'AirStay',
     city: 'Montreal',
     country: 'Canada',
     neighbourhood: 'Downtown',
@@ -50,7 +50,7 @@ export const PROPERTIES = [
   {
     id: 'bishop',
     name: 'Bishop',
-    brand: 'Airstay',
+    brand: 'AirStay',
     city: 'Montreal',
     country: 'Canada',
     neighbourhood: 'Bishop Street',
@@ -67,7 +67,7 @@ export const PROPERTIES = [
   {
     id: 'saint-paul',
     name: 'Saint-Paul',
-    brand: 'Airstay',
+    brand: 'AirStay',
     city: 'Montreal',
     country: 'Canada',
     neighbourhood: 'Old Montreal',
@@ -84,7 +84,7 @@ export const PROPERTIES = [
   {
     id: 'notre-dame',
     name: 'Notre-Dame',
-    brand: 'Airstay',
+    brand: 'AirStay',
     city: 'Montreal',
     country: 'Canada',
     neighbourhood: 'Old Montreal',

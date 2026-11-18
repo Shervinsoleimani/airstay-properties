@@ -15,7 +15,7 @@ export default function Loader({ onDone }) {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}>
-        <img src="/logo.svg" alt="Airstay" style={{ height: 56, width: 'auto' }} />
+        <img src="/logo.svg" alt="AirStay" style={{ height: 56, width: 'auto' }} />
       </motion.div>
       <motion.p className="eyebrow mt-6"
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
