@@ -16,7 +16,7 @@ const privacy = {
   title: 'Privacy',
   titleAccent: 'Policy',
   intro: 'How AirStay Properties collects, uses, shares and protects personal information, and how you can exercise your rights.',
-  meta: ['Last updated: November 18, 2026'],
+  meta: ['Version 1.0', 'Last updated: November 18, 2026'],
   languageNote: 'This document is available in French and in English. In case of any discrepancy, the French version prevails.',
 
   sections: [
@@ -70,10 +70,10 @@ const privacy = {
         'Do not upload identity documents or payment information through website forms.',
 
         { h: 'Bookings and stays', id: 'bookings' },
-        'For a booking, we collect the name and contact details of the Responsible Guest, the stay dates, the residence, the number of guests, the price and payment status, special requests, and our communications before, during and after the stay. Payments are processed by our payment processor: we receive limited card information, such as the card type and last four digits, but never the full card number. We also keep check-in and check-out records and any incident or damage reports, including photos.',
+        'For a booking, we collect the name and contact details of the Responsible Guest, the stay dates, the residence, the number of guests, the price and payment status, special requests, and our communications before, during and after the stay. Payments are processed by our payment processor: we receive limited card information, such as the card type and last four digits, but never the full card number. We also keep check-in and check-out records and any incident or damage reports, including photos. When you accept our terms and the rental agreement, we record the date and time, the IP address used and the version of the documents accepted, as evidence of your acceptance.',
 
         { h: 'Identity verification', id: 'verification' },
-        'For direct bookings and, where disclosed in the listing, certain other channels, the Responsible Guest completes our online check-in form. It collects a government-issued photo ID (its image and details such as your name, date of birth, document number and expiry date) and includes an identity check through our payment processor, which also acts as our identity-verification provider. This information is sensitive: we collect it only with your express consent and use it only to verify your identity and prevent fraud.',
+        'For direct bookings and Vrbo reservations for which AirStay processes the payment, the Responsible Guest completes our online check-in form. It collects a government-issued photo ID (its image and details such as your name, date of birth, document number and expiry date) and includes an identity check through our payment processor, which also acts as our identity-verification provider. This information is sensitive: we collect it only with your express consent and use it only to verify your identity and prevent fraud.',
         'For reservations made through third-party platforms, we follow each platform’s policies. Where a platform does not allow us to collect identity documents, we do not collect them.',
 
         { h: 'Biometric verification', id: 'biometrics' },
@@ -186,6 +186,7 @@ const privacy = {
       blocks: [
         '**Identity documents.** ID images and check-in documents are kept for 180 days after check-out, or longer while a dispute, chargeback or claim is open. Only team members who need them can access them. They are stored only in our reservation and payment platforms, never in email or chat, and are securely deleted at the end of that period.',
         '**Facial comparison.** The images used for facial comparison are handled by our identity-verification provider; we keep only the verification result.',
+        '**Booking and evidence records.** Booking details, records of your acceptance of our terms, messages, verification results and door access logs are kept for at least 180 days after check-out, or longer while a dispute, chargeback or claim is open, and longer where the law requires it.',
         '**Other information.** We keep other personal information only as long as needed for the purposes for which it was collected, including the resolution of disputes and claims, or longer where the law requires it, for example for tax and accounting records.',
         'When information is no longer needed, we destroy it securely or anonymize it in accordance with the law.',
       ],

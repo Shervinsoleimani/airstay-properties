@@ -10,7 +10,7 @@ const terms = {
   title: 'Conditions d’utilisation',
   titleAccent: 'et de réservation',
   intro: 'Les conditions qui s’appliquent lorsque vous utilisez notre site Web, réservez un séjour directement auprès d’AirStay Properties ou réservez l’une de nos résidences par l’intermédiaire d’une plateforme de réservation.',
-  meta: ['Dernière mise à jour : 18 novembre 2026', 'Entrée en vigueur des conditions de réservation : 20 novembre 2026'],
+  meta: ['Version 1.0', 'Dernière mise à jour : 18 novembre 2026', 'Entrée en vigueur des conditions de réservation : 20 novembre 2026'],
   languageNote: 'Le présent document est offert en français et en anglais. En cas de divergence, la version française prévaut.',
 
   summary: {
@@ -47,11 +47,12 @@ const terms = {
         {
           list: [
             'à votre utilisation du site airstayproperties.com (le « site Web »);',
-            'aux réservations effectuées directement auprès de nous, notamment au moyen de notre site de réservation book.airstayproperties.com (le « site de réservation ») (article 3);',
+            'aux réservations effectuées directement auprès de nous, notamment au moyen de notre site de réservation book.airstayproperties.com (le « site de réservation »), ainsi qu’à toute réservation payée directement à AirStay (article 3);',
             'aux réservations de nos résidences effectuées par l’intermédiaire de plateformes de réservation tierces, dans la mesure prévue à l’article 4;',
             'aux demandes relatives à la location de longue durée, aux services aux propriétaires et aux carrières (articles 5 à 7).',
           ],
         },
+        '**En bref :** si vous réservez sur notre site Web ou notre site de réservation, ou si vous payez directement AirStay, les présentes conditions et le contrat d’hébergement transmis avec votre réservation s’appliquent. Les réservations Airbnb sont régies par les conditions d’Airbnb et les règles de la maison de l’annonce.',
         'En utilisant le site Web ou en effectuant une réservation directe, vous acceptez les présentes conditions. Si vous ne les acceptez pas, veuillez ne pas utiliser le site Web ni effectuer de réservation. La façon dont nous traitons les renseignements personnels est expliquée dans notre [Politique de confidentialité](/privacy?lang=fr).',
       ],
     },
@@ -86,7 +87,7 @@ const terms = {
         'Le présent article s’applique aux réservations effectuées directement auprès d’AirStay, au moyen du site de réservation ou confirmées par écrit par notre équipe (les « réservations directes »), qui sont confirmées à compter du 20 novembre 2026.',
 
         { h: 'Documents applicables à votre réservation', id: 'booking-documents' },
-        'Chaque réservation directe est assujettie aux présentes conditions ainsi qu’au contrat de location et aux règles de la maison transmis avec votre confirmation de réservation, de même qu’à la politique d’annulation affichée au moment de la réservation. En cas d’incompatibilité entre le contrat de location et les présentes conditions, les présentes conditions prévalent, à moins que le contrat de location ne vous soit plus favorable.',
+        'Chaque réservation directe est assujettie aux présentes conditions ainsi qu’au contrat d’hébergement et aux règles de la maison transmis avec votre confirmation de réservation, de même qu’à la politique d’annulation affichée au moment de la réservation. En cas d’incompatibilité entre le contrat d’hébergement et les présentes conditions, les présentes conditions prévalent, à moins que le contrat d’hébergement ne vous soit plus favorable.',
         'Votre réservation constitue un contrat d’hébergement touristique de courte durée dans un établissement enregistré auprès de la CITQ. Il ne s’agit pas d’un bail de logement au sens de l’article 1892 du Code civil du Québec, et aucune relation de locateur à locataire n’est créée.',
 
         { h: 'Prix et confirmation', id: 'price-confirmation' },
@@ -102,7 +103,7 @@ const terms = {
         'Le voyageur qui effectue la réservation (le « voyageur responsable ») doit avoir au moins 18 ans et séjourner dans la propriété. Le voyageur responsable est tenu :',
         {
           list: [
-            'de veiller à ce que chaque voyageur respecte les présentes conditions, le contrat de location et les règles de la maison;',
+            'de veiller à ce que chaque voyageur respecte les présentes conditions, le contrat d’hébergement et les règles de la maison;',
             'de remplir notre formulaire d’enregistrement en ligne avant l’arrivée, notamment en fournissant une pièce d’identité avec photo délivrée par une autorité gouvernementale et en se soumettant à une vérification d’identité effectuée par l’intermédiaire de notre fournisseur de services de paiement (le lien est transmis avec votre confirmation de réservation);',
             'de s’assurer que le nom figurant sur la réservation correspond à celui de la pièce d’identité fournie et à celui du titulaire de la carte de paiement;',
             'de nous signaler sans délai tout dommage ou problème.',
@@ -112,7 +113,7 @@ const terms = {
         'Pour la sécurité de nos voyageurs et de nos immeubles, les instructions d’accès ne sont transmises qu’une fois la vérification terminée. Si la vérification n’est pas effectuée, la réservation peut être annulée conformément à la politique d’annulation applicable au moment de la réservation.',
 
         { h: 'Préautorisation de garantie', id: 'security-hold' },
-        'Nous pouvons effectuer une préautorisation (blocage temporaire de fonds) d’au plus **500 $ CA** sur la carte du voyageur responsable peu avant l’arrivée. Une préautorisation n’est pas un débit. Elle est libérée après le séjour si aucun dommage ni aucune infraction aux règles n’est constaté. Le délai avant que les fonds libérés redeviennent disponibles dépend de l’émetteur de votre carte.',
+        'Nous pouvons effectuer une préautorisation (blocage temporaire de fonds) d’au plus **500 $ CA** sur la carte du voyageur responsable peu avant l’arrivée. Une préautorisation n’est pas un débit. Elle est libérée après le séjour si aucun dommage ni aucune infraction aux règles n’est constaté. Le délai avant que les fonds libérés redeviennent disponibles dépend de l’émetteur de votre carte. Le montant de la préautorisation ainsi que le moment où elle sera effectuée et libérée sont indiqués avant le paiement.',
 
         { h: 'Arrivée, départ et départs tardifs', id: 'check-in-out' },
         'L’arrivée se fait à partir de **16 h** le jour de l’arrivée, et le départ au plus tard à **11 h** le jour du départ, sauf entente contraire écrite. Une arrivée hâtive ou un départ tardif peuvent être possibles sur demande, mais ne sont jamais garantis à l’avance.',
@@ -165,7 +166,7 @@ const terms = {
         'Aucun remboursement n’est accordé en cas de non-présentation, et les nuits non utilisées ne sont pas remboursées si vous quittez avant la fin de votre séjour, sauf dans la mesure prévue par la politique d’annulation ou exigée par la loi.',
         'Toute modification des dates, de la résidence ou du nombre de voyageurs est sujette à disponibilité et à notre confirmation écrite, et peut modifier le prix.',
         'Nous vous recommandons de souscrire une assurance voyage.',
-        'Si nous annulons votre réservation pour un motif autre qu’un manquement aux présentes conditions ou au contrat de location, nous vous rembourserons les sommes payées pour les nuits annulées ou, si vous le préférez, nous vous proposerons une résidence comparable, si une telle résidence est disponible.',
+        'Si nous annulons votre réservation pour un motif autre qu’un manquement aux présentes conditions ou au contrat d’hébergement, nous vous rembourserons les sommes payées pour les nuits annulées ou, si vous le préférez, nous vous proposerons une résidence comparable, si une telle résidence est disponible.',
 
         { h: 'Force majeure', id: 'force-majeure' },
         'Ni vous ni nous ne sommes responsables d’un défaut d’exécution causé par une force majeure, comme un incendie, une inondation, une panne prolongée des services publics, une urgence touchant l’immeuble, une ordonnance des autorités publiques, une grève ou une épidémie. Si un tel événement nous empêche de fournir la propriété, nous vous proposerons une solution de rechange comparable, si elle est disponible, ou nous vous rembourserons les sommes payées pour les nuits que nous ne pouvons fournir. Veuillez nous signaler immédiatement toute interruption afin que nous puissions y remédier.',
@@ -175,11 +176,11 @@ const terms = {
         'Les commodités communes de l’immeuble, lorsqu’elles sont offertes, sont assujetties aux règles et aux heures d’ouverture de l’immeuble et peuvent être temporairement indisponibles.',
 
         { h: 'Documents et signatures électroniques', id: 'electronic' },
-        'Vous acceptez que les présentes conditions, le contrat de location et votre réservation puissent être acceptés, signés, communiqués et conservés sur support électronique. Votre acceptation électronique, par exemple en cochant une case, en cliquant pour confirmer ou en signant dans le formulaire d’enregistrement en ligne, a le même effet qu’une signature manuscrite, conformément à la Loi concernant le cadre juridique des technologies de l’information. Nos documents électroniques relatifs à votre réservation, à votre acceptation, aux résultats de la vérification et à nos communications peuvent servir de preuve.',
+        'Vous acceptez que les présentes conditions, le contrat d’hébergement et votre réservation puissent être acceptés, signés, communiqués et conservés sur support électronique. Votre acceptation électronique, par exemple en cochant une case, en cliquant pour confirmer ou en signant dans le formulaire d’enregistrement en ligne, a le même effet qu’une signature manuscrite, conformément à la Loi concernant le cadre juridique des technologies de l’information. Nos documents électroniques relatifs à votre réservation, à votre acceptation, aux résultats de la vérification et à nos communications peuvent servir de preuve. Lorsque vous acceptez les présentes conditions et le contrat d’hébergement, nous consignons la date et l’heure de votre acceptation, l’adresse IP utilisée et la version des documents acceptés.',
 
         { h: 'Questions de facturation et contestations de débit', id: 'billing-disputes' },
         'Si vous avez une question ou une préoccupation au sujet d’un débit, veuillez d’abord communiquer avec nous à [info@airstayproperties.com](mailto:info@airstayproperties.com). Dans la mesure permise par la loi, vous acceptez de nous donner une occasion raisonnable de régler la situation avant de contester le débit auprès de l’émetteur de votre carte. Cela ne limite aucun droit que vous confèrent la Loi sur la protection du consommateur ou votre contrat de carte.',
-        'Si un débit est contesté, nous pouvons fournir à notre fournisseur de services de paiement et à l’émetteur de la carte les renseignements raisonnablement nécessaires pour y répondre, notamment : votre acceptation des présentes conditions; les résultats de la vérification d’identité; les messages échangés avec vous; les renseignements relatifs à l’arrivée et au départ, y compris les registres d’accès de la serrure; et les photos, factures ou autres documents justifiant le débit.',
+        'Si un débit est contesté, nous pouvons fournir à notre fournisseur de services de paiement et à l’émetteur de la carte les renseignements raisonnablement nécessaires pour y répondre, notamment : votre acceptation des présentes conditions; les résultats de la vérification d’identité; les messages échangés avec vous; les renseignements relatifs à l’arrivée et au départ, y compris les registres d’accès de la serrure; et les photos, factures ou autres documents justifiant le débit. Nous conservons ces documents pendant au moins 180 jours après le départ, ou plus longtemps tant qu’une contestation, une rétrofacturation ou une réclamation est en cours.',
       ],
     },
 
@@ -187,9 +188,9 @@ const terms = {
       id: 'platform-bookings',
       title: 'Réservations effectuées par l’intermédiaire de plateformes tierces',
       blocks: [
-        'Lorsque vous réservez l’une de nos résidences par l’intermédiaire d’une plateforme tierce, comme Airbnb, Vrbo, Booking.com, Expedia, Hotels.com ou Hopper, votre réservation est effectuée par l’intermédiaire de cette plateforme. Les conditions de la plateforme et les règles de la maison de l’annonce s’appliquent, et les paiements, remboursements et annulations sont traités par la plateforme. En cas de divergence entre les présentes conditions et celles de la plateforme pour une réservation effectuée par son intermédiaire, les conditions de la plateforme prévalent.',
+        'Lorsque vous réservez l’une de nos résidences par l’intermédiaire d’une plateforme tierce, comme Airbnb, Vrbo, Booking.com, Expedia, Hotels.com ou Hopper, votre réservation est effectuée par l’intermédiaire de cette plateforme. Les conditions de la plateforme et les règles de la maison de l’annonce s’appliquent et, sauf si AirStay traite votre paiement, les paiements, remboursements et annulations sont traités par la plateforme. En cas de divergence entre les présentes conditions et celles de la plateforme pour une réservation effectuée par son intermédiaire, les conditions de la plateforme prévalent.',
         'Nous respectons les politiques de chaque plateforme. Lorsqu’une plateforme ne permet pas les contrats de location distincts, la collecte de pièces d’identité ou les amendes imposées par l’hôte, nous ne les imposons pas.',
-        'L’enregistrement en ligne, la vérification d’identité et la préautorisation de garantie décrits à l’article 3 s’appliquent aux réservations directes et, lorsque l’annonce l’indique, à certains autres canaux.',
+        'Pour les réservations Vrbo dont AirStay traite le paiement, les présentes conditions et le contrat d’hébergement transmis avec votre réservation s’appliquent également, en plus des conditions de Vrbo, y compris l’enregistrement en ligne, la vérification d’identité et la préautorisation de garantie décrits à l’article 3. Les réservations Airbnb sont régies uniquement par les conditions d’Airbnb et les règles de la maison de l’annonce.',
       ],
     },
 
@@ -303,7 +304,7 @@ const terms = {
       blocks: [
         {
           list: [
-            '**Intégralité de l’entente.** Pour une réservation directe, les présentes conditions, le contrat de location et les règles de la maison transmis avec votre confirmation de réservation, ainsi que la politique d’annulation affichée au moment de la réservation, constituent l’entente intégrale entre vous et nous concernant votre séjour.',
+            '**Intégralité de l’entente.** Pour une réservation directe, les présentes conditions, le contrat d’hébergement et les règles de la maison transmis avec votre confirmation de réservation, ainsi que la politique d’annulation affichée au moment de la réservation, constituent l’entente intégrale entre vous et nous concernant votre séjour.',
             '**Divisibilité.** Si une disposition est jugée invalide ou inapplicable, les autres dispositions demeurent en vigueur.',
             '**Absence de renonciation.** Le fait que nous n’exercions pas un droit prévu aux présentes conditions ne constitue pas une renonciation à ce droit.',
             '**Cession.** Vous ne pouvez céder votre réservation ni vos droits en vertu des présentes conditions sans notre consentement écrit. Nous pouvons céder nos droits à une société liée ou à un successeur, pourvu que vos droits ne soient pas réduits.',

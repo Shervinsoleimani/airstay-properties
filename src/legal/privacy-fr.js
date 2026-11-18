@@ -16,7 +16,7 @@ const privacy = {
   title: 'Politique de',
   titleAccent: 'confidentialité',
   intro: 'Comment AirStay Properties recueille, utilise, communique et protège les renseignements personnels, et comment vous pouvez exercer vos droits.',
-  meta: ['Dernière mise à jour : 18 novembre 2026'],
+  meta: ['Version 1.0', 'Dernière mise à jour : 18 novembre 2026'],
   languageNote: 'Le présent document est offert en français et en anglais. En cas de divergence, la version française prévaut.',
 
   sections: [
@@ -70,10 +70,10 @@ const privacy = {
         'Ne téléversez aucune pièce d’identité ni aucun renseignement de paiement au moyen des formulaires du site Web.',
 
         { h: 'Réservations et séjours', id: 'bookings' },
-        'Pour une réservation, nous recueillons le nom et les coordonnées du voyageur responsable, les dates du séjour, la résidence, le nombre de voyageurs, le prix et l’état du paiement, les demandes particulières ainsi que nos communications avant, pendant et après le séjour. Les paiements sont traités par notre fournisseur de services de paiement : nous recevons des renseignements limités sur la carte, comme le type de carte et ses quatre derniers chiffres, mais jamais le numéro complet. Nous conservons également les registres d’arrivée et de départ ainsi que les rapports d’incident ou de dommages, y compris les photos.',
+        'Pour une réservation, nous recueillons le nom et les coordonnées du voyageur responsable, les dates du séjour, la résidence, le nombre de voyageurs, le prix et l’état du paiement, les demandes particulières ainsi que nos communications avant, pendant et après le séjour. Les paiements sont traités par notre fournisseur de services de paiement : nous recevons des renseignements limités sur la carte, comme le type de carte et ses quatre derniers chiffres, mais jamais le numéro complet. Nous conservons également les registres d’arrivée et de départ ainsi que les rapports d’incident ou de dommages, y compris les photos. Lorsque vous acceptez nos conditions et le contrat d’hébergement, nous consignons la date et l’heure, l’adresse IP utilisée et la version des documents acceptés, à titre de preuve de votre acceptation.',
 
         { h: 'Vérification d’identité', id: 'verification' },
-        'Pour les réservations directes et, lorsque l’annonce l’indique, pour certains autres canaux, le voyageur responsable remplit notre formulaire d’enregistrement en ligne. Ce formulaire recueille une pièce d’identité avec photo délivrée par un gouvernement (son image et des renseignements comme votre nom, votre date de naissance, le numéro du document et sa date d’expiration) et comporte une vérification d’identité effectuée par l’intermédiaire de notre fournisseur de services de paiement, qui agit également comme fournisseur de services de vérification d’identité. Ces renseignements sont sensibles : nous ne les recueillons qu’avec votre consentement exprès et ne les utilisons que pour vérifier votre identité et prévenir la fraude.',
+        'Pour les réservations directes et les réservations Vrbo dont AirStay traite le paiement, le voyageur responsable remplit notre formulaire d’enregistrement en ligne. Ce formulaire recueille une pièce d’identité avec photo délivrée par une autorité gouvernementale (son image et des renseignements comme votre nom, votre date de naissance, le numéro du document et sa date d’expiration) et comporte une vérification d’identité effectuée par l’intermédiaire de notre fournisseur de services de paiement, qui agit également comme fournisseur de services de vérification d’identité. Ces renseignements sont sensibles : nous ne les recueillons qu’avec votre consentement exprès et ne les utilisons que pour vérifier votre identité et prévenir la fraude.',
         'Pour les réservations effectuées par l’intermédiaire de plateformes tierces, nous respectons les politiques de chaque plateforme. Lorsqu’une plateforme ne nous permet pas de recueillir des pièces d’identité, nous ne les recueillons pas.',
 
         { h: 'Vérification biométrique', id: 'biometrics' },
@@ -186,6 +186,7 @@ const privacy = {
       blocks: [
         '**Pièces d’identité.** Les images des pièces d’identité et les documents d’enregistrement sont conservés pendant 180 jours après le départ, ou plus longtemps tant qu’une contestation, une rétrofacturation ou une réclamation est en cours. Seuls les membres de l’équipe qui en ont besoin peuvent y accéder. Ils sont conservés uniquement dans nos plateformes de réservation et de paiement, jamais dans les courriels ou les clavardages, et sont supprimés de façon sécuritaire au terme de cette période.',
         '**Comparaison faciale.** Les images servant à la comparaison faciale sont traitées par notre fournisseur de services de vérification d’identité; nous ne conservons que le résultat de la vérification.',
+        '**Dossiers de réservation et éléments de preuve.** Les renseignements sur la réservation, les preuves de votre acceptation de nos conditions, les messages, les résultats de la vérification et les registres d’accès de la serrure sont conservés pendant au moins 180 jours après le départ, ou plus longtemps tant qu’une contestation, une rétrofacturation ou une réclamation est en cours, et plus longtemps lorsque la loi l’exige.',
         '**Autres renseignements.** Nous ne conservons les autres renseignements personnels que le temps nécessaire à la réalisation des fins pour lesquelles ils ont été recueillis, y compris le règlement des différends et des réclamations, ou plus longtemps lorsque la loi l’exige, par exemple pour les documents fiscaux et comptables.',
         'Lorsque les renseignements ne sont plus nécessaires, nous les détruisons de façon sécuritaire ou les anonymisons conformément à la loi.',
       ],

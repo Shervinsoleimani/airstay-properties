@@ -78,6 +78,7 @@ export default function LeadForm({ type, theme = 'light', fields, files: fileCfg
     if (!validate()) return
     setStatus('sending')
     const payload = { ...extra, ...Object.fromEntries(Object.entries(values).map(([k, v]) => [k, String(v).trim()])) }
+    payload.privacyConsent = `Agreed to Privacy Policy v1.0 on ${new Date().toISOString().replace('T', ' ').slice(0, 19)} UTC`
     const r = await submitLead(type, payload, attached, { honeypot, elapsed: Date.now() - started.current })
     setReference(r.reference)
     setStatus(r.ok ? 'sent' : 'error')

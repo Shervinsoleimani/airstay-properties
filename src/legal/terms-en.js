@@ -10,7 +10,7 @@ const terms = {
   title: 'Terms of Use',
   titleAccent: '& Booking Terms',
   intro: 'The terms that apply when you use our website, book a stay directly with AirStay Properties, or reserve one of our residences through a booking platform.',
-  meta: ['Last updated: November 18, 2026', 'Booking terms effective: November 20, 2026'],
+  meta: ['Version 1.0', 'Last updated: November 18, 2026', 'Booking terms effective: November 20, 2026'],
   languageNote: 'This document is available in French and in English. In case of any discrepancy, the French version prevails.',
 
   summary: {
@@ -47,11 +47,12 @@ const terms = {
         {
           list: [
             'your use of airstayproperties.com (the “Website”);',
-            'reservations made directly with us, including through our booking site at book.airstayproperties.com (the “Booking Site”) (Section 3);',
+            'reservations made directly with us, including through our booking site at book.airstayproperties.com (the “Booking Site”), and any reservation paid to AirStay directly (Section 3);',
             'reservations of our residences made through third-party booking platforms, to the extent described in Section 4;',
             'inquiries about long-term rentals, owner services and careers (Sections 5 to 7).',
           ],
         },
+        '**In short:** if you book on our website or Booking Site, or pay AirStay directly, these Terms and the rental agreement provided with your booking apply. Airbnb reservations are governed by Airbnb’s terms and the listing’s house rules.',
         'By using the Website or making a direct booking, you accept these Terms. If you do not accept them, please do not use the Website or make a booking. How we handle personal information is explained in our [Privacy Policy](/privacy?lang=en).',
       ],
     },
@@ -112,7 +113,7 @@ const terms = {
         'For the security of our guests and buildings, access instructions are sent only after verification is complete. If verification is not completed, the reservation may be cancelled under the cancellation policy that applied at the time of booking.',
 
         { h: 'Security hold', id: 'security-hold' },
-        'We may place a pre-authorization hold of up to **CAD $500** on the Responsible Guest’s card shortly before check-in. A hold is not a charge. It is released after the stay if no damage or rule violation is found. The time it takes for released funds to become available again depends on your card issuer.',
+        'We may place a pre-authorization hold of up to **CAD $500** on the Responsible Guest’s card shortly before check-in. A hold is not a charge. It is released after the stay if no damage or rule violation is found. The time it takes for released funds to become available again depends on your card issuer. The amount of the hold, and when it will be placed and released, are shown before you pay.',
 
         { h: 'Check-in, check-out and late departures', id: 'check-in-out' },
         'Check-in is from **4:00 p.m.** on the arrival date and check-out is by **11:00 a.m.** on the departure date, unless we agree otherwise in writing. Early check-in and late check-out may be possible on request but are never guaranteed in advance.',
@@ -175,11 +176,11 @@ const terms = {
         'Shared building amenities, where offered, are subject to the building’s rules and hours and may be temporarily unavailable.',
 
         { h: 'Electronic records and signatures', id: 'electronic' },
-        'You agree that these Terms, the rental agreement and your booking may be accepted, signed, communicated and kept in electronic form. Your electronic acceptance, such as ticking a box, clicking to confirm or signing in the online check-in form, has the same effect as a handwritten signature, in accordance with the Act to establish a legal framework for information technology (Québec). Our electronic records of your booking, your acceptance, verification results and our communications may be used as evidence.',
+        'You agree that these Terms, the rental agreement and your booking may be accepted, signed, communicated and kept in electronic form. Your electronic acceptance, such as ticking a box, clicking to confirm or signing in the online check-in form, has the same effect as a handwritten signature, in accordance with the Act to establish a legal framework for information technology (Québec). Our electronic records of your booking, your acceptance, verification results and our communications may be used as evidence. When you accept these Terms and the rental agreement, we record the date and time of your acceptance, the IP address used and the version of the documents accepted.',
 
         { h: 'Billing questions and card disputes', id: 'billing-disputes' },
         'If you have a question or concern about a charge, please contact us first at [info@airstayproperties.com](mailto:info@airstayproperties.com). To the extent permitted by law, you agree to give us a reasonable opportunity to resolve it before disputing the charge with your card issuer. This does not limit any right you have under the Consumer Protection Act (Québec) or your card agreement.',
-        'If a charge is disputed, we may provide our payment processor and the card issuer with the information reasonably needed to respond, including: your acceptance of these Terms; the results of identity verification; the messages exchanged with you; check-in and check-out information, including door access logs; and photos, invoices or other documents supporting the charge.',
+        'If a charge is disputed, we may provide our payment processor and the card issuer with the information reasonably needed to respond, including: your acceptance of these Terms; the results of identity verification; the messages exchanged with you; check-in and check-out information, including door access logs; and photos, invoices or other documents supporting the charge. We keep these records for at least 180 days after check-out, or longer while a dispute, chargeback or claim is open.',
       ],
     },
 
@@ -187,9 +188,9 @@ const terms = {
       id: 'platform-bookings',
       title: 'Bookings through third-party platforms',
       blocks: [
-        'When you book one of our residences through a third-party platform, such as Airbnb, Vrbo, Booking.com, Expedia, Hotels.com or Hopper, your reservation is made through that platform. The platform’s terms and the listing’s house rules apply, and payments, refunds and cancellations are handled through the platform. If these Terms differ from the platform’s terms for a platform booking, the platform’s terms prevail.',
+        'When you book one of our residences through a third-party platform, such as Airbnb, Vrbo, Booking.com, Expedia, Hotels.com or Hopper, your reservation is made through that platform. The platform’s terms and the listing’s house rules apply, and, unless AirStay processes your payment, payments, refunds and cancellations are handled through the platform. If these Terms differ from the platform’s terms for a platform booking, the platform’s terms prevail.',
         'We follow each platform’s policies. Where a platform does not allow separate rental agreements, identity document collection or host fines, we do not impose them.',
-        'The online check-in, identity verification and security hold described in Section 3 apply to direct bookings and, where disclosed in the listing, to certain other channels.',
+        'For Vrbo reservations for which AirStay processes the payment, these Terms and the rental agreement provided with your booking also apply, together with Vrbo’s terms, including the online check-in, identity verification and security hold described in Section 3. Airbnb reservations are governed only by Airbnb’s terms and the listing’s house rules.',
       ],
     },
 
