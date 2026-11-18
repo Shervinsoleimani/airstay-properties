@@ -19,7 +19,7 @@ const terms = {
       'Prices include all mandatory fees, including cleaning. GST, QST and any applicable lodging tax are added at checkout.',
       'We email you a confirmation, including these Terms, within 15 days of booking.',
       'The Responsible Guest must be 18 or older and complete online check-in with a government-issued photo ID and identity verification. Access instructions are sent only after verification.',
-      'A pre-authorization hold (generally CAD $500, higher for larger residences) may be placed up to 2 days before arrival and is released within 7 days after check-out if there is no claim. The amount is shown before you pay.',
+      'For direct bookings, a pre-authorization hold (CAD $500, or CAD $1,000 for our largest residences) may be placed no earlier than 2 days before arrival and is released within 7 days after check-out if there is no claim. The amount is shown before you pay.',
       'Check-in from 4:00 p.m., check-out by 11:00 a.m. Quiet hours from 10:00 p.m. to 7:00 a.m.',
       'No parties or events. No smoking or vaping in the unit, on balconies and terraces, or in the building, including common areas. No pets unless approved in writing before arrival.',
       'We charge only documented actual costs for damage, loss or excessive cleaning, after sending you a description with photos or invoices and giving you an opportunity to respond.',
@@ -88,6 +88,15 @@ const terms = {
 
         { h: 'Documents that apply to your booking', id: 'booking-documents' },
         'Each direct booking is subject to these Terms and to the rental agreement and house rules provided with your booking confirmation, as well as to the cancellation policy shown at the time of booking. If the rental agreement and these Terms are inconsistent, the provision more favourable to the guest applies.',
+        'The accommodation contract (version 2.0, French version prevailing) for each establishment:',
+        {
+          list: [
+            '[155 Saint-Paul Street East · CITQ 316300 (PDF)](/legal/AirStay-Contrat-v2.0-155-Saint-Paul-CITQ-316300.pdf)',
+            '[380 Le Moyne Street · CITQ 312667 (PDF)](/legal/AirStay-Contrat-v2.0-380-Le-Moyne-CITQ-312667.pdf)',
+            '[386 Le Moyne Street · CITQ 304411 (PDF)](/legal/AirStay-Contrat-v2.0-386-Le-Moyne-CITQ-304411.pdf)',
+            '[2055 Bishop Street · CITQ 295420 (PDF)](/legal/AirStay-Contrat-v2.0-Bishop-2055-CITQ-295420.pdf)',
+          ],
+        },
         'Your booking is a short-term tourist accommodation contract in an establishment registered with the CITQ. It is not a lease of a dwelling within the meaning of article 1892 of the Civil Code of Québec, and no landlord-tenant relationship is created.',
 
         { h: 'Price and confirmation', id: 'price-confirmation' },
@@ -113,7 +122,7 @@ const terms = {
         'For the security of our guests and buildings, access instructions are sent only after verification is complete. If verification is not completed at least **24 hours before arrival** despite our reminders, we may cancel the reservation; any refund is determined by the cancellation policy that applied at the time of booking.',
 
         { h: 'Security hold', id: 'security-hold' },
-        'We may place a pre-authorization hold on the Responsible Guest’s card. The amount is shown in the listing and in your booking confirmation before you pay. It is generally **CAD $500** and may be higher for larger residences and the penthouse.',
+        'For direct bookings, we may place a pre-authorization hold on the Responsible Guest’s card. The amount is shown in the listing and in your booking confirmation before you pay: **CAD $500** for standard units and **CAD $1,000** for four-bedroom lofts, the top-floor units at 155 Saint-Paul and the 380 Le Moyne penthouse.',
         'The hold is placed no earlier than **2 days before arrival**, may be renewed for stays longer than 5 nights, and is released no later than **7 days after check-out** unless we have sent you a claim notice (see Section 3.9). The time it takes for released funds to become available again depends on your card issuer.',
         'A hold is not a charge. It is not a penalty, and it does not limit your liability for documented costs.',
 
@@ -183,7 +192,7 @@ const terms = {
 
         { h: 'Billing questions and card disputes', id: 'billing-disputes' },
         'If you have a question or concern about a charge, please contact us first at [info@airstayproperties.com](mailto:info@airstayproperties.com). To the extent permitted by law, you agree to give us a reasonable opportunity to resolve it before disputing the charge with your card issuer. This does not limit any right you have under the Consumer Protection Act (Québec) or your card agreement.',
-        'If a charge is disputed, we may provide our payment processor and the card issuer with the information reasonably needed to respond, including: your acceptance of these Terms; the results of identity verification; the messages exchanged with you; check-in and check-out information, including door access logs; and photos, invoices or other documents supporting the charge. We keep these records for at least 180 days after check-out, or longer while a dispute, chargeback or claim is open.',
+        'If a charge is disputed, we may provide our payment processor and the card issuer with the information reasonably needed to respond, including: your acceptance of these Terms; the results of identity verification; the messages exchanged with you; check-in and check-out information, including door access logs; and photos, invoices or other documents supporting the charge. We keep booking records, acceptance records, messages and verification results for at least 180 days after check-out, or longer while a dispute, chargeback or claim is open. Door access logs relating to a dispute or claim are preserved for as long as needed.',
       ],
     },
 
@@ -193,7 +202,7 @@ const terms = {
       blocks: [
         'When you book one of our residences through a third-party platform, such as Airbnb, Vrbo, Booking.com, Expedia, Hotels.com or Hopper, your reservation is made through that platform. The platform’s terms and the listing’s house rules apply, and, unless AirStay processes your payment, payments, refunds and cancellations are handled through the platform. If these Terms differ from the platform’s terms for a platform booking, the platform’s terms prevail.',
         'We follow each platform’s policies. Where a platform does not allow separate rental agreements, identity document collection or host fines, we do not impose them.',
-        'For Vrbo reservations for which AirStay processes the payment, these Terms and the rental agreement attached to the Vrbo listing also apply, in addition to Vrbo’s terms. The online check-in, identity verification and security hold described in Section 3 apply where the Vrbo listing says so. Vrbo’s cancellation policy and, where applicable, Vrbo’s refundable damage deposit remain governed by Vrbo’s rules.',
+        'For Vrbo reservations for which AirStay processes the payment, these Terms and the rental agreement attached to the Vrbo listing also apply, in addition to Vrbo’s terms. The online check-in and identity verification described in Section 3 apply where the Vrbo listing says so. Our security hold does not apply to Vrbo reservations: Vrbo’s cancellation policy and refundable damage deposit remain governed by Vrbo’s rules.',
         'Airbnb reservations are governed only by Airbnb’s terms and the listing’s house rules.',
       ],
     },

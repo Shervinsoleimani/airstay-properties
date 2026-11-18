@@ -57,7 +57,8 @@ function Inline({ text }) {
     const m = part.match(/^\[([^\]]+)\]\(([^)\s]+)\)$/)
     if (m) {
       const [, label, href] = m
-      if (href.startsWith('/')) return <Link key={i} to={href} style={S.link}>{label}</Link>
+      if (href.startsWith('/') && !/\.pdf($|#)/i.test(href)) return <Link key={i} to={href} style={S.link}>{label}</Link>
+      if (/\.pdf($|#)/i.test(href)) return <a key={i} href={href} style={S.link} target="_blank" rel="noopener noreferrer">{label}</a>
       const external = /^https?:/.test(href)
       return (
         <a key={i} href={href} style={S.link} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{label}</a>

@@ -19,7 +19,7 @@ const terms = {
       'Les prix comprennent tous les frais obligatoires, y compris le ménage. La TPS, la TVQ et, le cas échéant, la taxe sur l’hébergement sont ajoutées au moment du paiement.',
       'Nous vous transmettons par courriel une confirmation, accompagnée des présentes conditions, dans les 15 jours suivant la réservation.',
       'Le voyageur responsable doit avoir au moins 18 ans et remplir l’enregistrement en ligne avec une pièce d’identité avec photo délivrée par une autorité gouvernementale et une vérification d’identité. Les instructions d’accès ne sont transmises qu’après la vérification.',
-      'Une préautorisation (généralement 500 $ CA, davantage pour les plus grandes résidences) peut être effectuée au plus tôt 2 jours avant l’arrivée et est libérée au plus tard 7 jours après le départ en l’absence de réclamation. Le montant est indiqué avant le paiement.',
+      'Pour les réservations directes, une préautorisation (500 $ CA, ou 1 000 $ CA pour nos plus grandes résidences) peut être effectuée au plus tôt 2 jours avant l’arrivée et est libérée au plus tard 7 jours après le départ en l’absence de réclamation. Le montant est indiqué avant le paiement.',
       'Arrivée à partir de 16 h, départ au plus tard à 11 h. Heures de tranquillité de 22 h à 7 h.',
       'Aucune fête ni aucun événement. Interdiction de fumer et de vapoter dans le logement, sur les balcons et terrasses et dans l’immeuble, y compris les aires communes. Aucun animal sans autorisation écrite avant l’arrivée.',
       'Nous ne facturons que les coûts réels documentés des dommages, des pertes ou du nettoyage excessif, après vous avoir transmis une description accompagnée de photos ou de factures et vous avoir donné l’occasion de répondre.',
@@ -88,6 +88,15 @@ const terms = {
 
         { h: 'Documents applicables à votre réservation', id: 'booking-documents' },
         'Chaque réservation directe est assujettie aux présentes conditions ainsi qu’au contrat d’hébergement et aux règles de la maison transmis avec votre confirmation de réservation, de même qu’à la politique d’annulation affichée au moment de la réservation. En cas d’incompatibilité entre le contrat d’hébergement et les présentes conditions, la disposition la plus favorable au voyageur s’applique.',
+        'Le contrat d’hébergement (version 2.0, la version française prévaut) de chaque établissement :',
+        {
+          list: [
+            '[155, rue Saint-Paul Est · CITQ 316300 (PDF)](/legal/AirStay-Contrat-v2.0-155-Saint-Paul-CITQ-316300.pdf)',
+            '[380, rue Le Moyne · CITQ 312667 (PDF)](/legal/AirStay-Contrat-v2.0-380-Le-Moyne-CITQ-312667.pdf)',
+            '[386, rue Le Moyne · CITQ 304411 (PDF)](/legal/AirStay-Contrat-v2.0-386-Le-Moyne-CITQ-304411.pdf)',
+            '[2055, rue Bishop · CITQ 295420 (PDF)](/legal/AirStay-Contrat-v2.0-Bishop-2055-CITQ-295420.pdf)',
+          ],
+        },
         'Votre réservation constitue un contrat d’hébergement touristique de courte durée dans un établissement enregistré auprès de la CITQ. Il ne s’agit pas d’un bail de logement au sens de l’article 1892 du Code civil du Québec, et aucune relation de locateur à locataire n’est créée.',
 
         { h: 'Prix et confirmation', id: 'price-confirmation' },
@@ -113,7 +122,7 @@ const terms = {
         'Pour la sécurité de nos voyageurs et de nos immeubles, les instructions d’accès ne sont transmises qu’une fois la vérification terminée. Si la vérification n’est pas effectuée au moins **24 heures avant l’arrivée** malgré nos rappels, nous pouvons annuler la réservation; tout remboursement est déterminé selon la politique d’annulation applicable au moment de la réservation.',
 
         { h: 'Préautorisation de garantie', id: 'security-hold' },
-        'Nous pouvons effectuer une préautorisation (blocage temporaire de fonds) sur la carte du voyageur responsable. Son montant est indiqué dans l’annonce et dans votre confirmation de réservation avant le paiement. Il est généralement de **500 $ CA** et peut être plus élevé pour les plus grandes résidences et le penthouse.',
+        'Pour les réservations directes, nous pouvons effectuer une préautorisation (blocage temporaire de fonds) sur la carte du voyageur responsable. Son montant est indiqué dans l’annonce et dans votre confirmation de réservation avant le paiement : **500 $ CA** pour les unités standard et **1 000 $ CA** pour les lofts de quatre chambres, les unités du dernier étage du 155, rue Saint-Paul et le penthouse du 380, rue Le Moyne.',
         'La préautorisation est effectuée au plus tôt **2 jours avant l’arrivée**, peut être renouvelée pour les séjours de plus de 5 nuits et est libérée au plus tard **7 jours après le départ**, sauf si nous vous avons transmis un avis de réclamation (voir l’article 3.9). Le délai avant que les fonds libérés redeviennent disponibles dépend de l’émetteur de votre carte.',
         'Une préautorisation n’est pas un débit. Elle ne constitue ni une pénalité ni une limite à votre responsabilité à l’égard des coûts documentés.',
 
@@ -183,7 +192,7 @@ const terms = {
 
         { h: 'Questions de facturation et contestations de débit', id: 'billing-disputes' },
         'Si vous avez une question ou une préoccupation au sujet d’un débit, veuillez d’abord communiquer avec nous à [info@airstayproperties.com](mailto:info@airstayproperties.com). Dans la mesure permise par la loi, vous acceptez de nous donner une occasion raisonnable de régler la situation avant de contester le débit auprès de l’émetteur de votre carte. Cela ne limite aucun droit que vous confèrent la Loi sur la protection du consommateur ou votre contrat de carte.',
-        'Si un débit est contesté, nous pouvons fournir à notre fournisseur de services de paiement et à l’émetteur de la carte les renseignements raisonnablement nécessaires pour y répondre, notamment : votre acceptation des présentes conditions; les résultats de la vérification d’identité; les messages échangés avec vous; les renseignements relatifs à l’arrivée et au départ, y compris les registres d’accès de la serrure; et les photos, factures ou autres documents justifiant le débit. Nous conservons ces documents pendant au moins 180 jours après le départ, ou plus longtemps tant qu’une contestation, une rétrofacturation ou une réclamation est en cours.',
+        'Si un débit est contesté, nous pouvons fournir à notre fournisseur de services de paiement et à l’émetteur de la carte les renseignements raisonnablement nécessaires pour y répondre, notamment : votre acceptation des présentes conditions; les résultats de la vérification d’identité; les messages échangés avec vous; les renseignements relatifs à l’arrivée et au départ, y compris les registres d’accès de la serrure; et les photos, factures ou autres documents justifiant le débit. Nous conservons les dossiers de réservation, les preuves d’acceptation, les messages et les résultats de la vérification pendant au moins 180 jours après le départ, ou plus longtemps tant qu’une contestation, une rétrofacturation ou une réclamation est en cours. Les registres d’accès de la serrure liés à une contestation ou à une réclamation sont conservés aussi longtemps que nécessaire.',
       ],
     },
 
@@ -193,7 +202,7 @@ const terms = {
       blocks: [
         'Lorsque vous réservez l’une de nos résidences par l’intermédiaire d’une plateforme tierce, comme Airbnb, Vrbo, Booking.com, Expedia, Hotels.com ou Hopper, votre réservation est effectuée par l’intermédiaire de cette plateforme. Les conditions de la plateforme et les règles de la maison de l’annonce s’appliquent et, sauf si AirStay traite votre paiement, les paiements, remboursements et annulations sont traités par la plateforme. En cas de divergence entre les présentes conditions et celles de la plateforme pour une réservation effectuée par son intermédiaire, les conditions de la plateforme prévalent.',
         'Nous respectons les politiques de chaque plateforme. Lorsqu’une plateforme ne permet pas les contrats de location distincts, la collecte de pièces d’identité ou les amendes imposées par l’hôte, nous ne les imposons pas.',
-        'Pour les réservations Vrbo dont AirStay traite le paiement, les présentes conditions et le contrat d’hébergement joint à l’annonce Vrbo s’appliquent également, en plus des conditions de Vrbo. L’enregistrement en ligne, la vérification d’identité et la préautorisation de garantie décrits à l’article 3 s’appliquent lorsque l’annonce Vrbo l’indique. La politique d’annulation et, le cas échéant, le dépôt de garantie remboursable de Vrbo demeurent régis par les règles de Vrbo.',
+        'Pour les réservations Vrbo dont AirStay traite le paiement, les présentes conditions et le contrat d’hébergement joint à l’annonce Vrbo s’appliquent également, en plus des conditions de Vrbo. L’enregistrement en ligne et la vérification d’identité décrits à l’article 3 s’appliquent lorsque l’annonce Vrbo l’indique. Notre préautorisation de garantie ne s’applique pas aux réservations Vrbo : la politique d’annulation et le dépôt de garantie remboursable de Vrbo demeurent régis par les règles de Vrbo.',
         'Les réservations Airbnb sont régies uniquement par les conditions d’Airbnb et les règles de la maison de l’annonce.',
       ],
     },
