@@ -88,13 +88,13 @@ const terms = {
 
         { h: 'Documents applicables à votre réservation', id: 'booking-documents' },
         'Chaque réservation directe est assujettie aux présentes conditions ainsi qu’au contrat d’hébergement et aux règles de la maison transmis avec votre confirmation de réservation, de même qu’à la politique d’annulation affichée au moment de la réservation. En cas d’incompatibilité entre le contrat d’hébergement et les présentes conditions, la disposition la plus favorable au voyageur s’applique.',
-        'Le contrat d’hébergement, version 2.2 (la version française prévaut), de chaque établissement :',
+        'Le contrat d’hébergement, version 2.3 (la version française prévaut), de chaque établissement :',
         {
           list: [
-            '[Contrat d’hébergement, version 2.2 : 155, rue Saint-Paul Est · CITQ 316300 (PDF)](/legal/AirStay-Contrat-v2.2-155-Saint-Paul-CITQ-316300.pdf)',
-            '[Contrat d’hébergement, version 2.2 : 380, rue Le Moyne · CITQ 312667 (PDF)](/legal/AirStay-Contrat-v2.2-380-Le-Moyne-CITQ-312667.pdf)',
-            '[Contrat d’hébergement, version 2.2 : 386, rue Le Moyne · CITQ 304411 (PDF)](/legal/AirStay-Contrat-v2.2-386-Le-Moyne-CITQ-304411.pdf)',
-            '[Contrat d’hébergement, version 2.2 : 2055, rue Bishop · CITQ 295420 (PDF)](/legal/AirStay-Contrat-v2.2-Bishop-2055-CITQ-295420.pdf)',
+            '[Contrat d’hébergement, version 2.3 : 155, rue Saint-Paul Est · CITQ 316300 (PDF)](/legal/AirStay-Contrat-v2.3-155-Saint-Paul-CITQ-316300.pdf)',
+            '[Contrat d’hébergement, version 2.3 : 380, rue Le Moyne · CITQ 312667 (PDF)](/legal/AirStay-Contrat-v2.3-380-Le-Moyne-CITQ-312667.pdf)',
+            '[Contrat d’hébergement, version 2.3 : 386, rue Le Moyne · CITQ 304411 (PDF)](/legal/AirStay-Contrat-v2.3-386-Le-Moyne-CITQ-304411.pdf)',
+            '[Contrat d’hébergement, version 2.3 : 2055, rue Bishop · CITQ 295420 (PDF)](/legal/AirStay-Contrat-v2.3-Bishop-2055-CITQ-295420.pdf)',
           ],
         },
         'Votre réservation constitue un contrat d’hébergement touristique de courte durée dans un établissement enregistré auprès de la CITQ. Il ne s’agit pas d’un bail de logement au sens de l’article 1892 du Code civil du Québec, et aucune relation de locateur à locataire n’est créée.',
@@ -118,7 +118,7 @@ const terms = {
             'de nous signaler sans délai tout dommage ou problème.',
           ],
         },
-        'Lorsque la vérification d’identité fait appel à la comparaison faciale (égoportrait), nous vous demandons votre consentement exprès, et vous pouvez plutôt choisir une vérification manuelle de votre identité par notre équipe. Les renseignements de vérification ne servent qu’à vérifier votre identité et à prévenir la fraude, comme l’explique notre [Politique de confidentialité](/privacy?lang=fr).',
+        'Lorsque la vérification d’identité fait appel à la comparaison faciale (égoportrait), nous vous demandons votre consentement exprès, et vous pouvez plutôt choisir une vérification manuelle de votre identité par notre équipe. Les renseignements de vérification ne servent qu’à vérifier votre identité, à prévenir la fraude et à répondre aux contestations, rétrofacturations et réclamations, comme l’explique notre [Politique de confidentialité](/privacy?lang=fr).',
         'Pour la sécurité de nos voyageurs et de nos immeubles, les instructions d’accès ne sont transmises qu’une fois la vérification terminée. Si la vérification n’est pas effectuée au moins **24 heures avant l’arrivée** malgré nos rappels, nous pouvons annuler la réservation; tout remboursement est déterminé selon la politique d’annulation applicable au moment de la réservation.',
 
         { h: 'Préautorisation de garantie', id: 'security-hold' },

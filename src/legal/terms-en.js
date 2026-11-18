@@ -88,13 +88,13 @@ const terms = {
 
         { h: 'Documents that apply to your booking', id: 'booking-documents' },
         'Each direct booking is subject to these Terms and to the rental agreement and house rules provided with your booking confirmation, as well as to the cancellation policy shown at the time of booking. If the rental agreement and these Terms are inconsistent, the provision more favourable to the guest applies.',
-        'The accommodation contract, version 2.2 (the French version prevails), for each establishment:',
+        'The accommodation contract, version 2.3 (the French version prevails), for each establishment:',
         {
           list: [
-            '[Accommodation contract, version 2.2: 155 Saint-Paul Street East · CITQ 316300 (PDF)](/legal/AirStay-Contrat-v2.2-155-Saint-Paul-CITQ-316300.pdf)',
-            '[Accommodation contract, version 2.2: 380 Le Moyne Street · CITQ 312667 (PDF)](/legal/AirStay-Contrat-v2.2-380-Le-Moyne-CITQ-312667.pdf)',
-            '[Accommodation contract, version 2.2: 386 Le Moyne Street · CITQ 304411 (PDF)](/legal/AirStay-Contrat-v2.2-386-Le-Moyne-CITQ-304411.pdf)',
-            '[Accommodation contract, version 2.2: 2055 Bishop Street · CITQ 295420 (PDF)](/legal/AirStay-Contrat-v2.2-Bishop-2055-CITQ-295420.pdf)',
+            '[Accommodation contract, version 2.3: 155 Saint-Paul Street East · CITQ 316300 (PDF)](/legal/AirStay-Contrat-v2.3-155-Saint-Paul-CITQ-316300.pdf)',
+            '[Accommodation contract, version 2.3: 380 Le Moyne Street · CITQ 312667 (PDF)](/legal/AirStay-Contrat-v2.3-380-Le-Moyne-CITQ-312667.pdf)',
+            '[Accommodation contract, version 2.3: 386 Le Moyne Street · CITQ 304411 (PDF)](/legal/AirStay-Contrat-v2.3-386-Le-Moyne-CITQ-304411.pdf)',
+            '[Accommodation contract, version 2.3: 2055 Bishop Street · CITQ 295420 (PDF)](/legal/AirStay-Contrat-v2.3-Bishop-2055-CITQ-295420.pdf)',
           ],
         },
         'Your booking is a short-term tourist accommodation contract in an establishment registered with the CITQ. It is not a lease of a dwelling within the meaning of article 1892 of the Civil Code of Québec, and no landlord-tenant relationship is created.',
@@ -118,7 +118,7 @@ const terms = {
             'reporting any damage or problem to us right away.',
           ],
         },
-        'Where identity verification uses facial comparison (a selfie), we ask for your express consent, and you may instead choose a manual identity check by our team. Verification information is used only to verify your identity and prevent fraud, as explained in our [Privacy Policy](/privacy?lang=en).',
+        'Where identity verification uses facial comparison (a selfie), we ask for your express consent, and you may instead choose a manual identity check by our team. Verification information is used only to verify your identity, prevent fraud and respond to disputes, chargebacks and claims, as explained in our [Privacy Policy](/privacy?lang=en).',
         'For the security of our guests and buildings, access instructions are sent only after verification is complete. If verification is not completed at least **24 hours before arrival** despite our reminders, we may cancel the reservation; any refund is determined by the cancellation policy that applied at the time of booking.',
 
         { h: 'Security hold', id: 'security-hold' },
