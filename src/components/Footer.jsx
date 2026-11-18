@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { BOOKING_URL } from '../lib/data'
 
 export default function Footer({ onBook, onOwner }) {
   return (
@@ -11,7 +12,7 @@ export default function Footer({ onBook, onOwner }) {
             <p style={{ fontFamily: 'Playfair Display', fontSize: 32, fontWeight: 400, color: '#F2EDE4', marginBottom: 6 }}>
               Ready to elevate your stay?
             </p>
-            <p style={{ fontSize: 14, fontWeight: 300, color: '#9B9590' }}>Boutique hotels and premium rentals across 6 countries.</p>
+            <p style={{ fontSize: 14, fontWeight: 300, color: '#9B9590' }}>Boutique suites and residences in Montreal, now launching in Vancouver.</p>
           </div>
           <div style={{ display: 'flex', gap: 12 }}>
             <button onClick={onBook} style={{ background: '#2C3E35', color: '#F2EDE4', fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '14px 32px', border: 'none', cursor: 'pointer' }}>
@@ -28,22 +29,22 @@ export default function Footer({ onBook, onOwner }) {
           <div>
             <img src="/logo.svg" alt="Airstay" style={{ height: 44, width: 'auto', marginBottom: 20 }} />
             <p style={{ fontSize: 13, fontWeight: 300, lineHeight: 1.8, maxWidth: 240, color: 'rgba(155,149,144,0.8)' }}>
-              Global luxury hospitality company. Boutique hotels, premium rentals, and full-service property management.
+              Luxury hospitality and property management. Short-term stays, long-term residences and full-service building care.
             </p>
             <p style={{ fontSize: 12, color: '#C9A96E', marginTop: 16, letterSpacing: '0.1em' }}>info@airstayproperties.com</p>
           </div>
 
           {[
-            ['Stays', [['Browse All', '/stay'], ['Montreal', '/stay?city=montreal'], ['Vancouver', '/stay?city=vancouver'], ['Dubai', '/stay?city=dubai'], ['Spain', '/stay?city=spain']]],
-            ['Company', [['About Us', '/about'], ['Services', '/services'], ['For Owners', '/own'], ['Long-Term', '/longterm'], ['Careers', '/careers']]],
-            ['Support', [['Contact', '/contact'], ['FAQ', '/faq'], ['Book a Stay', '#'], ['Owner Portal', '#'], ['Maintenance', '#']]],
+            ['Stays', [['Our Residences', '/stay'], ['Book Direct', `${BOOKING_URL}/all-listings`], ['Long-Term Living', '/longterm']]],
+            ['Company', [['Our Story', '/about'], ['Services', '/services'], ['For Owners', '/own'], ['Careers', '/careers']]],
+            ['Contact', [['Contact Us', '/contact'], ['Privacy Policy', '/privacy'], ['Terms & Booking', '/terms']]],
           ].map(([title, links]) => (
             <div key={title}>
               <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: 20 }}>{title}</p>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
                 {links.map(([label, href]) => (
                   <li key={label}>
-                    <Link to={href} style={{ fontSize: 13, fontWeight: 300, color: 'rgba(155,149,144,0.7)', textDecoration: 'none', transition: 'color 0.2s' }}
+                    <Link to={href} {...(href.startsWith('http') ? { reloadDocument: true } : {})} style={{ fontSize: 13, fontWeight: 300, color: 'rgba(155,149,144,0.7)', textDecoration: 'none', transition: 'color 0.2s' }}
                       onMouseEnter={e => e.target.style.color = '#F2EDE4'}
                       onMouseLeave={e => e.target.style.color = 'rgba(155,149,144,0.7)'}>
                       {label}
@@ -57,14 +58,14 @@ export default function Footer({ onBook, onOwner }) {
 
         {/* Bottom bar */}
         <div style={{ borderTop: '1px solid rgba(201,169,110,0.1)', paddingTop: 28, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
-          <p style={{ fontSize: 12, fontWeight: 300 }}>© {new Date().getFullYear()} Airstay Properties Inc. All rights reserved.</p>
+          <p style={{ fontSize: 12, fontWeight: 300 }}>© {new Date().getFullYear()} AirStay Properties Inc. All rights reserved.</p>
           <div style={{ display: 'flex', gap: 24 }}>
-            {['Privacy Policy', 'Terms', 'Cookies'].map(item => (
-              <a key={item} href="#" style={{ fontSize: 12, color: 'rgba(155,149,144,0.5)', textDecoration: 'none' }}
+            {[['Privacy Policy', '/privacy'], ['Terms', '/terms']].map(([item, href]) => (
+              <Link key={item} to={href} style={{ fontSize: 12, color: 'rgba(155,149,144,0.5)', textDecoration: 'none' }}
                 onMouseEnter={e => e.target.style.color = '#9B9590'}
                 onMouseLeave={e => e.target.style.color = 'rgba(155,149,144,0.5)'}>
                 {item}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

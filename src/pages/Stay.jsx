@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import { Reveal } from '../components/Reveal'
-import { PROPERTIES, CITIES } from '../lib/data'
+import { PROPERTIES, BOOKING_URL } from '../lib/data'
 
 export default function Stay({ onBook }) {
   const [city, setCity] = useState('All')
-  const [type, setType] = useState('All')
 
   const filtered = PROPERTIES.filter(p =>
-    (city === 'All' || p.city === city) &&
-    (type === 'All' || p.type === type)
+    (city === 'All' || (city === 'Old Montreal' ? p.neighbourhood === 'Old Montreal' : p.neighbourhood !== 'Old Montreal')) &&
+    true
   )
 
   return (
@@ -17,7 +16,7 @@ export default function Stay({ onBook }) {
 
         {/* Header */}
         <div style={{ paddingTop: 48, paddingBottom: 72 }}>
-          <Reveal><div className="eyebrow" style={{ marginBottom: 20 }}>Our Portfolio</div></Reveal>
+          <Reveal><div className="eyebrow" style={{ marginBottom: 20 }}>Our Residences</div></Reveal>
           <Reveal delay={0.1}>
             <h1 className="heading-xl" style={{ color: '#0D0C0A', marginBottom: 16 }}>
               Find your<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>perfect</em> space.
@@ -25,7 +24,7 @@ export default function Stay({ onBook }) {
           </Reveal>
           <Reveal delay={0.2}>
             <p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: '#9B9590', maxWidth: 480, lineHeight: 1.8 }}>
-              Boutique hotels and premium rentals across 6 countries — each curated, managed, and maintained to an uncompromising standard.
+              Boutique suites and residences in Montreal’s most storied buildings, each curated, managed and maintained to an uncompromising standard. Vancouver is now launching.
             </p>
           </Reveal>
         </div>
@@ -34,22 +33,16 @@ export default function Stay({ onBook }) {
         <Reveal>
           <div style={{ display: 'flex', gap: 20, marginBottom: 48, flexWrap: 'wrap', alignItems: 'center' }}>
             <div style={{ display: 'flex', gap: 8 }}>
-              {['All', 'Montreal', 'Vancouver', 'Toronto', 'Dubai', 'Barcelona'].map(c => (
+              {['All', 'Old Montreal', 'Downtown'].map(c => (
                 <button key={c} onClick={() => setCity(c)}
                   style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', padding: '8px 18px', border: `1px solid ${city === c ? '#2C3E35' : 'rgba(13,12,10,0.15)'}`, background: city === c ? '#2C3E35' : 'transparent', color: city === c ? '#F2EDE4' : '#9B9590', cursor: 'pointer', transition: 'all 0.2s' }}>
-                  {c === 'All' ? 'All Cities' : c}
+                  {c === 'All' ? 'All Neighbourhoods' : c}
                 </button>
               ))}
             </div>
-            <div style={{ width: 1, height: 24, background: 'rgba(13,12,10,0.1)' }} />
-            <div style={{ display: 'flex', gap: 8 }}>
-              {['All', 'Boutique Hotel', 'Short-Term', 'Long-Term'].map(t => (
-                <button key={t} onClick={() => setType(t)}
-                  style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', padding: '8px 18px', border: `1px solid ${type === t ? '#8B7355' : 'rgba(13,12,10,0.15)'}`, background: type === t ? '#8B7355' : 'transparent', color: type === t ? '#F2EDE4' : '#9B9590', cursor: 'pointer', transition: 'all 0.2s' }}>
-                  {t === 'All' ? 'All Types' : t}
-                </button>
-              ))}
-            </div>
+            <a href={`${BOOKING_URL}/all-listings`} style={{ marginLeft: 'auto', fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#2C3E35', textDecoration: 'none', borderBottom: '1px solid rgba(44,62,53,0.3)', paddingBottom: 2 }}>
+              See all units &amp; live availability →
+            </a>
           </div>
         </Reveal>
 
@@ -74,7 +67,7 @@ export default function Stay({ onBook }) {
                   <p style={{ fontFamily: 'DM Sans', fontSize: 12, fontWeight: 300, color: 'rgba(242,237,228,0.5)', marginBottom: 12 }}>{p.type}</p>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <span style={{ fontFamily: 'DM Sans', fontSize: 12, fontWeight: 300, color: 'rgba(242,237,228,0.7)' }}>From ${p.basePrice} / night</span>
-                    <span style={{ fontFamily: 'DM Mono', fontSize: 10, color: '#C9A96E' }}>★ {p.rating} ({p.reviews})</span>
+                    <span style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A96E' }}>Reserve →</span>
                   </div>
                 </div>
               </div>
@@ -85,7 +78,7 @@ export default function Stay({ onBook }) {
         {filtered.length === 0 && (
           <div style={{ textAlign: 'center', padding: '80px 0' }}>
             <p style={{ fontFamily: 'Playfair Display', fontSize: 28, color: '#9B9590' }}>No properties match your filters.</p>
-            <button onClick={() => { setCity('All'); setType('All') }} style={{ marginTop: 24, fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase', background: 'none', border: 'none', color: '#2C3E35', cursor: 'pointer', borderBottom: '1px solid #2C3E35', paddingBottom: 2 }}>Clear filters</button>
+            <button onClick={() => setCity('All')} style={{ marginTop: 24, fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase', background: 'none', border: 'none', color: '#2C3E35', cursor: 'pointer', borderBottom: '1px solid #2C3E35', paddingBottom: 2 }}>Clear filters</button>
           </div>
         )}
       </div>

@@ -20,7 +20,7 @@ export default function Loader({ onDone }) {
       <motion.p className="eyebrow mt-6"
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
         style={{ color: 'rgba(201,169,110,0.5)' }}>
-        Elevated Living, Worldwide
+        Where Luxury Feels Like Home
       </motion.p>
       <div className="loader-progress">
         <div className="loader-fill" onAnimationEnd={finish} />

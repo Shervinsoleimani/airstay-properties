@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { Toaster } from 'react-hot-toast'
@@ -18,12 +18,15 @@ import Services from './pages/Services'
 import About from './pages/About'
 import Careers from './pages/Careers'
 import Contact from './pages/Contact'
+import Privacy from './pages/Privacy'
+import Terms from './pages/Terms'
 
 export default function App() {
   const [loading, setLoading] = useState(true)
   const [bookOpen, setBookOpen] = useState(false)
   const [ownerOpen, setOwnerOpen] = useState(false)
   const location = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [location.pathname])
 
   if (loading) {
     return (
@@ -51,6 +54,9 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="*" element={<Home onBook={() => setBookOpen(true)} onOwner={() => setOwnerOpen(true)} />} />
       </Routes>
 
       <Footer onBook={() => setBookOpen(true)} onOwner={() => setOwnerOpen(true)} />

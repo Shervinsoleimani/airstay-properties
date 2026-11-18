@@ -4,85 +4,26 @@ import { Reveal } from '../components/Reveal'
 import { WHY_OWN } from '../lib/data'
 import toast from 'react-hot-toast'
 
-function ROICalculator() {
-  const [value, setValue] = useState('')
-  const [city, setCity] = useState('Montreal')
-  const [type, setType] = useState('STR')
-  const [result, setResult] = useState(null)
-
-  const calculate = () => {
-    if (!value) return toast.error('Please enter a property value')
-    const v = parseFloat(value.replace(/,/g, ''))
-    const rates = {
-      'Montreal': { STR: 0.12, LTR: 0.08 },
-      'Vancouver': { STR: 0.10, LTR: 0.07 },
-      'Toronto': { STR: 0.11, LTR: 0.07 },
-      'Dubai': { STR: 0.14, LTR: 0.09 },
-      'Barcelona': { STR: 0.13, LTR: 0.08 },
-    }
-    const baseRate = rates[city]?.[type] || 0.10
-    const selfManaged = Math.round(v * baseRate)
-    const withAirstay = Math.round(selfManaged * 1.38)
-    const airstayFee = Math.round(withAirstay * 0.20)
-    const netEarnings = withAirstay - airstayFee
-    setResult({ selfManaged, withAirstay, airstayFee, netEarnings })
-  }
-
+function AssessmentPanel() {
   return (
-    <div style={{ background: '#0D0C0A', padding: '56px' }}>
-      <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: 8 }}>Revenue Calculator</p>
-      <p style={{ fontFamily: 'Playfair Display', fontSize: 28, fontWeight: 400, color: '#F2EDE4', marginBottom: 40 }}>How much could your property earn?</p>
-
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 24 }}>
-        <div>
-          <label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.6)', display: 'block', marginBottom: 8 }}>Property Value (CAD)</label>
-          <input className="input-field" placeholder="e.g. 500,000" value={value} onChange={e => setValue(e.target.value)} style={{ fontSize: 16 }} />
-        </div>
-        <div>
-          <label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.6)', display: 'block', marginBottom: 8 }}>City</label>
-          <select className="select-field" value={city} onChange={e => setCity(e.target.value)}>
-            {['Montreal', 'Vancouver', 'Toronto', 'Dubai', 'Barcelona'].map(c => <option key={c}>{c}</option>)}
-          </select>
-        </div>
+    <div style={{ position: 'relative', overflow: 'hidden', height: '100%', minHeight: 640, display: 'flex', alignItems: 'flex-end' }}>
+      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/le-moyne-heritage/8.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,12,10,0.96) 20%, rgba(13,12,10,0.55) 70%, rgba(13,12,10,0.25))' }} />
+      <div style={{ position: 'relative', padding: '56px' }}>
+        <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: 12 }}>Complimentary Revenue Assessment</p>
+        <p style={{ fontFamily: 'Playfair Display', fontSize: 32, fontWeight: 400, color: '#F2EDE4', marginBottom: 32, lineHeight: 1.2 }}>What your property<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>could earn.</em></p>
+        {[
+          'A walkthrough of your property, at no cost',
+          'Short-term, long-term and furnished scenarios compared',
+          'A projected monthly income and a clear management proposal',
+          'An honest recommendation, even if it is to wait',
+        ].map(item => (
+          <div key={item} style={{ display: 'flex', gap: 16, alignItems: 'flex-start', padding: '12px 0', borderTop: '1px solid rgba(201,169,110,0.15)' }}>
+            <span style={{ width: 20, height: 1, background: '#C9A96E', marginTop: 10, flexShrink: 0 }} />
+            <p style={{ fontFamily: 'DM Sans', fontSize: 14, fontWeight: 300, color: 'rgba(242,237,228,0.75)', lineHeight: 1.6 }}>{item}</p>
+          </div>
+        ))}
       </div>
-
-      <div style={{ marginBottom: 32 }}>
-        <label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.6)', display: 'block', marginBottom: 8 }}>Rental Type</label>
-        <div style={{ display: 'flex', gap: 8 }}>
-          {[['STR', 'Short-Term'], ['LTR', 'Long-Term']].map(([val, label]) => (
-            <button key={val} onClick={() => setType(val)}
-              style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '10px 20px', border: `1px solid ${type === val ? '#C9A96E' : 'rgba(201,169,110,0.2)'}`, background: type === val ? 'rgba(201,169,110,0.1)' : 'transparent', color: type === val ? '#C9A96E' : 'rgba(201,169,110,0.4)', cursor: 'pointer' }}>
-              {label}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <button onClick={calculate}
-        style={{ width: '100%', background: '#2C3E35', color: '#F2EDE4', fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '16px', border: 'none', cursor: 'pointer', marginBottom: 32 }}>
-        Calculate My Revenue →
-      </button>
-
-      {result && (
-        <div style={{ borderTop: '1px solid rgba(201,169,110,0.15)', paddingTop: 28 }}>
-          {[
-            ['Self-managed', result.selfManaged, false],
-            ['With Airstay (gross)', result.withAirstay, false],
-            ['Airstay fee (20%)', result.airstayFee, false],
-            ['Your net earnings', result.netEarnings, true],
-          ].map(([label, val, highlight]) => (
-            <div key={label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', padding: '10px 0', borderBottom: '1px solid rgba(201,169,110,0.08)' }}>
-              <span style={{ fontFamily: 'DM Sans', fontSize: 13, fontWeight: 300, color: 'rgba(242,237,228,0.5)' }}>{label}</span>
-              <span style={{ fontFamily: 'Playfair Display', fontSize: highlight ? 28 : 18, fontWeight: 400, color: highlight ? '#C9A96E' : 'rgba(242,237,228,0.7)' }}>
-                ${val.toLocaleString()}/yr
-              </span>
-            </div>
-          ))}
-          <p style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.3)', marginTop: 16 }}>
-            * Estimates based on market averages. Actual results may vary.
-          </p>
-        </div>
-      )}
     </div>
   )
 }
@@ -102,7 +43,7 @@ function OwnerForm() {
 
   if (done) return (
     <div style={{ textAlign: 'center', padding: '60px 40px' }}>
-      <p style={{ fontFamily: 'Playfair Display', fontSize: 42, color: '#C9A96E', marginBottom: 8 }}>✦</p>
+      <div style={{ width: 40, height: 1, background: '#C9A96E', margin: '0 auto 28px' }} />
       <h3 style={{ fontFamily: 'Playfair Display', fontSize: 32, fontWeight: 400, color: '#0D0C0A', marginBottom: 12 }}>Inquiry received.</h3>
       <p style={{ fontFamily: 'DM Sans', fontSize: 14, fontWeight: 300, color: '#9B9590' }}>We'll be in touch within 24 hours with a personalised revenue projection.</p>
     </div>
@@ -122,7 +63,7 @@ function OwnerForm() {
           <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>City</label>
             <select className="input-light" style={{ appearance: 'none' }} value={form.city} onChange={e => setForm({...form, city: e.target.value})}>
               <option value="">Select city</option>
-              {['Montreal', 'Vancouver', 'Toronto', 'Dubai', 'Barcelona', 'Other'].map(c => <option key={c}>{c}</option>)}
+              {['Montreal', 'Vancouver', 'Other'].map(c => <option key={c}>{c}</option>)}
             </select>
           </div>
           <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>Property Type</label>
@@ -146,8 +87,10 @@ export default function Own() {
   return (
     <div className="page-in" style={{ background: '#FAF7F2' }}>
       {/* Hero */}
-      <div style={{ background: '#0D0C0A', padding: '160px 48px 100px' }}>
-        <div style={{ maxWidth: 1600, margin: '0 auto' }}>
+      <div className="r-pad" style={{ background: '#0D0C0A', padding: '180px 48px 110px', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/notre-dame/7.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(13,12,10,0.93), rgba(13,12,10,0.5))' }} />
+        <div style={{ maxWidth: 1600, margin: '0 auto', position: 'relative' }}>
           <Reveal><div className="eyebrow" style={{ color: '#C9A96E', marginBottom: 24 }}>For Property Owners</div></Reveal>
           <Reveal delay={0.1}>
             <h1 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 20 }}>
@@ -156,7 +99,7 @@ export default function Own() {
           </Reveal>
           <Reveal delay={0.2}>
             <p style={{ fontFamily: 'DM Sans', fontSize: 16, fontWeight: 300, color: '#9B9590', maxWidth: 560, lineHeight: 1.9 }}>
-              We manage your property like it's our own — maximising revenue, protecting your asset, and handling every detail so you don't have to.
+              We care for your property as if we had built it ourselves: maximising revenue, protecting your asset and handling every detail, so you don’t have to.
             </p>
           </Reveal>
         </div>
@@ -165,10 +108,10 @@ export default function Own() {
       {/* Why section */}
       <div style={{ padding: '100px 48px', background: '#FAF7F2' }}>
         <div style={{ maxWidth: 1600, margin: '0 auto' }}>
-          <Reveal><div className="eyebrow" style={{ marginBottom: 20 }}>Why Airstay</div></Reveal>
+          <Reveal><div className="eyebrow" style={{ marginBottom: 20 }}>Why AirStay</div></Reveal>
           <Reveal delay={0.1}><h2 className="heading-lg" style={{ color: '#0D0C0A', marginBottom: 64 }}>Six reasons owners<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>choose us.</em></h2></Reveal>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }}>
+          <div className="r-two" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }}>
             {WHY_OWN.map((w, i) => (
               <Reveal key={w.title} delay={i * 0.08}>
                 <div style={{ background: i % 2 === 0 ? '#F2EDE4' : '#0D0C0A', padding: '44px 40px' }}>
@@ -184,8 +127,8 @@ export default function Own() {
 
       {/* Calculator + Form */}
       <div style={{ padding: '0 48px 120px', background: '#FAF7F2' }}>
-        <div style={{ maxWidth: 1600, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
-          <Reveal><ROICalculator /></Reveal>
+        <div className="r-stack" style={{ maxWidth: 1600, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+          <Reveal><AssessmentPanel /></Reveal>
           <Reveal delay={0.15}><OwnerForm /></Reveal>
         </div>
       </div>

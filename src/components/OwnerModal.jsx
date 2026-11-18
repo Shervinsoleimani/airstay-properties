@@ -23,7 +23,7 @@ export default function OwnerModal({ isOpen, onClose }) {
           onClick={e => e.target === e.currentTarget && handleClose()}>
           <motion.div className="modal-box" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 24 }}
             style={{ maxHeight: '88vh', overflowY: 'auto' }}>
-            <button onClick={handleClose} style={{ position: 'absolute', top: 20, right: 20, background: 'none', border: 'none', fontSize: 20, color: '#9B9590', cursor: 'pointer' }}>✕</button>
+            <button onClick={handleClose} style={{ position: 'absolute', top: 20, right: 20, background: 'none', border: 'none', fontSize: 20, color: '#9B9590', cursor: 'pointer' }} aria-label="Close">×</button>
 
             {!done ? (
               <>
@@ -40,7 +40,7 @@ export default function OwnerModal({ isOpen, onClose }) {
                     <div><label style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>City</label>
                       <select className="input-light" style={{ appearance: 'none' }} value={form.city} onChange={e => setForm({...form, city: e.target.value})}>
                         <option value="">Select</option>
-                        {['Montreal', 'Vancouver', 'Toronto', 'Dubai', 'Barcelona', 'Other'].map(c => <option key={c}>{c}</option>)}
+                        {['Montreal', 'Vancouver', 'Other'].map(c => <option key={c}>{c}</option>)}
                       </select>
                     </div>
                     <div><label style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>Property Type</label>
@@ -57,7 +57,7 @@ export default function OwnerModal({ isOpen, onClose }) {
               </>
             ) : (
               <div style={{ textAlign: 'center', padding: '40px 0' }}>
-                <p style={{ fontFamily: 'Playfair Display', fontSize: 56, color: '#C9A96E', marginBottom: 20 }}>✦</p>
+                <div style={{ width: 40, height: 1, background: '#C9A96E', margin: '0 auto 28px' }} />
                 <h3 style={{ fontFamily: 'Playfair Display', fontSize: 32, fontWeight: 400, color: '#0D0C0A', marginBottom: 12 }}>Thank you.</h3>
                 <p style={{ fontFamily: 'DM Sans', fontSize: 14, fontWeight: 300, color: '#9B9590', marginBottom: 32 }}>We'll be in touch within 24 hours with a personalised revenue projection for your property.</p>
                 <button onClick={handleClose} style={{ background: '#2C3E35', color: '#F2EDE4', fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '14px 36px', border: 'none', cursor: 'pointer' }}>Close</button>

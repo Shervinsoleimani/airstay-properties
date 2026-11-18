@@ -1,13 +1,16 @@
+// Where we operate today. Add a city here when it truly opens.
 export const CITIES = [
-  { id: 'montreal', name: 'Montreal', country: 'Canada', flag: '🇨🇦', active: true, mapX: '27%', mapY: '38%' },
-  { id: 'vancouver', name: 'Vancouver', country: 'Canada', flag: '🇨🇦', active: true, mapX: '15%', mapY: '36%' },
-  { id: 'toronto', name: 'Toronto', country: 'Canada', flag: '🇨🇦', active: true, mapX: '25%', mapY: '39%' },
-  { id: 'dubai', name: 'Dubai', country: 'UAE', flag: '🇦🇪', active: true, mapX: '60%', mapY: '50%' },
-  { id: 'barcelona', name: 'Barcelona', country: 'Spain', flag: '🇪🇸', active: true, mapX: '46%', mapY: '42%' },
-  { id: 'miami', name: 'Miami', country: 'USA', flag: '🇺🇸', active: false, mapX: '23%', mapY: '47%' },
-  { id: 'new-york', name: 'New York', country: 'USA', flag: '🇺🇸', active: false, mapX: '24%', mapY: '41%' },
-  { id: 'los-angeles', name: 'Los Angeles', country: 'USA', flag: '🇺🇸', active: false, mapX: '14%', mapY: '43%' },
+  { id: 'montreal', name: 'Montreal', country: 'Québec, Canada', status: 'Flagship' },
+  { id: 'vancouver', name: 'Vancouver', country: 'British Columbia, Canada', status: 'Now Launching' },
 ]
+
+// Hostaway direct-booking website (live prices, availability and checkout)
+export const BOOKING_URL = 'https://book.airstayproperties.com'
+export const bookingSearchUrl = ({ checkIn, checkOut, guests } = {}) => {
+  if (!checkIn || !checkOut) return `${BOOKING_URL}/all-listings`
+  const q = new URLSearchParams({ start: checkIn, end: checkOut, numberOfGuests: String(guests || 2) })
+  return `${BOOKING_URL}/search?${q.toString()}`
+}
 
 export const PROPERTIES = [
   {
@@ -22,11 +25,10 @@ export const PROPERTIES = [
     basePrice: 220,
     currency: 'CAD',
     bedrooms: '1–3',
-    description: 'A 19th-century stone building with the legendary Central Perk lounge, exposed brick suites, and pool tables.',
+    description: 'A 19th-century stone building with a private games lounge, exposed-brick suites and a billiards room.',
     coverGradient: 'linear-gradient(155deg, #5C4A2A 0%, #1A1208 100%)',
     images: Array.from({length:9}, (_,i) => `/images/le-moyne-heritage/${i+1}.jpg`),
     amenities: ['Games Lounge', 'Pool Table', 'Fireplace', 'Exposed Brick', 'Full Kitchen'],
-    rating: 4.97, reviews: 312,
   },
   {
     id: 'le-moyne-modern',
@@ -44,7 +46,6 @@ export const PROPERTIES = [
     coverGradient: 'linear-gradient(155deg, #2C3E35 0%, #0D1A14 100%)',
     images: Array.from({length:9}, (_,i) => `/images/le-moyne-modern/${i+1}.jpg`),
     amenities: ['Rooftop Terrace', 'Fire Pit', 'Skylight', 'Marble Bathrooms', 'Resident Lounge'],
-    rating: 4.99, reviews: 89,
   },
   {
     id: 'bishop',
@@ -62,7 +63,6 @@ export const PROPERTIES = [
     coverGradient: 'linear-gradient(155deg, #1A1A1A 0%, #0A0A0A 100%)',
     images: Array.from({length:5}, (_,i) => `/images/bishop/${i+1}.jpg`),
     amenities: ['Reception & Concierge', 'Grand Staircase', 'Exposed Brick', 'Industrial Design'],
-    rating: 4.95, reviews: 201,
   },
   {
     id: 'saint-paul',
@@ -80,7 +80,6 @@ export const PROPERTIES = [
     coverGradient: 'linear-gradient(155deg, #1C3025 0%, #081510 100%)',
     images: Array.from({length:5}, (_,i) => `/images/saint-paul/${i+1}.jpg`),
     amenities: ['Living Moss Wall', 'Stone Walls', 'Walnut Kitchens', 'Old Montreal Views'],
-    rating: 4.96, reviews: 178,
   },
   {
     id: 'notre-dame',
@@ -98,51 +97,53 @@ export const PROPERTIES = [
     coverGradient: 'linear-gradient(155deg, #3D2A1A 0%, #150D06 100%)',
     images: Array.from({length:8}, (_,i) => `/images/notre-dame/${i+1}.jpg`),
     amenities: ['Garden Terrace', 'Four-Poster Beds', 'Stone Walls', 'Gold & Black Bathrooms'],
-    rating: 4.98, reviews: 144,
   },
 ]
 
 export const STATS = [
-  { value: '50+', label: 'Properties Managed' },
-  { value: '6', label: 'Countries' },
-  { value: '4.9★', label: 'Average Rating' },
-  { value: '1,200+', label: 'Happy Guests' },
-  { value: '38%', label: 'Revenue Increase vs Self-Managed' },
-  { value: '24/7', label: 'Guest & Owner Support' },
+  { value: '200+', label: 'Properties Managed' },
+  { value: '4,000+', label: 'Verified Guest Reviews' },
+  { value: '6+', label: 'Global Booking Channels' },
+  { value: '24/7', label: 'Guest & Owner Care' },
 ]
 
+// Photo-led service cards (no icons): short-term, long-term, management, maintenance
 export const SERVICES = [
   {
     number: '01',
-    title: 'Short-Term Rentals',
-    desc: 'Fully managed boutique hotel experiences. Guest communications, cleaning, maintenance, pricing — we handle everything. Your property earns at its peak, every night.',
-    icon: '🏨',
+    title: 'Short-Term Stays',
+    desc: 'Hotel-calibre suites in Montreal’s most storied addresses. Concierge-level guest care, hotel-grade housekeeping and seamless keyless arrival.',
+    image: '/images/notre-dame/4.jpg',
+    link: '/stay',
   },
   {
     number: '02',
-    title: 'Long-Term Rentals',
-    desc: 'Premium managed residences with flexible lease terms. Fully furnished, utilities coordinated, maintenance included. We find and vet tenants, handle renewals, manage everything.',
-    icon: '🏠',
+    title: 'Long-Term Residences',
+    desc: 'Furnished or unfurnished homes, professionally leased and cared for. Careful tenant selection, clear leases and maintenance that never waits.',
+    image: '/images/saint-paul/5.jpg',
+    link: '/longterm',
   },
   {
     number: '03',
     title: 'Property Management',
-    desc: 'End-to-end building management for owners and investors. From a single unit to an entire building — we run it like a five-star operation.',
-    icon: '🏢',
+    desc: 'From a single investment condo to an entire building, we operate your asset with institutional discipline and a builder’s eye for detail.',
+    image: '/images/notre-dame/7.jpg',
+    link: '/own',
   },
   {
     number: '04',
-    title: 'Maintenance Services',
-    desc: 'Proactive maintenance, 24/7 emergency response, vetted contractor network. Every property under our care is maintained to an uncompromising standard.',
-    icon: '🔧',
+    title: 'Building Care & Maintenance',
+    desc: 'Preventive care, rapid response and a trusted network of trades, overseen by people who understand how buildings are made.',
+    image: '/images/bishop/3.jpg',
+    link: '/services',
   },
 ]
 
 export const WHY_OWN = [
-  { title: 'Maximum Revenue', desc: 'Pricelabs dynamic pricing adjusts your rates in real-time against market demand. On average, our owners earn 38% more than self-managed properties.' },
-  { title: 'Zero Hassle', desc: 'We handle guests, cleaning, maintenance, compliance, financial reporting, and everything in between. You receive a cheque and a report.' },
-  { title: 'Full Transparency', desc: 'Real-time owner portal. Monthly performance reports. A dedicated manager who knows your property by name.' },
-  { title: 'Your Asset Protected', desc: 'Vetted guests, smart noise monitoring, insurance compliance, and meticulous property care — your investment is in safe hands.' },
-  { title: 'Global Reach', desc: 'Your property is listed across Airbnb, Booking.com, VRBO, direct channels, and our own growing global audience.' },
-  { title: 'Technology-Driven', desc: 'Hostaway PMS + Pricelabs + Smart locks + AI messaging. The most advanced property management stack available today.' },
+  { title: 'Maximum Revenue', desc: 'Dynamic, data-driven pricing adjusts your rates to market demand every day, with event and seasonal strategy built in.' },
+  { title: 'Zero Hassle', desc: 'We handle guests, tenants, cleaning, maintenance, compliance and reporting. You receive a payout and a clear monthly statement.' },
+  { title: 'Full Transparency', desc: 'Monthly performance reports, real numbers, and a dedicated manager who knows your property by name.' },
+  { title: 'Your Asset Protected', desc: 'Verified guests with government ID, signed rental agreements, firm house rules and meticulous property care.' },
+  { title: 'Maximum Exposure', desc: 'Your property is marketed across Airbnb, Booking.com, Expedia, Hotels.com, Vrbo and our own direct-booking website.' },
+  { title: 'Technology-Driven', desc: 'An enterprise-grade operating platform: centralised reservations, revenue management, keyless smart access and secure payments.' },
 ]

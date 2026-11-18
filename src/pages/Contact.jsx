@@ -25,9 +25,9 @@ export default function Contact() {
 
           <Reveal delay={0.3}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-              {[['📧', 'Email', 'info@airstayproperties.com'], ['📍', 'Montreal', 'Old Montreal, QC'], ['📍', 'Vancouver', 'Downtown, BC']].map(([icon, label, value]) => (
+              {[['Email', 'info@airstayproperties.com'], ['Montreal', 'Old Montreal, Québec'], ['Vancouver', 'Now launching']].map(([label, value]) => (
                 <div key={label} style={{ display: 'flex', gap: 16 }}>
-                  <span style={{ fontSize: 16 }}>{icon}</span>
+                  <span style={{ width: 20, height: 1, background: '#C9A96E', marginTop: 8, flexShrink: 0 }} />
                   <div>
                     <p style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.5)', marginBottom: 4 }}>{label}</p>
                     <p style={{ fontFamily: 'DM Sans', fontSize: 13, fontWeight: 300, color: 'rgba(242,237,228,0.6)' }}>{value}</p>
@@ -71,7 +71,7 @@ export default function Contact() {
           </div>
         ) : (
           <div style={{ textAlign: 'center', width: '100%' }}>
-            <p style={{ fontFamily: 'Playfair Display', fontSize: 56, color: '#C9A96E', marginBottom: 20 }}>✦</p>
+            <div style={{ width: 40, height: 1, background: '#C9A96E', margin: '0 auto 28px' }} />
             <h3 style={{ fontFamily: 'Playfair Display', fontSize: 36, fontWeight: 400, color: '#0D0C0A', marginBottom: 12 }}>Message received.</h3>
             <p style={{ fontFamily: 'DM Sans', fontSize: 14, fontWeight: 300, color: '#9B9590' }}>We'll respond within one business day.</p>
           </div>

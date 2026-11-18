@@ -5,26 +5,25 @@ import { Reveal } from '../components/Reveal'
 import toast from 'react-hot-toast'
 
 const JOBS = [
-  { id: 1, title: 'Guest Experience Manager', city: 'Montreal', type: 'Full-time', dept: 'Operations', desc: 'Be the face of Airstay in Montreal. Manage guest communications, coordinate check-ins, and ensure every stay exceeds expectations across our boutique hotel portfolio.' },
-  { id: 2, title: 'Guest Experience Manager', city: 'Vancouver', type: 'Full-time', dept: 'Operations', desc: 'Lead the guest experience across our Vancouver properties. Hotel hospitality background preferred.' },
-  { id: 3, title: 'Property Operations Lead', city: 'Montreal', type: 'Full-time', dept: 'Operations', desc: 'Oversee day-to-day property operations across our Montreal portfolio. Coordinate cleaning teams, maintenance, and vendor relationships.' },
-  { id: 4, title: 'Maintenance Technician', city: 'Montreal', type: 'Full-time', dept: 'Maintenance', desc: 'Respond to maintenance requests across our properties. General handyman skills required. 24/7 on-call rotation.' },
-  { id: 5, title: 'Maintenance Technician', city: 'Vancouver', type: 'Full-time', dept: 'Maintenance', desc: 'Keep our Vancouver properties in perfect condition. Proactive maintenance and fast emergency response.' },
-  { id: 6, title: 'Housekeeper / Cleaning Specialist', city: 'Montreal', type: 'Full-time / Part-time', dept: 'Housekeeping', desc: 'Hotel-grade cleaning for our boutique properties. Attention to detail is essential. Flexible scheduling available.' },
-  { id: 7, title: 'Housekeeper / Cleaning Specialist', city: 'Vancouver', type: 'Full-time / Part-time', dept: 'Housekeeping', desc: 'Join our Vancouver housekeeping team. High standards, professional environment, competitive pay.' },
-  { id: 8, title: 'Revenue & Pricing Analyst', city: 'Remote · Canada', type: 'Full-time', dept: 'Finance', desc: 'Optimize pricing strategy across our Pricelabs integration. Analyse occupancy trends, market rates, and seasonal patterns to maximize revenue.' },
-  { id: 9, title: 'Property Acquisition Manager', city: 'Montreal / Vancouver', type: 'Full-time', dept: 'Growth', desc: 'Grow the Airstay portfolio by building relationships with property owners, presenting management proposals, and onboarding new buildings.' },
-  { id: 10, title: 'Marketing & Brand Coordinator', city: 'Montreal', type: 'Full-time', dept: 'Marketing', desc: 'Manage Airstay\'s brand presence across all channels — social media, photography, partnerships, and digital marketing.' },
-  { id: 11, title: 'Open Application', city: 'Any', type: 'Flexible', dept: 'General', desc: 'Don\'t see your role? We\'re always looking for exceptional people. Tell us what you bring and where you think you\'d add value.' },
+  { id: 1, title: 'Guest Experience Manager', type: 'Full-time', dept: 'Hospitality', desc: 'Be the voice of AirStay for our guests: anticipate needs, coordinate arrivals and make every stay exceed expectations. Hotel front-office or concierge background preferred.' },
+  { id: 2, title: 'Property Operations Lead', type: 'Full-time', dept: 'Operations', desc: 'Oversee day-to-day operations across our residences, leading housekeeping, maintenance and vendor partners to a five-star standard.' },
+  { id: 3, title: 'Maintenance Technician', type: 'Full-time', dept: 'Building Care', desc: 'Keep our buildings in impeccable condition through preventive care and responsive repairs. Trade experience and on-call availability required.' },
+  { id: 4, title: 'Housekeeping Specialist', type: 'Full-time / Part-time', dept: 'Housekeeping', desc: 'Deliver hotel-grade presentation in every suite. Exceptional attention to detail and pride in your work are essential.' },
+  { id: 5, title: 'Revenue & Pricing Analyst', type: 'Full-time', dept: 'Revenue', desc: 'Shape our pricing and distribution strategy using market data, seasonality and major-event demand to maximise owner returns.' },
+  { id: 6, title: 'Business Development Manager', type: 'Full-time', dept: 'Growth', desc: 'Grow our portfolio by building relationships with owners, developers and investors, and presenting tailored management proposals.' },
+  { id: 7, title: 'Marketing & Brand Coordinator', type: 'Full-time', dept: 'Marketing', desc: 'Steward the AirStay brand across our website, social channels, photography and partnerships.' },
+  { id: 8, title: 'Open Application', type: 'Flexible', dept: 'General', desc: 'Exceptional people are always welcome. Tell us what you bring and where you would add the most value.' },
 ]
 
+const CITY_OPTIONS = ['Montreal', 'Vancouver', 'Remote (Canada)', 'Open to either']
+
 function ApplyModal({ job, onClose }) {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', portfolio: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', phone: '', city: '', portfolio: '', message: '' })
   const [done, setDone] = useState(false)
 
   const submit = async (e) => {
     e.preventDefault()
-    if (!form.name || !form.email) return toast.error('Name and email required')
+    if (!form.name || !form.email || !form.city) return toast.error('Please add your name, email and preferred city')
     if (!(await submitLead('careers', { ...form, role: job?.title || 'General application' }))) { return }
     setDone(true)
   }
@@ -33,11 +32,11 @@ function ApplyModal({ job, onClose }) {
     <motion.div className="modal-bg" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
       onClick={e => e.target === e.currentTarget && onClose()}>
       <motion.div className="modal-box" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 24 }}>
-        <button onClick={onClose} style={{ position: 'absolute', top: 20, right: 20, background: 'none', border: 'none', fontSize: 20, color: '#9B9590', cursor: 'pointer' }}>✕</button>
+        <button onClick={onClose} style={{ position: 'absolute', top: 20, right: 20, background: 'none', border: 'none', fontSize: 20, color: '#9B9590', cursor: 'pointer' }} aria-label="Close">×</button>
 
         {!done ? (
           <>
-            <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: 8 }}>{job.dept} · {job.city}</p>
+            <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: 8 }}>{job.dept} · {job.type}</p>
             <h2 style={{ fontFamily: 'Playfair Display', fontSize: 30, fontWeight: 400, color: '#0D0C0A', marginBottom: 8 }}>{job.title}</h2>
             <p style={{ fontFamily: 'DM Sans', fontSize: 13, fontWeight: 300, color: '#9B9590', lineHeight: 1.7, marginBottom: 32 }}>{job.desc}</p>
 
@@ -46,7 +45,8 @@ function ApplyModal({ job, onClose }) {
                 <div><label style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>Full Name *</label><input className="input-light" value={form.name} onChange={e => setForm({...form, name: e.target.value})} placeholder="Your name" /></div>
                 <div><label style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>Email *</label><input type="email" className="input-light" value={form.email} onChange={e => setForm({...form, email: e.target.value})} placeholder="email@example.com" /></div>
               </div>
-              <div><label style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>Phone</label><input className="input-light" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} placeholder="+1 (514) 555-0100" /></div>
+              <div><label style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>Phone</label><input className="input-light" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} placeholder="Your phone number" /></div>
+              <div><label style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>Preferred City *</label><select className="input-light" style={{ appearance: 'none' }} value={form.city} onChange={e => setForm({...form, city: e.target.value})}><option value="">Select a city</option>{CITY_OPTIONS.map(c => <option key={c}>{c}</option>)}</select></div>
               <div><label style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>LinkedIn or Portfolio</label><input type="url" className="input-light" value={form.portfolio} onChange={e => setForm({...form, portfolio: e.target.value})} placeholder="https://" /></div>
               <div><label style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>Why Airstay?</label><textarea className="input-light" style={{ resize: 'none', height: 80 }} value={form.message} onChange={e => setForm({...form, message: e.target.value})} placeholder="Tell us what excites you about this role..." /></div>
               <button type="submit" style={{ background: '#2C3E35', color: '#F2EDE4', fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '14px 36px', border: 'none', cursor: 'pointer', alignSelf: 'flex-start' }}>Submit Application →</button>
@@ -54,7 +54,7 @@ function ApplyModal({ job, onClose }) {
           </>
         ) : (
           <div style={{ textAlign: 'center', padding: '40px 0' }}>
-            <p style={{ fontFamily: 'Playfair Display', fontSize: 42, color: '#C9A96E', marginBottom: 16 }}>✦</p>
+            <div style={{ width: 40, height: 1, background: '#C9A96E', margin: '0 auto 28px' }} />
             <h3 style={{ fontFamily: 'Playfair Display', fontSize: 28, fontWeight: 400, color: '#0D0C0A', marginBottom: 12 }}>Application received.</h3>
             <p style={{ fontFamily: 'DM Sans', fontSize: 13, fontWeight: 300, color: '#9B9590' }}>We review every application carefully. We'll be in touch if there's a fit.</p>
           </div>
@@ -73,13 +73,14 @@ export default function Careers() {
   return (
     <div className="page-in" style={{ background: '#FAF7F2' }}>
       {/* Hero */}
-      <div style={{ background: '#2C3E35', padding: '160px 48px 100px', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, opacity: 0.06, backgroundImage: 'repeating-linear-gradient(45deg, #C9A96E 0, #C9A96E 1px, transparent 0, transparent 50%)', backgroundSize: '24px 24px' }} />
-        <div style={{ maxWidth: 1600, margin: '0 auto', position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80 }}>
+      <div className="r-pad" style={{ background: '#0D0C0A', padding: '180px 48px 110px', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/bishop/2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(13,12,10,0.92), rgba(44,62,53,0.75))' }} />
+        <div className="r-stack" style={{ maxWidth: 1600, margin: '0 auto', position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80 }}>
           <div>
             <Reveal><div className="eyebrow" style={{ color: 'rgba(201,169,110,0.7)', marginBottom: 24 }}>Join the Team</div></Reveal>
-            <Reveal delay={0.1}><h1 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 20 }}>Build the future<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>of hospitality.</em></h1></Reveal>
-            <Reveal delay={0.2}><p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: 'rgba(242,237,228,0.6)', lineHeight: 1.9 }}>A fast-growing global hospitality company expanding across Canada, the UAE, Spain, and the USA. We promote from within, move fast, and obsess over quality.</p></Reveal>
+            <Reveal delay={0.1}><h1 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 20 }}>Build a career<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>in hospitality.</em></h1></Reveal>
+            <Reveal delay={0.2}><p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: 'rgba(242,237,228,0.6)', lineHeight: 1.9 }}>Join a hospitality house built on a family heritage of building and care. We are growing across Montreal and Vancouver, we promote from within, and we hold ourselves to a five-star standard.</p></Reveal>
           </div>
           <Reveal delay={0.3}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1 }}>
@@ -119,7 +120,7 @@ export default function Careers() {
                     <span style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A96E' }}>{job.dept}</span>
                   </div>
                   <p style={{ fontFamily: 'Playfair Display', fontSize: 22, fontWeight: 400, color: 'inherit', transition: 'color 0.2s', marginBottom: 4 }}>{job.title}</p>
-                  <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'inherit', opacity: 0.5 }}>{job.city} · {job.type}</p>
+                  <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'inherit', opacity: 0.5 }}>{job.type}</p>
                 </div>
                 <span style={{ fontSize: 20, color: '#C9A96E', transition: 'transform 0.2s' }}>→</span>
               </div>
