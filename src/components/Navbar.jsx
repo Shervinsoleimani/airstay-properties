@@ -34,7 +34,7 @@ export default function Navbar({ onBook }) {
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 r-pad"
         style={{
           padding: scrolled ? '14px 48px' : '28px 48px',
-          background: scrolled ? 'rgba(10,9,8,0.96)' : 'transparent',
+          background: scrolled ? 'rgba(10,9,8,0.96)' : 'linear-gradient(to bottom, rgba(13,12,10,0.6), rgba(13,12,10,0))',
           backdropFilter: scrolled ? 'blur(16px)' : 'none',
           borderBottom: scrolled ? '1px solid rgba(201,169,110,0.1)' : 'none',
         }}

@@ -1,7 +1,6 @@
 import { Reveal } from '../components/Reveal'
-import { submitLead } from '../lib/submitLead'
-import toast from 'react-hot-toast'
-import { useState } from 'react'
+import LeadForm from '../components/LeadForm'
+import { LONGTERM_FIELDS, LONGTERM_SUCCESS } from '../lib/forms'
 
 const BENEFITS = [
   { title: 'Furnished or Unfurnished', desc: 'Move-in-ready furnished homes with premium furniture and linens, or unfurnished residences ready for your own touch.' },
@@ -13,16 +12,6 @@ const BENEFITS = [
 ]
 
 export default function LongTerm({ onBook }) {
-  const [form, setForm] = useState({ name: '', email: '', city: '', budget: '', move: '', message: '' })
-  const [done, setDone] = useState(false)
-
-  const submit = async (e) => {
-    e.preventDefault()
-    if (!form.name || !form.email) return toast.error('Please fill required fields')
-    if (!(await submitLead('longterm', form))) { return }
-    setDone(true)
-  }
-
   return (
     <div className="page-in" style={{ background: '#FAF7F2' }}>
 
@@ -125,36 +114,10 @@ export default function LongTerm({ onBook }) {
       {/* Inquiry form */}
       <div id="inquiry" className="r-pad" style={{ padding: '0 48px 120px', scrollMarginTop: 100 }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <div style={{ background: '#0D0C0A', padding: '64px' }}>
-            {!done ? (
-              <>
-                <Reveal><p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: 8 }}>Long-Term Inquiry</p></Reveal>
-                <Reveal delay={0.1}><p style={{ fontFamily: 'Playfair Display', fontSize: 32, fontWeight: 400, color: '#F2EDE4', marginBottom: 40 }}>Find your next home</p></Reveal>
-                <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
-                    <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.6)', display: 'block', marginBottom: 8 }}>Name *</label><input className="input-field" value={form.name} onChange={e => setForm({...form, name: e.target.value})} placeholder="Full name" /></div>
-                    <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.6)', display: 'block', marginBottom: 8 }}>Email *</label><input type="email" className="input-field" value={form.email} onChange={e => setForm({...form, email: e.target.value})} placeholder="email@example.com" /></div>
-                  </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
-                    <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.6)', display: 'block', marginBottom: 8 }}>City</label>
-                      <select className="select-field" value={form.city} onChange={e => setForm({...form, city: e.target.value})}><option value="">Select city</option>{['Montreal', 'Vancouver'].map(c => <option key={c}>{c}</option>)}</select>
-                    </div>
-                    <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.6)', display: 'block', marginBottom: 8 }}>Move-In Date</label><input type="month" className="input-field" value={form.move} onChange={e => setForm({...form, move: e.target.value})} /></div>
-                  </div>
-                  <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.6)', display: 'block', marginBottom: 8 }}>Monthly Budget</label>
-                    <select className="select-field" value={form.budget} onChange={e => setForm({...form, budget: e.target.value})}><option value="">Select range</option>{['Under $2,000', '$2,000–$3,500', '$3,500–$5,000', '$5,000–$8,000', '$8,000+'].map(b => <option key={b}>{b}</option>)}</select>
-                  </div>
-                  <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.6)', display: 'block', marginBottom: 8 }}>Requirements</label><textarea className="input-field" style={{ resize: 'none', height: 80 }} value={form.message} onChange={e => setForm({...form, message: e.target.value})} placeholder="Bedrooms needed, preferences, lease length..." /></div>
-                  <button type="submit" style={{ background: '#2C3E35', color: '#F2EDE4', fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '16px 44px', border: 'none', cursor: 'pointer', alignSelf: 'flex-start' }}>Submit Inquiry →</button>
-                </form>
-              </>
-            ) : (
-              <div style={{ textAlign: 'center', padding: '40px 0' }}>
-                <div style={{ width: 40, height: 1, background: '#C9A96E', margin: '0 auto 28px' }} />
-                <h3 style={{ fontFamily: 'Playfair Display', fontSize: 32, fontWeight: 400, color: '#F2EDE4', marginBottom: 12 }}>Received.</h3>
-                <p style={{ fontFamily: 'DM Sans', fontSize: 14, fontWeight: 300, color: '#9B9590' }}>We'll match you with available units and reach out within 24 hours.</p>
-              </div>
-            )}
+          <div className="r-pad" style={{ background: '#0D0C0A', padding: '64px' }}>
+            <Reveal><p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: 8 }}>Long-Term Inquiry</p></Reveal>
+            <Reveal delay={0.1}><p style={{ fontFamily: 'Playfair Display', fontSize: 34, fontWeight: 400, color: '#F2EDE4', marginBottom: 40 }}>Find your next home</p></Reveal>
+            <LeadForm type="longterm" theme="dark" fields={LONGTERM_FIELDS} success={LONGTERM_SUCCESS} submitLabel="Submit Inquiry" />
           </div>
         </div>
       </div>

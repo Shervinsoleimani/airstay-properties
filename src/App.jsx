@@ -26,7 +26,7 @@ export default function App() {
   const [bookOpen, setBookOpen] = useState(false)
   const [ownerOpen, setOwnerOpen] = useState(false)
   const location = useLocation()
-  useEffect(() => { window.scrollTo(0, 0) }, [location.pathname])
+  useEffect(() => { if (!location.hash) window.scrollTo(0, 0) }, [location.pathname])
 
   if (loading) {
     return (
@@ -50,7 +50,7 @@ export default function App() {
         <Route path="/stay" element={<Stay onBook={() => setBookOpen(true)} />} />
         <Route path="/own" element={<Own onOwner={() => setOwnerOpen(true)} />} />
         <Route path="/longterm" element={<LongTerm onBook={() => setBookOpen(true)} />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/services" element={<Services onOwner={() => setOwnerOpen(true)} />} />
         <Route path="/about" element={<About />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />

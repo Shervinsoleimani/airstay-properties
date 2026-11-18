@@ -19,7 +19,7 @@ export const PROPERTIES = [
     brand: 'AirStay',
     city: 'Montreal',
     country: 'Canada',
-    neighbourhood: 'Downtown',
+    neighbourhood: 'Old Montreal',
     type: 'Boutique Hotel',
     tag: 'Iconic',
     basePrice: 220,
@@ -36,13 +36,13 @@ export const PROPERTIES = [
     brand: 'AirStay',
     city: 'Montreal',
     country: 'Canada',
-    neighbourhood: 'Downtown',
+    neighbourhood: 'Old Montreal',
     type: 'Boutique Hotel',
-    tag: 'New 2024',
+    tag: 'Modern Lofts',
     basePrice: 265,
     currency: 'CAD',
     bedrooms: '1–3',
-    description: 'Brand-new 2024 build. Double-height lofts, skylight atrium, rooftop terrace with fire pit and city panorama.',
+    description: 'Double-height lofts, a skylight atrium and a landscaped rooftop terrace with fire pit and city panorama.',
     coverGradient: 'linear-gradient(155deg, #2C3E35 0%, #0D1A14 100%)',
     images: Array.from({length:9}, (_,i) => `/images/le-moyne-modern/${i+1}.jpg`),
     amenities: ['Rooftop Terrace', 'Fire Pit', 'Skylight', 'Marble Bathrooms', 'Resident Lounge'],
@@ -107,36 +107,106 @@ export const STATS = [
   { value: '24/7', label: 'Guest & Owner Care' },
 ]
 
-// Photo-led service cards (no icons): short-term, long-term, management, maintenance
+// Small (1000px) versions for cards and backgrounds; full size for hero shots.
+export const sm = (path) => path.replace(/^\/images\/([^/]+)\/([^/]+)$/, '/images/sm/$1-$2')
+
+// Full-service property care (photo-led, no icons)
 export const SERVICES = [
   {
     number: '01',
-    title: 'Short-Term Stays',
-    desc: 'Hotel-calibre suites in Montreal’s most storied addresses. Concierge-level guest care, hotel-grade housekeeping and seamless keyless arrival.',
+    title: 'Boutique Hotel & Short-Term Management',
+    short: 'Hotel & Short-Term',
+    desc: 'Hotel-calibre operations for boutique hotels and furnished suites: global distribution, revenue management, 24/7 guest care and seamless keyless arrival.',
     image: '/images/notre-dame/4.jpg',
-    link: '/stay',
+    link: '/services#hospitality',
   },
   {
     number: '02',
-    title: 'Long-Term Residences',
-    desc: 'Furnished or unfurnished homes, professionally leased and cared for. Careful tenant selection, clear leases and maintenance that never waits.',
+    title: 'Long-Term Leasing & Residences',
+    short: 'Leasing & Residences',
+    desc: 'Furnished or unfurnished homes, professionally leased and cared for, with careful tenant selection, clear leases and responsive maintenance.',
     image: '/images/saint-paul/5.jpg',
     link: '/longterm',
   },
   {
     number: '03',
-    title: 'Property Management',
-    desc: 'From a single investment condo to an entire building, we operate your asset with institutional discipline and a builder’s eye for detail.',
-    image: '/images/notre-dame/7.jpg',
-    link: '/own',
+    title: 'Property & Building Management',
+    short: 'Building Management',
+    desc: 'Complete operation of residential, commercial and public-sector buildings: vendors, budgets, compliance, amenities and transparent reporting.',
+    image: '/images/services/amenities-lounge.jpg',
+    link: '/services#management',
   },
   {
     number: '04',
-    title: 'Building Care & Maintenance',
-    desc: 'Preventive care, rapid response and a trusted network of trades, overseen by people who understand how buildings are made.',
-    image: '/images/bishop/3.jpg',
-    link: '/services',
+    title: 'Cleaning & Housekeeping',
+    short: 'Cleaning & Housekeeping',
+    desc: 'Hotel-grade housekeeping, turnovers, deep cleaning and common-area care, delivered by trained teams to our written cleaning standards.',
+    image: '/images/services/housekeeping-bath.jpg',
+    link: '/services#cleaning',
   },
+  {
+    number: '05',
+    title: 'Landscaping & Grounds Care',
+    short: 'Landscaping & Grounds',
+    desc: 'Courtyards, rooftop terraces, planters and green walls, thoughtfully designed and kept immaculate, so every arrival makes an impression.',
+    image: '/images/services/landscaping-courtyard.jpg',
+    link: '/services#landscaping',
+  },
+  {
+    number: '06',
+    title: 'Maintenance & Building Care',
+    short: 'Maintenance & Repairs',
+    desc: 'Preventive maintenance, rapid repairs and a trusted network of qualified trades, overseen by people who understand how buildings are made.',
+    image: '/images/bishop/3.jpg',
+    link: '/services#maintenance',
+  },
+]
+
+// Who we serve
+export const SECTORS = [
+  {
+    title: 'Boutique Hotels',
+    desc: 'Full operation or targeted support for independent hotels: front-of-house standards, housekeeping, revenue and distribution.',
+    image: '/images/services/boutique-lobby.jpg',
+  },
+  {
+    title: 'Private Residences & Condominiums',
+    desc: 'For owners, investors and condominium buildings: short-term, long-term or furnished strategies, managed end to end.',
+    image: '/images/services/skylight-living.jpg',
+  },
+  {
+    title: 'Commercial & Mixed-Use Buildings',
+    desc: 'Lobbies, amenities, common areas and tenant services kept to a hospitality standard, with clear budgets and reporting.',
+    image: '/images/services/building-entrance.jpg',
+  },
+  {
+    title: 'Public & Government Buildings',
+    desc: 'Reliable, discreet and fully documented cleaning, grounds care, maintenance and building operations, delivered to specification.',
+    image: '/images/notre-dame/7.jpg',
+  },
+]
+
+// The AirStay Standard: how we take on a property
+export const PROCESS = [
+  { step: '01', title: 'Assess', desc: 'A complimentary walkthrough of your property, its condition, its potential and your goals.' },
+  { step: '02', title: 'Prepare', desc: 'Design, furnishing, photography, cleaning and maintenance plans, so the property is ready to perform.' },
+  { step: '03', title: 'Operate', desc: 'Guests, tenants, housekeeping, grounds and repairs, handled daily by our own team and trusted trades.' },
+  { step: '04', title: 'Report', desc: 'Clear monthly statements, real numbers and a dedicated manager who answers when you call.' },
+]
+
+export const HERO_SLIDES = [
+  { image: '/images/saint-paul/1.jpg', caption: 'AirStay Saint-Paul · Old Montréal', position: 'center 40%' },
+  { image: '/images/notre-dame/7.jpg', caption: 'Heritage stone · Old Montréal', position: 'center 45%' },
+  { image: '/images/le-moyne-heritage/8.jpg', caption: 'Le Moyne Heritage · Old Montréal', position: 'center' },
+  { image: '/images/notre-dame/1.jpg', caption: 'The Courtyard · Old Montréal', position: 'center' },
+  { image: '/images/le-moyne-modern/6.jpg', caption: 'Le Moyne Modern · Old Montréal', position: 'center 30%' },
+]
+
+export const GALLERY = [
+  '/images/services/landscaping-rooftop.jpg', '/images/le-moyne-heritage/9.jpg', '/images/services/kitchen.jpg',
+  '/images/notre-dame/6.jpg', '/images/services/boutique-lobby.jpg', '/images/saint-paul/2.jpg',
+  '/images/services/amenities-gym.jpg', '/images/le-moyne-modern/2.jpg', '/images/notre-dame/2.jpg',
+  '/images/services/grounds-rooftop-aerial.jpg', '/images/bishop/4.jpg', '/images/services/housekeeping-suite.jpg',
 ]
 
 export const WHY_OWN = [

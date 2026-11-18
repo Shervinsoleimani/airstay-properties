@@ -1,8 +1,7 @@
-import { useState } from 'react'
-import { submitLead } from '../lib/submitLead'
 import { Reveal } from '../components/Reveal'
+import LeadForm from '../components/LeadForm'
+import { OWNER_FIELDS, OWNER_FILES, OWNER_SUCCESS } from '../lib/forms'
 import { WHY_OWN } from '../lib/data'
-import toast from 'react-hot-toast'
 
 function AssessmentPanel() {
   return (
@@ -29,56 +28,12 @@ function AssessmentPanel() {
 }
 
 function OwnerForm() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', city: '', type: '', units: '', message: '' })
-  const [done, setDone] = useState(false)
-  const [loading, setLoading] = useState(false)
-
-  const submit = async (e) => {
-    e.preventDefault()
-    if (!form.name || !form.email) return toast.error('Please fill in required fields')
-    setLoading(true)
-    if (!(await submitLead('owner', form))) { setLoading(false); return }
-    setDone(true); setLoading(false)
-  }
-
-  if (done) return (
-    <div style={{ textAlign: 'center', padding: '60px 40px' }}>
-      <div style={{ width: 40, height: 1, background: '#C9A96E', margin: '0 auto 28px' }} />
-      <h3 style={{ fontFamily: 'Playfair Display', fontSize: 32, fontWeight: 400, color: '#0D0C0A', marginBottom: 12 }}>Inquiry received.</h3>
-      <p style={{ fontFamily: 'DM Sans', fontSize: 14, fontWeight: 300, color: '#9B9590' }}>We'll be in touch within 24 hours with a personalised revenue projection.</p>
-    </div>
-  )
-
   return (
-    <div style={{ background: '#FAF7F2', padding: '56px' }}>
+    <div style={{ background: '#FAF7F2', padding: '56px', height: '100%' }} className="r-pad">
       <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: 8 }}>Get Started</p>
-      <p style={{ fontFamily: 'Playfair Display', fontSize: 28, fontWeight: 400, color: '#0D0C0A', marginBottom: 40 }}>Tell us about your property</p>
-
-      <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
-          <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>Full Name *</label><input className="input-light" placeholder="Your name" value={form.name} onChange={e => setForm({...form, name: e.target.value})} /></div>
-          <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>Email *</label><input type="email" className="input-light" placeholder="email@example.com" value={form.email} onChange={e => setForm({...form, email: e.target.value})} /></div>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
-          <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>City</label>
-            <select className="input-light" style={{ appearance: 'none' }} value={form.city} onChange={e => setForm({...form, city: e.target.value})}>
-              <option value="">Select city</option>
-              {['Montreal', 'Vancouver', 'Other'].map(c => <option key={c}>{c}</option>)}
-            </select>
-          </div>
-          <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>Property Type</label>
-            <select className="input-light" style={{ appearance: 'none' }} value={form.type} onChange={e => setForm({...form, type: e.target.value})}>
-              <option value="">Select type</option>
-              {['Condo/Apartment', 'House', 'Multi-Unit Building', 'Commercial', 'Other'].map(t => <option key={t}>{t}</option>)}
-            </select>
-          </div>
-        </div>
-        <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>Number of Units</label><input className="input-light" placeholder="e.g. 1, 5, 20+" value={form.units} onChange={e => setForm({...form, units: e.target.value})} /></div>
-        <div><label style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(13,12,10,0.4)', display: 'block', marginBottom: 8 }}>Tell us about your property</label><textarea className="input-light" style={{ resize: 'none', height: 80 }} placeholder="Location, size, current status..." value={form.message} onChange={e => setForm({...form, message: e.target.value})} /></div>
-        <button type="submit" style={{ background: '#2C3E35', color: '#F2EDE4', fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '16px', border: 'none', cursor: 'pointer', alignSelf: 'flex-start', paddingLeft: 44, paddingRight: 44 }} disabled={loading}>
-          {loading ? 'Sending...' : 'Submit Inquiry →'}
-        </button>
-      </form>
+      <p style={{ fontFamily: 'Playfair Display', fontSize: 30, fontWeight: 400, color: '#0D0C0A', marginBottom: 12 }}>Tell us about your property</p>
+      <p style={{ fontFamily: 'DM Sans', fontSize: 13.5, fontWeight: 300, color: '#6F6A64', lineHeight: 1.8, marginBottom: 36 }}>Residences, buildings, boutique hotels and public or commercial properties. Share the address and a few photos for the most accurate assessment.</p>
+      <LeadForm type="owner" fields={OWNER_FIELDS} files={OWNER_FILES} success={OWNER_SUCCESS} submitLabel="Request My Assessment" />
     </div>
   )
 }
