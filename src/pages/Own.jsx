@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { submitLead } from '../lib/submitLead'
 import { Reveal } from '../components/Reveal'
 import { WHY_OWN } from '../lib/data'
 import toast from 'react-hot-toast'
@@ -95,7 +96,7 @@ function OwnerForm() {
     e.preventDefault()
     if (!form.name || !form.email) return toast.error('Please fill in required fields')
     setLoading(true)
-    await new Promise(r => setTimeout(r, 1200))
+    if (!(await submitLead('owner', form))) { setLoading(false); return }
     setDone(true); setLoading(false)
   }
 

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { submitLead } from '../lib/submitLead'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PROPERTIES } from '../lib/data'
 import toast from 'react-hot-toast'
@@ -19,7 +20,7 @@ export default function BookingModal({ isOpen, onClose }) {
 
   const submit = async () => {
     if (!form.name || !form.email) return toast.error('Name and email required')
-    await new Promise(r => setTimeout(r, 1200))
+    if (!(await submitLead('booking', { ...form, property: selected?.name || selected?.id || '', checkIn: dates.in, checkOut: dates.out, nights, guests }))) { return }
     setDone(true)
     toast.success('Booking request received!')
   }

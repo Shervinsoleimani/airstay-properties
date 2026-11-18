@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { submitLead } from '../lib/submitLead'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Reveal } from '../components/Reveal'
 import toast from 'react-hot-toast'
@@ -24,7 +25,7 @@ function ApplyModal({ job, onClose }) {
   const submit = async (e) => {
     e.preventDefault()
     if (!form.name || !form.email) return toast.error('Name and email required')
-    await new Promise(r => setTimeout(r, 1000))
+    if (!(await submitLead('careers', { ...form, role: job?.title || 'General application' }))) { return }
     setDone(true)
   }
 

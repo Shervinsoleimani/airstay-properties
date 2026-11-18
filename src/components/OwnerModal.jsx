@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { submitLead } from '../lib/submitLead'
 import { motion, AnimatePresence } from 'framer-motion'
 import toast from 'react-hot-toast'
 
@@ -9,7 +10,7 @@ export default function OwnerModal({ isOpen, onClose }) {
   const submit = async (e) => {
     e.preventDefault()
     if (!form.name || !form.email) return toast.error('Name and email required')
-    await new Promise(r => setTimeout(r, 1000))
+    if (!(await submitLead('owner', form))) { return }
     setDone(true)
   }
 

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { submitLead } from '../lib/submitLead'
 import { Reveal } from '../components/Reveal'
 import toast from 'react-hot-toast'
 
@@ -9,7 +10,7 @@ export default function Contact() {
   const submit = async (e) => {
     e.preventDefault()
     if (!form.name || !form.email || !form.message) return toast.error('Please fill all required fields')
-    await new Promise(r => setTimeout(r, 1000))
+    if (!(await submitLead('contact', form))) { return }
     setDone(true)
   }
 

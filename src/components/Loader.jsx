@@ -1,6 +1,12 @@
+import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 export default function Loader({ onDone }) {
+  // Never block the site: finish after 1.2s even if the CSS animation
+  // doesn't fire (background tabs, reduced-motion settings, slow phones).
+  const done = useRef(false)
+  const finish = () => { if (!done.current) { done.current = true; onDone() } }
+  useEffect(() => { const t = setTimeout(finish, 1200); return () => clearTimeout(t) }, [])
   return (
     <motion.div className="page-loader"
       exit={{ opacity: 0 }}
@@ -17,7 +23,7 @@ export default function Loader({ onDone }) {
         Elevated Living, Worldwide
       </motion.p>
       <div className="loader-progress">
-        <div className="loader-fill" onAnimationEnd={onDone} />
+        <div className="loader-fill" onAnimationEnd={finish} />
       </div>
     </motion.div>
   )

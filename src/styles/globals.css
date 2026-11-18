@@ -293,7 +293,7 @@
   .loader-fill {
     height: 100%;
     background: var(--gold);
-    animation: fill 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: fill 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
   @keyframes fill { from { width: 0; } to { width: 100%; } }
 

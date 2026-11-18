@@ -1,4 +1,5 @@
 import { Reveal } from '../components/Reveal'
+import { submitLead } from '../lib/submitLead'
 import toast from 'react-hot-toast'
 import { useState } from 'react'
 
@@ -18,7 +19,7 @@ export default function LongTerm({ onBook }) {
   const submit = async (e) => {
     e.preventDefault()
     if (!form.name || !form.email) return toast.error('Please fill required fields')
-    await new Promise(r => setTimeout(r, 1000))
+    if (!(await submitLead('longterm', form))) { return }
     setDone(true)
   }
 
