@@ -88,13 +88,13 @@ const terms = {
 
         { h: 'Documents applicables à votre réservation', id: 'booking-documents' },
         'Chaque réservation directe est assujettie aux présentes conditions ainsi qu’au contrat d’hébergement et aux règles de la maison transmis avec votre confirmation de réservation, de même qu’à la politique d’annulation affichée au moment de la réservation. En cas d’incompatibilité entre le contrat d’hébergement et les présentes conditions, la disposition la plus favorable au voyageur s’applique.',
-        'Le contrat d’hébergement, version 2.0 (la version française prévaut), de chaque établissement :',
+        'Le contrat d’hébergement, version 2.2 (la version française prévaut), de chaque établissement :',
         {
           list: [
-            '[Contrat d’hébergement, version 2.0 : 155, rue Saint-Paul Est · CITQ 316300 (PDF)](/legal/AirStay-Contrat-v2.0-155-Saint-Paul-CITQ-316300.pdf)',
-            '[Contrat d’hébergement, version 2.0 : 380, rue Le Moyne · CITQ 312667 (PDF)](/legal/AirStay-Contrat-v2.0-380-Le-Moyne-CITQ-312667.pdf)',
-            '[Contrat d’hébergement, version 2.0 : 386, rue Le Moyne · CITQ 304411 (PDF)](/legal/AirStay-Contrat-v2.0-386-Le-Moyne-CITQ-304411.pdf)',
-            '[Contrat d’hébergement, version 2.0 : 2055, rue Bishop · CITQ 295420 (PDF)](/legal/AirStay-Contrat-v2.0-Bishop-2055-CITQ-295420.pdf)',
+            '[Contrat d’hébergement, version 2.2 : 155, rue Saint-Paul Est · CITQ 316300 (PDF)](/legal/AirStay-Contrat-v2.2-155-Saint-Paul-CITQ-316300.pdf)',
+            '[Contrat d’hébergement, version 2.2 : 380, rue Le Moyne · CITQ 312667 (PDF)](/legal/AirStay-Contrat-v2.2-380-Le-Moyne-CITQ-312667.pdf)',
+            '[Contrat d’hébergement, version 2.2 : 386, rue Le Moyne · CITQ 304411 (PDF)](/legal/AirStay-Contrat-v2.2-386-Le-Moyne-CITQ-304411.pdf)',
+            '[Contrat d’hébergement, version 2.2 : 2055, rue Bishop · CITQ 295420 (PDF)](/legal/AirStay-Contrat-v2.2-Bishop-2055-CITQ-295420.pdf)',
           ],
         },
         'Votre réservation constitue un contrat d’hébergement touristique de courte durée dans un établissement enregistré auprès de la CITQ. Il ne s’agit pas d’un bail de logement au sens de l’article 1892 du Code civil du Québec, et aucune relation de locateur à locataire n’est créée.',

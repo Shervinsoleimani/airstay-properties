@@ -88,13 +88,13 @@ const terms = {
 
         { h: 'Documents that apply to your booking', id: 'booking-documents' },
         'Each direct booking is subject to these Terms and to the rental agreement and house rules provided with your booking confirmation, as well as to the cancellation policy shown at the time of booking. If the rental agreement and these Terms are inconsistent, the provision more favourable to the guest applies.',
-        'The accommodation contract, version 2.0 (the French version prevails), for each establishment:',
+        'The accommodation contract, version 2.2 (the French version prevails), for each establishment:',
         {
           list: [
-            '[Accommodation contract, version 2.0: 155 Saint-Paul Street East · CITQ 316300 (PDF)](/legal/AirStay-Contrat-v2.0-155-Saint-Paul-CITQ-316300.pdf)',
-            '[Accommodation contract, version 2.0: 380 Le Moyne Street · CITQ 312667 (PDF)](/legal/AirStay-Contrat-v2.0-380-Le-Moyne-CITQ-312667.pdf)',
-            '[Accommodation contract, version 2.0: 386 Le Moyne Street · CITQ 304411 (PDF)](/legal/AirStay-Contrat-v2.0-386-Le-Moyne-CITQ-304411.pdf)',
-            '[Accommodation contract, version 2.0: 2055 Bishop Street · CITQ 295420 (PDF)](/legal/AirStay-Contrat-v2.0-Bishop-2055-CITQ-295420.pdf)',
+            '[Accommodation contract, version 2.2: 155 Saint-Paul Street East · CITQ 316300 (PDF)](/legal/AirStay-Contrat-v2.2-155-Saint-Paul-CITQ-316300.pdf)',
+            '[Accommodation contract, version 2.2: 380 Le Moyne Street · CITQ 312667 (PDF)](/legal/AirStay-Contrat-v2.2-380-Le-Moyne-CITQ-312667.pdf)',
+            '[Accommodation contract, version 2.2: 386 Le Moyne Street · CITQ 304411 (PDF)](/legal/AirStay-Contrat-v2.2-386-Le-Moyne-CITQ-304411.pdf)',
+            '[Accommodation contract, version 2.2: 2055 Bishop Street · CITQ 295420 (PDF)](/legal/AirStay-Contrat-v2.2-Bishop-2055-CITQ-295420.pdf)',
           ],
         },
         'Your booking is a short-term tourist accommodation contract in an establishment registered with the CITQ. It is not a lease of a dwelling within the meaning of article 1892 of the Civil Code of Québec, and no landlord-tenant relationship is created.',

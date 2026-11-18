@@ -184,7 +184,7 @@ const privacy = {
       id: 'retention',
       title: 'How long we keep it',
       blocks: [
-        '**Identity documents.** ID images and check-in documents are kept for 180 days after check-out, or longer while a dispute, chargeback or claim is open. Only team members who need them can access them. They are stored only in our reservation and payment platforms, never in email or chat, and are securely deleted at the end of that period.',
+        '**ID documents.** ID images and check-in documents are kept for 180 days after check-out, or longer while a dispute, chargeback or claim is open. They are then destroyed in our monthly purge, no later than 31 days after that period ends. Only team members who need them can access them. They are stored only in our reservation and payment platforms, never in email or chat.',
         '**Facial comparison.** The images used for facial comparison are handled by our identity-verification provider; we keep only the verification result.',
         '**Booking and evidence records.** Booking details, records of your acceptance of our terms, messages and verification results are kept for at least 180 days after check-out, or longer while a dispute, chargeback or claim is open, and longer where the law requires it. Door access logs are kept according to our smart-lock provider’s settings and are preserved for as long as needed when they relate to a dispute or claim.',
         '**Other information.** We keep other personal information only as long as needed for the purposes for which it was collected, including the resolution of disputes and claims, or longer where the law requires it, for example for tax and accounting records.',
