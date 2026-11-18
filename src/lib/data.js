@@ -153,7 +153,7 @@ export const SERVICES = [
     title: 'Cleaning & Housekeeping',
     short: 'Cleaning & Housekeeping',
     desc: 'Hotel-grade housekeeping, turnovers, deep cleaning and common-area care, delivered by trained teams to our written cleaning standards.',
-    image: '/images/services/housekeeping-shower.jpg',
+    image: '/images/services/housekeeping-bath.jpg',
     link: '/services#cleaning',
   },
   {

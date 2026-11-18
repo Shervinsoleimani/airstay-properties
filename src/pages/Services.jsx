@@ -22,7 +22,7 @@ const DETAIL = [
     items: ['Day-to-day building operations for residential, commercial and public-sector properties', 'Vendor, contractor and service-contract management', 'Budgets, financial reporting and capital planning', 'Regulatory compliance, permits and registrations', 'Lobbies, gyms, lounges, rooftops and other amenities', 'Common-area standards and inspections', 'Emergency response and incident documentation'],
   },
   {
-    id: 'cleaning', num: '04', title: 'Cleaning & Housekeeping', image: '/images/services/housekeeping-shower.jpg',
+    id: 'cleaning', num: '04', title: 'Cleaning & Housekeeping', image: '/images/services/housekeeping-bath.jpg',
     desc: 'Our housekeeping teams work to written standards and checklists, so every suite, office and common area is presented exactly as it should be, every single time.',
     items: ['Hotel-grade turnovers, linen and amenity replenishment', 'Scheduled deep-cleaning programmes', 'Lobbies, corridors and common-area cleaning', 'Move-in and move-out cleaning', 'Written cleaning standards and quality inspections', 'Photo-documented reports after every visit'],
   },
