@@ -8,7 +8,7 @@ export default function About() {
     <div className="page-in" style={{ background: '#FAF7F2' }}>
       {/* Hero */}
       <div className="r-pad" style={{ position: 'relative', overflow: 'hidden', padding: '200px 48px 120px', background: '#0D0C0A' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/notre-dame/7.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/le-moyne-heritage/facade.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(13,12,10,0.92), rgba(13,12,10,0.55))' }} />
         <div style={{ position: 'relative', maxWidth: 1600, margin: '0 auto' }}>
           <Reveal><div className="eyebrow" style={{ color: '#C9A96E', marginBottom: 24 }}>Our Story</div></Reveal>
@@ -62,7 +62,7 @@ export default function About() {
             </Reveal>
           </div>
           <FadeIn>
-            <div style={{ aspectRatio: '4/5', backgroundImage: 'url(/images/notre-dame/4.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            <div style={{ aspectRatio: '4/5', backgroundImage: 'url(/images/le-moyne-heritage/9.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
           </FadeIn>
         </div>
       </div>
