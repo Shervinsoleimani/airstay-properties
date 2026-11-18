@@ -19,7 +19,7 @@ const terms = {
       'Prices include all mandatory fees, including cleaning. GST, QST and any applicable lodging tax are added at checkout.',
       'We email you a confirmation, including these Terms, within 15 days of booking.',
       'The Responsible Guest must be 18 or older and complete online check-in with a government-issued photo ID and identity verification. Access instructions are sent only after verification.',
-      'A pre-authorization hold of up to CAD $500 may be placed shortly before check-in. It is a hold, not a charge.',
+      'A pre-authorization hold (generally CAD $500, higher for larger residences) may be placed up to 2 days before arrival and is released within 7 days after check-out if there is no claim. The amount is shown before you pay.',
       'Check-in from 4:00 p.m., check-out by 11:00 a.m. Quiet hours from 10:00 p.m. to 7:00 a.m.',
       'No parties or events. No smoking or vaping in the unit, on balconies and terraces, or in the building, including common areas. No pets unless approved in writing before arrival.',
       'We charge only documented actual costs for damage, loss or excessive cleaning, after sending you a description with photos or invoices and giving you an opportunity to respond.',
@@ -87,7 +87,7 @@ const terms = {
         'This Section applies to reservations made directly with AirStay, through the Booking Site or confirmed in writing by our team (“direct bookings”), that are confirmed on or after November 20, 2026.',
 
         { h: 'Documents that apply to your booking', id: 'booking-documents' },
-        'Each direct booking is subject to these Terms and to the rental agreement and house rules provided with your booking confirmation, as well as to the cancellation policy shown at the time of booking. If the rental agreement and these Terms are inconsistent, these Terms prevail, unless the rental agreement is more favourable to you.',
+        'Each direct booking is subject to these Terms and to the rental agreement and house rules provided with your booking confirmation, as well as to the cancellation policy shown at the time of booking. If the rental agreement and these Terms are inconsistent, the provision more favourable to the guest applies.',
         'Your booking is a short-term tourist accommodation contract in an establishment registered with the CITQ. It is not a lease of a dwelling within the meaning of article 1892 of the Civil Code of Québec, and no landlord-tenant relationship is created.',
 
         { h: 'Price and confirmation', id: 'price-confirmation' },
@@ -110,10 +110,12 @@ const terms = {
           ],
         },
         'Where identity verification uses facial comparison (a selfie), we ask for your express consent, and you may instead choose a manual identity check by our team. Verification information is used only to verify your identity and prevent fraud, as explained in our [Privacy Policy](/privacy?lang=en).',
-        'For the security of our guests and buildings, access instructions are sent only after verification is complete. If verification is not completed, the reservation may be cancelled under the cancellation policy that applied at the time of booking.',
+        'For the security of our guests and buildings, access instructions are sent only after verification is complete. If verification is not completed at least **24 hours before arrival** despite our reminders, we may cancel the reservation; any refund is determined by the cancellation policy that applied at the time of booking.',
 
         { h: 'Security hold', id: 'security-hold' },
-        'We may place a pre-authorization hold of up to **CAD $500** on the Responsible Guest’s card shortly before check-in. A hold is not a charge. It is released after the stay if no damage or rule violation is found. The time it takes for released funds to become available again depends on your card issuer. The amount of the hold, and when it will be placed and released, are shown before you pay.',
+        'We may place a pre-authorization hold on the Responsible Guest’s card. The amount is shown in the listing and in your booking confirmation before you pay. It is generally **CAD $500** and may be higher for larger residences and the penthouse.',
+        'The hold is placed no earlier than **2 days before arrival**, may be renewed for stays longer than 5 nights, and is released no later than **7 days after check-out** unless we have sent you a claim notice (see Section 3.9). The time it takes for released funds to become available again depends on your card issuer.',
+        'A hold is not a charge. It is not a penalty, and it does not limit your liability for documented costs.',
 
         { h: 'Check-in, check-out and late departures', id: 'check-in-out' },
         'Check-in is from **4:00 p.m.** on the arrival date and check-out is by **11:00 a.m.** on the departure date, unless we agree otherwise in writing. Early check-in and late check-out may be possible on request but are never guaranteed in advance.',
@@ -141,6 +143,7 @@ const terms = {
         { h: 'Damage and documented costs', id: 'charges' },
         'You are responsible for damage, loss, excessive cleaning or rule violations caused during your stay by you, your guests or anyone you allow into the property, beyond normal wear and tear. This includes any fine imposed by the City of Montréal or a condominium board because of conduct during your stay.',
         'You authorize AirStay and its payment processor to charge the card provided for the reservation and taxes and, where applicable, for the documented actual costs described above. We charge such costs only after we have sent you a description of the damage with photos or invoices and given you an opportunity to respond. This authorization also covers documented costs relating to your stay that are identified after check-out.',
+        '**Claims process.** If we intend to charge documented costs, we send you a claim notice within **14 days after check-out**, with a description and supporting photos or invoices. You then have **7 days** to respond. After that period, and after considering your response, we may charge the documented amount to the card on file. Any amount charged in excess is refunded. You may contest a claim before the Small Claims Division of the Court of Québec.',
 
         { h: 'Smart locks and security cameras', id: 'locks-cameras' },
         'Our residences use smart locks with a unique code for each guest. The lock records the date and time of each entry. Some buildings have security cameras in certain common areas, such as hallways and entrances. There are never cameras inside the units. These records are used for safety, incident investigation, dispute resolution and claims, as described in our [Privacy Policy](/privacy?lang=en).',
@@ -267,6 +270,7 @@ const terms = {
           note: '**Notice to consumers in Québec:** under the Consumer Protection Act, a merchant may not exclude itself from the consequences of its own act or of the act of its representative. The limitations in the next paragraph therefore do not apply to consumers in Québec to the extent that Act prohibits them.',
         },
         'Subject to the notice above and to the extent permitted by law, AirStay’s total liability for any claim relating to a stay is limited to the amount paid for the reservation, and AirStay is not liable for indirect damages.',
+        'For guests who book for business purposes and are not consumers within the meaning of the Consumer Protection Act, AirStay’s liability is limited to the price of the stay and excludes indirect damages, except for bodily or moral injury and for injury caused intentionally or through gross fault.',
         'Nothing in these Terms excludes or limits liability for bodily or moral injury, or for material injury caused intentionally or through gross fault (Civil Code of Québec, art. 1474), or any right or remedy you have under mandatory law, including the Consumer Protection Act.',
       ],
     },
