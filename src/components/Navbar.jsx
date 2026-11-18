@@ -4,11 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const LINKS = [
   ['Stay', '/stay'],
-  ['Own', '/own'],
-  ['Long-Term', '/longterm'],
+  ['Owners', '/own'],
   ['Services', '/services'],
+  ['Long-Term', '/longterm'],
   ['About', '/about'],
-  ['Careers', '/careers'],
+  ['Contact', '/contact'],
 ]
 
 export default function Navbar({ onBook }) {

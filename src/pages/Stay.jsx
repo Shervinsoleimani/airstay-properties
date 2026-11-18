@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Reveal } from '../components/Reveal'
-import { PROPERTIES, BOOKING_URL } from '../lib/data'
+import { PROPERTIES, BOOKING_URL, sm } from '../lib/data'
 
 export default function Stay({ onBook }) {
   const [city, setCity] = useState('All')
@@ -54,7 +54,7 @@ export default function Stay({ onBook }) {
             <Reveal key={p.id} delay={i * 0.07}>
               <div className="prop-card" onClick={onBook} style={{ background: '#0D0C0A' }}>
                 <div style={{ aspectRatio: '3/4', background: p.coverGradient, position: 'relative', overflow: 'hidden' }}>
-                  <img src={p.images[0]} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.8s cubic-bezier(0.22,1,0.36,1)' }} className="prop-card-img"
+                  <img src={sm(p.images[0])} alt={`AirStay ${p.name}`} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.8s cubic-bezier(0.22,1,0.36,1)' }} className="prop-card-img"
                     onError={e => { e.target.style.display = 'none' }} />
                 </div>
                 <div className="prop-card-overlay" />

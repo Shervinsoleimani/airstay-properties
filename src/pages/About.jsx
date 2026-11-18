@@ -57,7 +57,7 @@ export default function About() {
                 Founder Shervin Soleimani brought that foundation into hospitality with one conviction: a stay in a managed residence should feel as refined as a five-star hotel, and an owner’s property should be cared for with the discipline of the people who built it.
               </p>
               <p style={body}>
-                AirStay began in the historic stone buildings of Old Montreal. Today we care for more than 200 properties, short-term suites and long-term residences alike, and our guests have left more than 4,000 reviews across the world’s leading travel platforms. We are now bringing the same standard to Vancouver.
+                AirStay began in the historic stone buildings of Old Montréal. Today we care for more than 200 properties: boutique suites, long-term residences and complete buildings, along with housekeeping, landscaping and maintenance services for hotels, private owners, commercial landlords and public-sector clients. Our guests have left more than 4,000 reviews across the world’s leading travel platforms, and we are now bringing the same standard to Vancouver.
               </p>
             </Reveal>
           </div>
