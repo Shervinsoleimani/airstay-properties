@@ -174,7 +174,9 @@ const terms = {
         'AirStay or the Owner may enter the property at reasonable times, with prior notice, for maintenance, repairs or inspection. In an emergency, such as a fire, a water leak or imminent danger, we may enter without notice.',
 
         { h: 'Cancellations, changes, early departures and no-shows', id: 'cancellation' },
-        'The cancellation policy shown at the time of booking applies to your reservation. Any refund it provides is made to the original payment method.',
+        // PENDING SHERVIN APPROVAL: direct-booking cancellation policy (contract v2.2, §7.1.1). Confirm before go-live.
+        'For direct bookings: free cancellation within 48 hours of booking if arrival is 30 days or more away; regular dates: 100% refund 30 days or more before arrival, 50% from 14 to 29 days, no refund within 14 days; event and peak dates (indicated at booking): 100% refund 60 days or more before arrival, no refund after that; an optional non-refundable rate (10% discount); one free date change 30 days or more before arrival, subject to any price difference. If we re-let cancelled or unused nights, we refund the amount we received for those nights, up to what you paid. Refunds are made without deducting processing fees. For Vrbo, Expedia and other channels, the channel’s policy applies.',
+        'Any refund is made to the original payment method. The full policy is set out in Section 7 of the accommodation contract.',
         'No refund is given for no-shows, and unused nights are not refunded if you leave before the end of your stay, except as provided by the cancellation policy or required by law.',
         'Changes to dates, residences or the number of guests are subject to availability and to our written confirmation, and may change the price.',
         'We recommend that you purchase travel insurance.',
