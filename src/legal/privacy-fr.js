@@ -17,7 +17,7 @@ const privacy = {
   titleAccent: 'confidentialité',
   intro: 'Comment AirStay Properties recueille, utilise, communique et protège les renseignements personnels, et comment vous pouvez exercer vos droits.',
   meta: ['Dernière mise à jour : 18 novembre 2026'],
-  languageNote: 'Le présent document est offert en français et en anglais. Les deux versions sont fournies par commodité et visent à avoir le même sens.',
+  languageNote: 'Le présent document est offert en français et en anglais. En cas de divergence, la version française prévaut.',
 
   sections: [
     {

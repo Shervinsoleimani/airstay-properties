@@ -11,7 +11,7 @@ const terms = {
   titleAccent: '& Booking Terms',
   intro: 'The terms that apply when you use our website, book a stay directly with AirStay Properties, or reserve one of our residences through a booking platform.',
   meta: ['Last updated: November 18, 2026', 'Booking terms effective: November 20, 2026'],
-  languageNote: 'This document is available in French and in English. Both versions are provided for convenience and are intended to have the same meaning.',
+  languageNote: 'This document is available in French and in English. In case of any discrepancy, the French version prevails.',
 
   summary: {
     title: 'At a glance: direct bookings',
@@ -21,7 +21,7 @@ const terms = {
       'The Responsible Guest must be 18 or older and complete online check-in with a government-issued photo ID and identity verification. Access instructions are sent only after verification.',
       'A pre-authorization hold of up to CAD $500 may be placed shortly before check-in. It is a hold, not a charge.',
       'Check-in from 4:00 p.m., check-out by 11:00 a.m. Quiet hours from 10:00 p.m. to 7:00 a.m.',
-      'No parties or events. No smoking or vaping in the unit or the building, or within 9 metres of doors or windows. No pets unless approved in writing before arrival.',
+      'No parties or events. No smoking or vaping in the unit, on balconies and terraces, or in the building, including common areas. No pets unless approved in writing before arrival.',
       'We charge only documented actual costs for damage, loss or excessive cleaning, after sending you a description with photos or invoices and giving you an opportunity to respond.',
       'Bookings made through a platform follow that platform’s terms and the listing’s house rules (Section 4).',
     ],
@@ -87,7 +87,7 @@ const terms = {
 
         { h: 'Documents that apply to your booking', id: 'booking-documents' },
         'Each direct booking is subject to these Terms and to the rental agreement and house rules provided with your booking confirmation, as well as to the cancellation policy shown at the time of booking. If the rental agreement and these Terms are inconsistent, these Terms prevail, unless the rental agreement is more favourable to you.',
-        'Your booking gives you a license to occupy the property for short-term lodging: a revocable, non-transferable right to occupy the property for the dates of your booking. It is not a residential lease and does not create a landlord-tenant relationship.',
+        'Your booking is a short-term tourist accommodation contract in an establishment registered with the CITQ. It is not a lease of a dwelling within the meaning of article 1892 of the Civil Code of Québec, and no landlord-tenant relationship is created.',
 
         { h: 'Price and confirmation', id: 'price-confirmation' },
         'Prices shown include all mandatory fees, including cleaning. GST, QST and any applicable lodging tax are added at checkout, and the total is shown before you confirm. Amounts are in Canadian dollars unless otherwise indicated.',
@@ -116,7 +116,7 @@ const terms = {
 
         { h: 'Check-in, check-out and late departures', id: 'check-in-out' },
         'Check-in is from **4:00 p.m.** on the arrival date and check-out is by **11:00 a.m.** on the departure date, unless we agree otherwise in writing. Early check-in and late check-out may be possible on request but are never guaranteed in advance.',
-        'Staying past check-out without our consent may result in removal from the property, and the documented costs it causes may be charged as set out in Section 3.9.',
+        'Staying past check-out without our consent may result in an obligation to leave the property, and the documented costs it causes may be charged as set out in Section 3.9.',
 
         { h: 'Occupancy and permitted use', id: 'occupancy' },
         'The property may be used only for personal lodging. Only the guests on the reservation may stay at the property, and their number may not exceed the occupancy shown on the listing. Adding a guest requires our approval before arrival and may carry an additional fee, which will be shown to you before you accept it.',
@@ -127,7 +127,7 @@ const terms = {
         {
           list: [
             'parties, events or gatherings, and any commercial use (including commercial photography or filming) without our prior written permission;',
-            'smoking or vaping of any substance, including cannabis, in the unit or the building, or within 9 metres of doors or windows (City of Montréal by-law);',
+            'smoking or vaping of any substance, including cannabis, in the unit, on balconies and terraces, or in the building, including common areas. Outside, please move away from the building’s doors, windows and air intakes;',
             'pets, unless approved in writing before arrival. Service animals assisting a person with a disability are not pets; please let us know before arrival;',
             'noise during quiet hours, from **10:00 p.m. to 7:00 a.m.**, and any breach of the building’s rules;',
             'exceeding the number of guests on the reservation;',
@@ -171,7 +171,7 @@ const terms = {
         'Neither you nor we are responsible for a failure to perform caused by superior force (force majeure), such as a fire, a flood, a prolonged utility outage, a building emergency, an order of public authorities, a strike or an epidemic. If such an event prevents us from providing the property, we will offer a comparable alternative if one is available or refund the amounts paid for the nights we cannot provide. Please report any interruption to us right away so we can address it.',
 
         { h: 'Personal belongings, parking and amenities', id: 'belongings' },
-        'Except where the law provides otherwise, AirStay is not responsible for loss, theft or damage to guests’ personal belongings, or for vehicles and parking, which guests arrange at their own risk. Parking is not included unless the listing says so. Any parking suggestions we provide concern third-party operators, who set their own rates, hours and conditions.',
+        'Subject to the rules of the Civil Code of Québec on the liability of hotelkeepers (arts. 2298 and following) and except where we are at fault, AirStay is not responsible for loss, theft or damage to guests’ personal belongings, or for vehicles and parking, which guests arrange at their own risk. Parking is not included unless the listing says so. Any parking suggestions we provide concern third-party operators, who set their own rates, hours and conditions.',
         'Shared building amenities, where offered, are subject to the building’s rules and hours and may be temporarily unavailable.',
 
         { h: 'Electronic records and signatures', id: 'electronic' },
@@ -293,7 +293,7 @@ const terms = {
       id: 'language',
       title: 'Language',
       blocks: [
-        'These Terms are available in French and in English. The French version is presented first; use the language selector at the top of this page to switch versions. Both versions are provided for convenience and are intended to have the same meaning.',
+        'These Terms are available in French and in English. The French version is presented first; use the language selector at the top of this page to switch versions. In case of any discrepancy, the French version prevails.',
       ],
     },
 

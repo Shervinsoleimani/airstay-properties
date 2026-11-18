@@ -5,7 +5,7 @@ import { LONGTERM_FIELDS, LONGTERM_SUCCESS } from '../lib/forms'
 const BENEFITS = [
   { title: 'Furnished or Unfurnished', desc: 'Move-in-ready furnished homes with premium furniture and linens, or unfurnished residences ready for your own touch.' },
   { title: 'Maintenance Included', desc: 'Something breaks? We fix it. No calls to landlords, no waiting weeks for repairs.' },
-  { title: 'Flexible Terms', desc: 'Leases from 3 months to 2+ years. We work around your timeline, not ours.' },
+  { title: 'Terms That Fit', desc: 'Long-term rentals arranged around your timeline. Tell us what you need and we’ll advise on the right option.' },
   { title: 'Smart Home Tech', desc: 'Keyless entry, smart thermostats, high-speed WiFi — the technology you expect.' },
   { title: 'Hotel-Grade Cleaning', desc: 'Professional cleaning service available. Your home, maintained to our standard.' },
   { title: 'Prime Locations', desc: 'Residences in Old Montreal and downtown, with Vancouver now launching. One application, one trusted manager.' },
@@ -30,7 +30,7 @@ export default function LongTerm({ onBook }) {
               </Reveal>
               <Reveal delay={0.2}>
                 <p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: 'rgba(242,237,228,0.6)', lineHeight: 1.9, marginBottom: 40 }}>
-                  Professionally managed residences in Montreal, with Vancouver now launching. Furnished or unfurnished, maintenance included, flexible leases: the home you deserve, without the hassle.
+                  Professionally managed residences in Montreal, with Vancouver now launching. Furnished or unfurnished, with maintenance included and leasing handled for you: the home you deserve, without the hassle.
                 </p>
               </Reveal>
               <Reveal delay={0.3}>
@@ -43,7 +43,7 @@ export default function LongTerm({ onBook }) {
             <Reveal delay={0.3}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1 }}>
                 {[
-                  ['3 mo+', 'Minimum Lease'],
+                  ['Inquire', 'Long-Term Rental'],
                   ['2', 'Cities'],
                   ['Your Choice', 'Furnished or Not'],
                   ['24/7', 'Maintenance'],
@@ -97,7 +97,7 @@ export default function LongTerm({ onBook }) {
               ['Furnished Option', 'Rarely offered', 'Furnished or unfurnished'],
               ['Maintenance', 'Weeks to respond', '24/7 response'],
               ['Smart Home Tech', 'Rarely included', 'Standard'],
-              ['Flexible Lease', '1 year minimum', 'From 3 months'],
+              ['Clear, Simple Leasing', 'Paperwork on you', 'Handled for you'],
               ['Professional Cleaning', 'Not included', 'Available'],
               ['Dedicated Manager', 'Call a hotline', 'Named contact'],
             ].map(([feature, no, yes]) => (

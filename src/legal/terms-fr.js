@@ -11,17 +11,17 @@ const terms = {
   titleAccent: 'et de réservation',
   intro: 'Les conditions qui s’appliquent lorsque vous utilisez notre site Web, réservez un séjour directement auprès d’AirStay Properties ou réservez l’une de nos résidences par l’intermédiaire d’une plateforme de réservation.',
   meta: ['Dernière mise à jour : 18 novembre 2026', 'Entrée en vigueur des conditions de réservation : 20 novembre 2026'],
-  languageNote: 'Le présent document est offert en français et en anglais. Les deux versions sont fournies par commodité et visent à avoir le même sens.',
+  languageNote: 'Le présent document est offert en français et en anglais. En cas de divergence, la version française prévaut.',
 
   summary: {
     title: 'En bref : réservations directes',
     items: [
       'Les prix comprennent tous les frais obligatoires, y compris le ménage. La TPS, la TVQ et, le cas échéant, la taxe sur l’hébergement sont ajoutées au moment du paiement.',
       'Nous vous transmettons par courriel une confirmation, accompagnée des présentes conditions, dans les 15 jours suivant la réservation.',
-      'Le voyageur responsable doit avoir au moins 18 ans et remplir l’enregistrement en ligne avec une pièce d’identité avec photo délivrée par un gouvernement et une vérification d’identité. Les instructions d’accès ne sont transmises qu’après la vérification.',
+      'Le voyageur responsable doit avoir au moins 18 ans et remplir l’enregistrement en ligne avec une pièce d’identité avec photo délivrée par une autorité gouvernementale et une vérification d’identité. Les instructions d’accès ne sont transmises qu’après la vérification.',
       'Une préautorisation d’au plus 500 $ CA peut être effectuée peu avant l’arrivée. Il s’agit d’un blocage de fonds, et non d’un débit.',
       'Arrivée à partir de 16 h, départ au plus tard à 11 h. Heures de tranquillité de 22 h à 7 h.',
-      'Aucune fête ni aucun événement. Interdiction de fumer et de vapoter dans le logement et dans l’immeuble, ainsi qu’à moins de 9 mètres des portes et fenêtres. Aucun animal sans autorisation écrite avant l’arrivée.',
+      'Aucune fête ni aucun événement. Interdiction de fumer et de vapoter dans le logement, sur les balcons et terrasses et dans l’immeuble, y compris les aires communes. Aucun animal sans autorisation écrite avant l’arrivée.',
       'Nous ne facturons que les coûts réels documentés des dommages, des pertes ou du nettoyage excessif, après vous avoir transmis une description accompagnée de photos ou de factures et vous avoir donné l’occasion de répondre.',
       'Les réservations effectuées par l’intermédiaire d’une plateforme sont régies par les conditions de cette plateforme et les règles de la maison de l’annonce (article 4).',
     ],
@@ -87,7 +87,7 @@ const terms = {
 
         { h: 'Documents applicables à votre réservation', id: 'booking-documents' },
         'Chaque réservation directe est assujettie aux présentes conditions ainsi qu’au contrat de location et aux règles de la maison transmis avec votre confirmation de réservation, de même qu’à la politique d’annulation affichée au moment de la réservation. En cas d’incompatibilité entre le contrat de location et les présentes conditions, les présentes conditions prévalent, à moins que le contrat de location ne vous soit plus favorable.',
-        'Votre réservation vous confère une licence d’occupation de la propriété à des fins d’hébergement de courte durée, soit un droit révocable et incessible d’occuper la propriété pendant les dates de votre réservation. Il ne s’agit pas d’un bail résidentiel, et aucune relation de locateur à locataire n’est créée.',
+        'Votre réservation constitue un contrat d’hébergement touristique de courte durée dans un établissement enregistré auprès de la CITQ. Il ne s’agit pas d’un bail de logement au sens de l’article 1892 du Code civil du Québec, et aucune relation de locateur à locataire n’est créée.',
 
         { h: 'Prix et confirmation', id: 'price-confirmation' },
         'Les prix affichés comprennent tous les frais obligatoires, y compris le ménage. La TPS, la TVQ et, le cas échéant, la taxe sur l’hébergement sont ajoutées au moment du paiement, et le total est indiqué avant que vous confirmiez la réservation. Les montants sont en dollars canadiens, sauf indication contraire.',
@@ -103,7 +103,7 @@ const terms = {
         {
           list: [
             'de veiller à ce que chaque voyageur respecte les présentes conditions, le contrat de location et les règles de la maison;',
-            'de remplir notre formulaire d’enregistrement en ligne avant l’arrivée, notamment en fournissant une pièce d’identité avec photo délivrée par un gouvernement et en se soumettant à une vérification d’identité effectuée par l’intermédiaire de notre fournisseur de services de paiement (le lien est transmis avec votre confirmation de réservation);',
+            'de remplir notre formulaire d’enregistrement en ligne avant l’arrivée, notamment en fournissant une pièce d’identité avec photo délivrée par une autorité gouvernementale et en se soumettant à une vérification d’identité effectuée par l’intermédiaire de notre fournisseur de services de paiement (le lien est transmis avec votre confirmation de réservation);',
             'de s’assurer que le nom figurant sur la réservation correspond à celui de la pièce d’identité fournie et à celui du titulaire de la carte de paiement;',
             'de nous signaler sans délai tout dommage ou problème.',
           ],
@@ -116,7 +116,7 @@ const terms = {
 
         { h: 'Arrivée, départ et départs tardifs', id: 'check-in-out' },
         'L’arrivée se fait à partir de **16 h** le jour de l’arrivée, et le départ au plus tard à **11 h** le jour du départ, sauf entente contraire écrite. Une arrivée hâtive ou un départ tardif peuvent être possibles sur demande, mais ne sont jamais garantis à l’avance.',
-        'Le fait de demeurer dans la propriété après l’heure de départ sans notre consentement peut entraîner votre expulsion des lieux, et les coûts documentés qui en découlent peuvent être facturés conformément à l’article 3.9.',
+        'Le fait de demeurer dans la propriété après l’heure de départ sans notre consentement peut entraîner l’obligation de quitter les lieux, et les coûts documentés qui en découlent peuvent être facturés conformément à l’article 3.9.',
 
         { h: 'Occupation et usage permis', id: 'occupancy' },
         'La propriété ne peut être utilisée qu’à des fins d’hébergement personnel. Seuls les voyageurs inscrits à la réservation peuvent y séjourner, et leur nombre ne peut excéder la capacité d’accueil indiquée dans l’annonce. L’ajout d’un voyageur nécessite notre approbation avant l’arrivée et peut entraîner des frais supplémentaires, qui vous seront indiqués avant que vous les acceptiez.',
@@ -127,7 +127,7 @@ const terms = {
         {
           list: [
             'les fêtes, les événements et les rassemblements, ainsi que tout usage commercial (y compris la photographie ou le tournage commercial) sans notre autorisation écrite préalable;',
-            'le fait de fumer ou de vapoter toute substance, y compris le cannabis, dans le logement ou dans l’immeuble, ainsi qu’à moins de 9 mètres des portes et fenêtres (règlement de la Ville de Montréal);',
+            'le fait de fumer ou de vapoter toute substance, y compris le cannabis, dans le logement, sur les balcons et terrasses et dans l’immeuble, y compris les aires communes. À l’extérieur, veuillez vous éloigner des portes, fenêtres et prises d’air de l’immeuble;',
             'les animaux, sauf autorisation écrite avant l’arrivée. Les animaux d’assistance accompagnant une personne handicapée ne sont pas des animaux de compagnie; veuillez nous en informer avant l’arrivée;',
             'le bruit pendant les heures de tranquillité, de **22 h à 7 h**, et toute infraction aux règlements de l’immeuble;',
             'le dépassement du nombre de voyageurs inscrits à la réservation;',
@@ -171,7 +171,7 @@ const terms = {
         'Ni vous ni nous ne sommes responsables d’un défaut d’exécution causé par une force majeure, comme un incendie, une inondation, une panne prolongée des services publics, une urgence touchant l’immeuble, une ordonnance des autorités publiques, une grève ou une épidémie. Si un tel événement nous empêche de fournir la propriété, nous vous proposerons une solution de rechange comparable, si elle est disponible, ou nous vous rembourserons les sommes payées pour les nuits que nous ne pouvons fournir. Veuillez nous signaler immédiatement toute interruption afin que nous puissions y remédier.',
 
         { h: 'Effets personnels, stationnement et commodités', id: 'belongings' },
-        'Sauf disposition contraire de la loi, AirStay n’est pas responsable de la perte, du vol ou de l’endommagement des effets personnels des voyageurs, ni des véhicules et du stationnement, que les voyageurs organisent à leurs propres risques. Le stationnement n’est pas inclus, sauf mention contraire dans l’annonce. Les suggestions de stationnement que nous pouvons fournir concernent des exploitants tiers, qui fixent eux-mêmes leurs tarifs, leurs heures et leurs conditions.',
+        'Sous réserve des règles du Code civil du Québec sur la responsabilité des hôteliers (art. 2298 et suiv.) et sauf faute de notre part, AirStay n’est pas responsable de la perte, du vol ou de l’endommagement des effets personnels des voyageurs, ni des véhicules et du stationnement, que les voyageurs organisent à leurs propres risques. Le stationnement n’est pas inclus, sauf mention contraire dans l’annonce. Les suggestions de stationnement que nous pouvons fournir concernent des exploitants tiers, qui fixent eux-mêmes leurs tarifs, leurs heures et leurs conditions.',
         'Les commodités communes de l’immeuble, lorsqu’elles sont offertes, sont assujetties aux règles et aux heures d’ouverture de l’immeuble et peuvent être temporairement indisponibles.',
 
         { h: 'Documents et signatures électroniques', id: 'electronic' },
@@ -293,7 +293,7 @@ const terms = {
       id: 'language',
       title: 'Langue',
       blocks: [
-        'Les présentes conditions sont offertes en français et en anglais. La version française est présentée en premier; utilisez le sélecteur de langue en haut de cette page pour changer de version. Les deux versions sont fournies par commodité et visent à avoir le même sens.',
+        'Les présentes conditions sont offertes en français et en anglais. La version française est présentée en premier; utilisez le sélecteur de langue en haut de cette page pour changer de version. En cas de divergence, la version française prévaut.',
       ],
     },
 

@@ -52,7 +52,7 @@ export const LONGTERM_FIELDS = [
   { name: 'moveIn', label: 'Move-In Month', type: 'month' },
   { name: 'budget', label: 'Monthly Budget', type: 'select', placeholder: 'Select range', options: ['Under $2,000', '$2,000–$3,500', '$3,500–$5,000', '$5,000–$8,000', '$8,000+'] },
   { name: 'furnished', label: 'Furnished?', type: 'select', placeholder: 'Select', options: ['Furnished', 'Unfurnished', 'Either'] },
-  { name: 'leaseLength', label: 'Lease Length', type: 'select', placeholder: 'Select', options: ['3–6 months', '6–12 months', '12 months or more'] },
+  { name: 'leaseLength', label: 'Preferred Term', placeholder: 'Tell us your timing; we’ll advise' },
   { name: 'message', label: 'Requirements', type: 'textarea', span: 2, placeholder: 'Bedrooms, neighbourhood, parking, pets, occupants…' },
 ]
 
