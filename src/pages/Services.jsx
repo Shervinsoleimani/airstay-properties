@@ -7,7 +7,7 @@ const mono = { fontFamily: 'DM Mono', letterSpacing: '0.2em', textTransform: 'up
 
 const DETAIL = [
   {
-    id: 'hospitality', num: '01', title: 'Boutique Hotel & Short-Term Management', image: '/images/le-moyne-modern/1.jpg',
+    id: 'hospitality', num: '01', title: 'Boutique Hotel & Short-Term Management', image: '/images/services/suite-bedroom.jpg',
     desc: 'We run furnished suites and boutique hotels the way a five-star house would: thoughtfully presented, precisely priced and impeccably serviced, from the first enquiry to the final review.',
     items: ['Distribution across Airbnb, Booking.com, Expedia, Hotels.com, Vrbo and our own direct-booking site', 'Dynamic revenue management with event and seasonal strategy', '24/7 guest communication and on-call support', 'Secure keyless arrival and verified direct reservations', 'Hotel-grade housekeeping, linen and amenities', 'Professional photography, listing design and brand standards', 'Front-of-house standards and training for boutique hotels', 'Monthly performance reporting and owner payouts'],
   },
@@ -22,12 +22,12 @@ const DETAIL = [
     items: ['Day-to-day building operations for residential, commercial and public-sector properties', 'Vendor, contractor and service-contract management', 'Budgets, financial reporting and capital planning', 'Regulatory compliance, permits and registrations', 'Lobbies, gyms, lounges, rooftops and other amenities', 'Common-area standards and inspections', 'Emergency response and incident documentation'],
   },
   {
-    id: 'cleaning', num: '04', title: 'Cleaning & Housekeeping', image: '/images/services/housekeeping-bath.jpg',
+    id: 'cleaning', num: '04', title: 'Cleaning & Housekeeping', image: '/images/services/housekeeping-shower.jpg',
     desc: 'Our housekeeping teams work to written standards and checklists, so every suite, office and common area is presented exactly as it should be, every single time.',
     items: ['Hotel-grade turnovers, linen and amenity replenishment', 'Scheduled deep-cleaning programmes', 'Lobbies, corridors and common-area cleaning', 'Move-in and move-out cleaning', 'Written cleaning standards and quality inspections', 'Photo-documented reports after every visit'],
   },
   {
-    id: 'landscaping', num: '05', title: 'Landscaping & Grounds Care', image: '/images/services/landscaping-courtyard.jpg',
+    id: 'landscaping', num: '05', title: 'Landscaping & Grounds Care', image: '/images/services/grounds-rooftop-aerial.jpg',
     desc: 'First impressions begin outside. We design, plant and maintain courtyards, terraces and green spaces that make a property feel cared for the moment someone arrives.',
     items: ['Courtyards, gardens and entrance landscaping', 'Rooftop terraces, planters and outdoor lounges', 'Green walls and interior plantscapes', 'Seasonal planting, pruning and refreshes', 'Grounds cleanliness and regular upkeep', 'Outdoor furniture and lighting care'],
   },
@@ -161,7 +161,7 @@ export default function Services({ onOwner }) {
 
       {/* CTA */}
       <div className="r-pad" style={{ position: 'relative', overflow: 'hidden', padding: '130px 48px', textAlign: 'center' }}>
-        <img src={sm('/images/services/boutique-lobby.jpg')} alt="" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+        <img src={sm('/images/saint-paul/1-top.jpg')} alt="" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'rgba(13,12,10,0.8)' }} />
         <div style={{ position: 'relative', maxWidth: 820, margin: '0 auto' }}>
           <Reveal><div className="eyebrow" style={{ color: '#C9A96E', justifyContent: 'center', marginBottom: 20 }}>Let’s Talk</div></Reveal>

@@ -15,6 +15,7 @@ export const bookingSearchUrl = ({ checkIn, checkOut, guests } = {}) => {
 const ALL_PROPERTIES = [
   {
     id: 'le-moyne-heritage',
+    cover: '/images/le-moyne-heritage/1-tvoff.jpg',
     citq: '304411',
     name: 'Le Moyne Heritage',
     brand: 'AirStay',
@@ -33,6 +34,7 @@ const ALL_PROPERTIES = [
   },
   {
     id: 'le-moyne-modern',
+    cover: '/images/services/skylight-living.jpg',
     citq: '312667',
     name: 'Le Moyne Modern',
     brand: 'AirStay',
@@ -51,6 +53,7 @@ const ALL_PROPERTIES = [
   },
   {
     id: 'bishop',
+    cover: '/images/bishop/2.jpg',
     citq: '295420',
     name: 'Bishop',
     brand: 'AirStay',
@@ -69,6 +72,7 @@ const ALL_PROPERTIES = [
   },
   {
     id: 'saint-paul',
+    cover: '/images/saint-paul/1-top.jpg',
     citq: '316300',
     name: 'Saint-Paul',
     brand: 'AirStay',
@@ -125,7 +129,7 @@ export const SERVICES = [
     title: 'Boutique Hotel & Short-Term Management',
     short: 'Hotel & Short-Term',
     desc: 'Hotel-calibre operations for boutique hotels and furnished suites: global distribution, revenue management, 24/7 guest care and seamless keyless arrival.',
-    image: '/images/le-moyne-modern/1.jpg',
+    image: '/images/services/suite-bedroom.jpg',
     link: '/services#hospitality',
   },
   {
@@ -149,7 +153,7 @@ export const SERVICES = [
     title: 'Cleaning & Housekeeping',
     short: 'Cleaning & Housekeeping',
     desc: 'Hotel-grade housekeeping, turnovers, deep cleaning and common-area care, delivered by trained teams to our written cleaning standards.',
-    image: '/images/services/housekeeping-bath.jpg',
+    image: '/images/services/housekeeping-shower.jpg',
     link: '/services#cleaning',
   },
   {
@@ -157,7 +161,7 @@ export const SERVICES = [
     title: 'Landscaping & Grounds Care',
     short: 'Landscaping & Grounds',
     desc: 'Courtyards, rooftop terraces, planters and green walls, thoughtfully designed and kept immaculate, so every arrival makes an impression.',
-    image: '/images/services/landscaping-courtyard.jpg',
+    image: '/images/services/grounds-rooftop-aerial.jpg',
     link: '/services#landscaping',
   },
   {
@@ -175,22 +179,22 @@ export const SECTORS = [
   {
     title: 'Boutique Hotels',
     desc: 'Full operation or targeted support for independent hotels: front-of-house standards, housekeeping, revenue and distribution.',
-    image: '/images/services/boutique-lobby.jpg',
+    image: '/images/services/lobby-green-wall.jpg',
   },
   {
     title: 'Private Residences & Condominiums',
     desc: 'For owners, investors and condominium buildings: short-term, long-term or furnished strategies, managed end to end.',
-    image: '/images/services/skylight-living.jpg',
+    image: '/images/services/kitchen-island.jpg',
   },
   {
     title: 'Commercial & Mixed-Use Buildings',
     desc: 'Lobbies, amenities, common areas and tenant services kept to a hospitality standard, with clear budgets and reporting.',
-    image: '/images/services/building-entrance.jpg',
+    image: '/images/services/elevator-lobby.jpg',
   },
   {
     title: 'Public & Government Buildings',
     desc: 'Reliable, discreet and fully documented cleaning, grounds care, maintenance and building operations, delivered to specification.',
-    image: '/images/le-moyne-heritage/4.jpg',
+    image: '/images/le-moyne-heritage/facade.jpg',
   },
 ]
 
@@ -202,19 +206,20 @@ export const PROCESS = [
   { step: '04', title: 'Report', desc: 'Clear monthly statements, real numbers and a dedicated manager who answers when you call.' },
 ]
 
+// Every image on the site follows marketing/social/photo-standards.md (no cables, bins, TVs on, brand posters,
+// street numbers or drawings). Rejected originals stay in /public/images but are no longer referenced.
 export const HERO_SLIDES = [
-  { image: '/images/saint-paul/1.jpg', caption: 'AirStay Saint-Paul · Old Montréal', position: 'center 40%' },
+  { image: '/images/saint-paul/1-top.jpg', caption: 'AirStay Saint-Paul · Old Montréal', position: 'center 35%' },
   { image: '/images/bishop/2.jpg', caption: 'AirStay Bishop · Downtown Montréal', position: 'center 40%' },
   { image: '/images/le-moyne-heritage/8.jpg', caption: 'Le Moyne Heritage · Old Montréal', position: 'center' },
   { image: '/images/services/landscaping-rooftop.jpg', caption: 'Rooftop gardens · Le Moyne, Old Montréal', position: 'center 60%' },
-  { image: '/images/le-moyne-modern/6.jpg', caption: 'Le Moyne Modern · Old Montréal', position: 'center 30%' },
 ]
 
 export const GALLERY = [
-  '/images/services/landscaping-rooftop.jpg', '/images/le-moyne-heritage/9.jpg', '/images/services/kitchen.jpg',
-  '/images/le-moyne-modern/3.jpg', '/images/services/boutique-lobby.jpg', '/images/saint-paul/2.jpg',
-  '/images/services/amenities-gym.jpg', '/images/le-moyne-modern/2.jpg', '/images/saint-paul/3.jpg',
-  '/images/services/grounds-rooftop-aerial.jpg', '/images/bishop/4.jpg', '/images/services/housekeeping-suite.jpg',
+  '/images/services/landscaping-rooftop.jpg', '/images/le-moyne-heritage/9.jpg', '/images/services/kitchen-island.jpg',
+  '/images/le-moyne-heritage/5.jpg', '/images/saint-paul/1-top.jpg', '/images/bishop/3.jpg',
+  '/images/le-moyne-heritage/1-tvoff.jpg', '/images/services/suite-bedroom.jpg', '/images/saint-paul/5.jpg',
+  '/images/services/grounds-rooftop-aerial.jpg', '/images/bishop/5-stair.jpg', '/images/le-moyne-heritage/8.jpg',
 ]
 
 export const WHY_OWN = [

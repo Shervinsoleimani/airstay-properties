@@ -208,7 +208,7 @@ function FeaturedProperties({ onBook }) {
             <Reveal key={p.id} delay={k * 0.08}>
               <div className="prop-card" onClick={onBook} style={{ background: p.coverGradient }}>
                 <div className="prop-card-img" style={{ aspectRatio: '4/5', background: p.coverGradient, position: 'relative' }}>
-                  <img src={sm(p.images[0])} alt={`AirStay ${p.name}, ${p.neighbourhood}`} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  <img src={sm(p.cover || p.images[0])} alt={`AirStay ${p.name}, ${p.neighbourhood}`} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                     onError={e => { e.target.style.display = 'none' }} />
                 </div>
                 <div className="prop-card-overlay" />
@@ -228,7 +228,7 @@ function FeaturedProperties({ onBook }) {
           ))}
           <Reveal delay={0.4}>
             <a href={`${BOOKING_URL}/all-listings`} className="svc-card" style={{ aspectRatio: '4/5', background: '#0D0C0A', minHeight: 0, height: '100%' }}>
-              <img className="svc-card-bg" src={sm('/images/le-moyne-modern/6.jpg')} alt="" loading="lazy" style={{ opacity: 0.35 }} />
+              <img className="svc-card-bg" src={sm('/images/le-moyne-heritage/5.jpg')} alt="" loading="lazy" style={{ opacity: 0.35 }} />
               <div style={{ position: 'relative', padding: '40px 32px' }}>
                 <p style={{ ...mono, fontSize: 10, letterSpacing: '0.2em', color: '#C9A96E', marginBottom: 16 }}>35 Residences · Live Availability</p>
                 <p style={{ fontFamily: 'Playfair Display', fontSize: 34, fontWeight: 400, color: '#F2EDE4', lineHeight: 1.15, marginBottom: 24 }}>View every<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>residence.</em></p>
@@ -341,7 +341,7 @@ function Heritage() {
       <div className="r-stack" style={{ maxWidth: 1600, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, alignItems: 'stretch' }}>
         <FadeIn>
           <div style={{ position: 'relative', minHeight: 600, height: '100%', overflow: 'hidden' }}>
-            <img src={sm('/images/bishop/5.jpg')} alt="The grand staircase at AirStay Bishop" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src={sm('/images/bishop/5-stair.jpg')} alt="The grand staircase at AirStay Bishop" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
         </FadeIn>
         <div style={{ padding: '120px 0 120px 80px' }} className="r-noborder">
@@ -506,7 +506,7 @@ function OwnersSection({ onOwner }) {
 function ReviewsBand() {
   return (
     <section className="r-pad" style={{ position: 'relative', overflow: 'hidden', padding: '150px 48px' }}>
-      <img src={sm('/images/le-moyne-heritage/1.jpg')} alt="" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      <img src={sm('/images/le-moyne-heritage/1-tvoff.jpg')} alt="" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(13,12,10,0.78)' }} />
       <div style={{ position: 'relative', maxWidth: 1100, margin: '0 auto', textAlign: 'center' }}>
         <Reveal><div className="eyebrow" style={{ color: '#C9A96E', justifyContent: 'center', marginBottom: 24 }}>Trusted by Guests</div></Reveal>
