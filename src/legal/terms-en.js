@@ -19,7 +19,7 @@ const terms = {
       'Prices include all mandatory fees, including cleaning. GST, QST and any applicable lodging tax are added at checkout.',
       'We email you a confirmation, including these Terms, within 15 days of booking.',
       'The Responsible Guest must be 18 or older and complete online check-in with a government-issued photo ID and identity verification. Access instructions are sent only after verification.',
-      'For direct bookings, a pre-authorization hold (CAD $500, or CAD $1,000 for our largest residences) may be placed no earlier than 2 days before arrival and is released within 7 days after check-out if there is no claim. The amount is shown before you pay.',
+      'A pre-authorization hold (CAD $500, or up to CAD $1,000 for our largest residences) may be placed up to 3 days before arrival and is released within 7 days after check-out if there is no claim. The amount is shown before you pay.',
       'Check-in from 4:00 p.m., check-out by 11:00 a.m. Quiet hours from 10:00 p.m. to 7:00 a.m.',
       'No parties or events. No smoking or vaping in the unit, on balconies and terraces, or in the building, including common areas. No pets unless approved in writing before arrival.',
       'We charge only documented actual costs for damage, loss or excessive cleaning, after sending you a description with photos or invoices and giving you an opportunity to respond.',
@@ -122,8 +122,8 @@ const terms = {
         'For the security of our guests and buildings, access instructions are sent only after verification is complete. If verification is not completed at least **24 hours before arrival** despite our reminders, we may cancel the reservation; any refund is determined by the cancellation policy that applied at the time of booking.',
 
         { h: 'Security hold', id: 'security-hold' },
-        'For direct bookings, we may place a pre-authorization hold on the Responsible Guest’s card. The amount is shown in the listing and in your booking confirmation before you pay: **CAD $500** for standard units and **CAD $1,000** for four-bedroom lofts, the top-floor units at 155 Saint-Paul and the 380 Le Moyne penthouse.',
-        'The hold is placed no earlier than **2 days before arrival**, may be renewed for stays longer than 5 nights, and is released no later than **7 days after check-out** unless we have sent you a claim notice (see Section 3.9). The time it takes for released funds to become available again depends on your card issuer.',
+        'We may place a pre-authorization hold on the Responsible Guest’s card for direct bookings and, as described in Section 4, for certain platform reservations for which AirStay processes the payment. The amount is shown in the listing and in your booking confirmation before you pay: **CAD $500** for standard units and up to **CAD $1,000** for four-bedroom lofts, the top-floor units at 155 Saint-Paul and the 380 Le Moyne penthouse.',
+        'The hold may be placed up to **3 days before arrival**. Because a pre-authorization expires after a few days under card-network rules, we may renew it during your stay; your payment authorization remains valid even if the pre-authorization has expired. The hold is released no later than **7 days after check-out** unless we have sent you a claim notice (see Section 3.9). The time it takes for released funds to become available again depends on your card issuer.',
         'A hold is not a charge. It is not a penalty, and it does not limit your liability for documented costs.',
 
         { h: 'Check-in, check-out and late departures', id: 'check-in-out' },
@@ -202,7 +202,7 @@ const terms = {
       blocks: [
         'When you book one of our residences through a third-party platform, such as Airbnb, Vrbo, Booking.com, Expedia, Hotels.com or Hopper, your reservation is made through that platform. The platform’s terms and the listing’s house rules apply, and, unless AirStay processes your payment, payments, refunds and cancellations are handled through the platform. If these Terms differ from the platform’s terms for a platform booking, the platform’s terms prevail.',
         'We follow each platform’s policies. Where a platform does not allow separate rental agreements, identity document collection or host fines, we do not impose them.',
-        'For Vrbo reservations for which AirStay processes the payment, these Terms and the rental agreement attached to the Vrbo listing also apply, in addition to Vrbo’s terms. The online check-in and identity verification described in Section 3 apply where the Vrbo listing says so; AirStay takes no pre-authorization hold, as Vrbo’s refundable damage deposit applies under Vrbo’s rules, as does Vrbo’s cancellation policy.',
+        'For Vrbo, Expedia or Hotels.com reservations for which AirStay processes the payment, these Terms and the accommodation contract apply in addition to the platform’s terms, where the contract is attached to the listing or you accept it, including in our online check-in. The security hold described in Section 3 applies to these reservations when it is indicated in the listing before booking; Vrbo’s refundable damage deposit is not used. The platform’s cancellation policy applies.',
         'Airbnb reservations are governed only by Airbnb’s terms and the listing’s house rules.',
       ],
     },
