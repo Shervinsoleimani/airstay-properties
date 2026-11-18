@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { Toaster } from 'react-hot-toast'
@@ -18,8 +18,8 @@ import Services from './pages/Services'
 import About from './pages/About'
 import Careers from './pages/Careers'
 import Contact from './pages/Contact'
-import Privacy from './pages/Privacy'
-import Terms from './pages/Terms'
+const Privacy = lazy(() => import('./pages/Privacy'))
+const Terms = lazy(() => import('./pages/Terms'))
 
 export default function App() {
   const [loading, setLoading] = useState(true)
@@ -54,8 +54,8 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Suspense fallback={<div style={{ minHeight: '100vh', background: '#0D0C0A' }} />}><Privacy /></Suspense>} />
+        <Route path="/terms" element={<Suspense fallback={<div style={{ minHeight: '100vh', background: '#0D0C0A' }} />}><Terms /></Suspense>} />
         <Route path="*" element={<Home onBook={() => setBookOpen(true)} onOwner={() => setOwnerOpen(true)} />} />
       </Routes>
 
