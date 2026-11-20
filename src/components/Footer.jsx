@@ -4,15 +4,15 @@ import { BOOKING_URL } from '../lib/data'
 export default function Footer({ onBook, onOwner }) {
   return (
     <footer style={{ background: '#0D0C0A', color: '#9B9590', fontFamily: 'DM Sans' }}>
-      <div style={{ maxWidth: 1600, margin: '0 auto', padding: '80px 48px 40px' }}>
+      <div className="r-pad" style={{ maxWidth: 1600, margin: '0 auto', padding: '80px 48px 40px' }}>
 
         {/* Top CTA strip */}
         <div style={{ borderTop: '1px solid rgba(201,169,110,0.15)', borderBottom: '1px solid rgba(201,169,110,0.15)', padding: '40px 0', marginBottom: 64, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 24 }}>
           <div>
             <p style={{ fontFamily: 'Playfair Display', fontSize: 32, fontWeight: 400, color: '#F2EDE4', marginBottom: 6 }}>
-              Ready to elevate your stay?
+              Stay with us, or let us look after yours.
             </p>
-            <p style={{ fontSize: 14, fontWeight: 300, color: '#9B9590' }}>Boutique suites and residences in Montreal, now launching in Vancouver.</p>
+            <p style={{ fontSize: 14, fontWeight: 300, color: '#9B9590' }}>Lofts and suites in Old Montréal and downtown. Owner enquiries in Montréal and Vancouver.</p>
           </div>
           <div style={{ display: 'flex', gap: 12 }}>
             <button onClick={onBook} style={{ background: '#2C3E35', color: '#F2EDE4', fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '14px 32px', border: 'none', cursor: 'pointer' }}>
@@ -25,19 +25,22 @@ export default function Footer({ onBook, onOwner }) {
         </div>
 
         {/* Main footer grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 48, marginBottom: 64 }}>
+        <div className="r-two" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 48, marginBottom: 64 }}>
           <div>
             <img src="/logo.svg" alt="AirStay" style={{ height: 44, width: 'auto', marginBottom: 20 }} />
             <p style={{ fontSize: 13, fontWeight: 300, lineHeight: 1.8, maxWidth: 240, color: 'rgba(155,149,144,0.8)' }}>
-              Luxury hospitality and property management. Short-term stays, long-term residences and full-service building care.
+              Boutique stays and complete property care: long-term residences, building management, cleaning, landscaping and maintenance.
             </p>
             <p style={{ fontSize: 12, color: '#C9A96E', marginTop: 16, letterSpacing: '0.1em' }}>info@airstayproperties.com</p>
+            <a href="tel:+16042562560" style={{ display: 'block', fontSize: 12, color: '#C9A96E', marginTop: 8, letterSpacing: '0.1em', textDecoration: 'none' }}>Customer support · (604) 256-2560</a>
+            <a href="https://www.instagram.com/airstayproperties/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: 14, fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(242,237,228,0.7)', textDecoration: 'none', borderBottom: '1px solid rgba(201,169,110,0.4)', paddingBottom: 2 }}>Instagram · @airstayproperties</a>
           </div>
 
           {[
             ['Stays', [['Our Residences', '/stay'], ['Book Direct', `${BOOKING_URL}/all-listings`], ['Long-Term Living', '/longterm']]],
-            ['Company', [['Our Story', '/about'], ['Services', '/services'], ['For Owners', '/own'], ['Careers', '/careers']]],
-            ['Contact', [['Contact Us', '/contact'], ['Privacy Policy', '/privacy'], ['Terms & Booking', '/terms']]],
+            ['Services', [['Hotels & Short-Term', '/services#hospitality'], ['Building Management', '/services#management'], ['Cleaning & Housekeeping', '/services#cleaning'], ['Landscaping & Grounds', '/services#landscaping'], ['Maintenance', '/services#maintenance'], ['Sectors We Serve', '/services#sectors']]],
+            ['Company', [['Our Story', '/about'], ['For Owners', '/own'], ['Careers', '/careers'], ['Contact Us', '/contact']]],
+            
           ].map(([title, links]) => (
             <div key={title}>
               <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: 20 }}>{title}</p>

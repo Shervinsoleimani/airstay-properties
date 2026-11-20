@@ -14,7 +14,7 @@ export default function About() {
           <Reveal><div className="eyebrow" style={{ color: '#C9A96E', marginBottom: 24 }}>Our Story</div></Reveal>
           <Reveal delay={0.1}>
             <h1 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 28, maxWidth: 900 }}>
-              From building them<br />to <em style={{ fontStyle: 'italic', color: '#C9A96E' }}>bringing them to life.</em>
+              A family of builders,<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>now looking after yours.</em>
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
@@ -36,10 +36,10 @@ export default function About() {
             <Reveal delay={0.1}><h2 className="heading-lg" style={{ color: '#0D0C0A', marginBottom: 32 }}>Raised among <em style={{ fontStyle: 'italic', color: '#2C3E35' }}>builders.</em></h2></Reveal>
             <Reveal delay={0.2}>
               <p style={body}>
-                Long before AirStay welcomed its first guest, our family was creating buildings: developing properties, managing construction sites and engineering spaces designed to stand for generations. Conversations at our table were about structure, materials, timelines and the people who would one day live inside the walls.
+                Long before AirStay welcomed its first guest, our family was developing properties, managing construction sites and engineering buildings.
               </p>
               <p style={body}>
-                That upbringing taught us what most hospitality companies never see: how a building is made, where it is vulnerable, and what it takes to keep it performing year after year. It is a perspective you cannot learn from a booking dashboard.
+                That upbringing taught us how a building is made, where it is vulnerable, and what it takes to keep it working year after year. You cannot learn that from a booking dashboard.
               </p>
             </Reveal>
           </div>
@@ -51,18 +51,18 @@ export default function About() {
         <div className="r-stack" style={{ maxWidth: 1400, margin: '0 auto', display: 'grid', gridTemplateColumns: '6fr 5fr', gap: 100, alignItems: 'center' }}>
           <div>
             <Reveal><p style={{ fontFamily: 'DM Mono', fontSize: 11, letterSpacing: '0.2em', color: '#C9A96E', marginBottom: 16 }}>II. THE HOUSE OF HOSPITALITY</p></Reveal>
-            <Reveal delay={0.1}><h2 className="heading-lg" style={{ color: '#0D0C0A', marginBottom: 32 }}>A builder’s eye, a <em style={{ fontStyle: 'italic', color: '#2C3E35' }}>hotelier’s heart.</em></h2></Reveal>
+            <Reveal delay={0.1}><h2 className="heading-lg" style={{ color: '#0D0C0A', marginBottom: 32 }}>A builder’s eye <em style={{ fontStyle: 'italic', color: '#2C3E35' }}>on every stay.</em></h2></Reveal>
             <Reveal delay={0.2}>
               <p style={body}>
-                Founder Shervin Soleimani brought that foundation into hospitality with one conviction: a stay in a managed residence should feel as refined as a five-star hotel, and an owner’s property should be cared for with the discipline of the people who built it.
+                Founder Shervin Soleimani brought that foundation into hospitality with one conviction: a managed residence should be kept like a good hotel, and an owner’s property cared for with the discipline of the people who built it.
               </p>
               <p style={body}>
-                AirStay began in the historic stone buildings of Old Montreal. Today we care for more than 200 properties, short-term suites and long-term residences alike, and our guests have left more than 4,000 reviews across the world’s leading travel platforms. We are now bringing the same standard to Vancouver.
+                AirStay began in Old Montréal. Today we care for more than 200 properties: boutique suites, long-term residences and complete buildings, along with housekeeping, landscaping and maintenance services for hotels, private owners, commercial landlords and public-sector clients. Our guests have left more than 4,000 reviews on Airbnb, Booking.com, Expedia, Hotels.com and Vrbo, and we now take owner enquiries in Vancouver too.
               </p>
             </Reveal>
           </div>
           <FadeIn>
-            <div style={{ aspectRatio: '4/5', backgroundImage: 'url(/images/le-moyne-heritage/9.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            <div style={{ aspectRatio: '4/5', backgroundImage: 'url(/images/sm/services-suite-bedroom.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
           </FadeIn>
         </div>
       </div>
@@ -85,13 +85,13 @@ export default function About() {
       <div className="r-pad" style={{ padding: '120px 48px' }}>
         <div style={{ maxWidth: 1600, margin: '0 auto' }}>
           <Reveal><div className="eyebrow" style={{ marginBottom: 20 }}>Our Principles</div></Reveal>
-          <Reveal delay={0.1}><h2 className="heading-lg" style={{ color: '#0D0C0A', marginBottom: 64 }}>What guides<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>everything we do.</em></h2></Reveal>
+          <Reveal delay={0.1}><h2 className="heading-lg" style={{ color: '#0D0C0A', marginBottom: 64 }}>What we<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>hold to.</em></h2></Reveal>
           <div className="r-two" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }}>
             {[
               { title: 'Built to Last', desc: 'We think like builders: preventive care, quality materials and decisions that protect the long-term value of every asset.' },
-              { title: 'Uncompromising Quality', desc: 'We set a standard and hold it, for every property, every guest and every owner. There are no off days.' },
-              { title: 'Radical Transparency', desc: 'Owners see exactly what is happening with their asset: real numbers, clear reporting, honest conversations.' },
-              { title: 'Technology-Forward', desc: 'We invest in industry-leading platforms because they make us faster, safer and more profitable for everyone.' },
+              { title: 'One Standard', desc: 'We set a standard and hold it, for every property, every guest and every owner. There are no off days.' },
+              { title: 'Real Numbers', desc: 'Owners see exactly what is happening with their asset: real numbers, clear reporting, honest conversations.' },
+              { title: 'Proven Tools', desc: 'We use proven systems because they make us faster and safer, for guests and owners alike.' },
               { title: 'People First', desc: 'Guests, tenants, owners and our team. Every decision starts with what is right for the people involved.' },
               { title: 'Always Improving', desc: 'We review every stay, every maintenance request and every owner report, looking for the detail that makes it better.' },
             ].map((v, i) => (

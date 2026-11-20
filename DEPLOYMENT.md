@@ -64,57 +64,19 @@ Your site will be at: `https://airstay-properties.vercel.app`
 
 ---
 
-## STEP 4: Connect Hostaway
+## STEP 4: Direct booking (Hostaway booking website)
 
-### Get your API credentials:
-1. Log into your Hostaway dashboard
-2. Go to **Settings** → **API**
-3. Copy your **Account ID** and **API Key**
+Direct reservations run on our Hostaway booking website at
+https://book.airstayproperties.com. The marketing site links to it
+(`BOOKING_URL` in `src/lib/data.js`). **Do not** call the Hostaway API from
+the browser and **never** store Hostaway or Stripe secrets in `VITE_`
+variables: Vite publishes them in the public JavaScript bundle.
 
-### Add to Vercel Environment Variables:
-1. Vercel → Your project → **Settings** → **Environment Variables**
-2. Add:
-   - `VITE_HOSTAWAY_ACCOUNT_ID` = your account ID
-   - `VITE_HOSTAWAY_API_KEY` = your API key
-   - `VITE_HOSTAWAY_BASE_URL` = `https://api.hostaway.com/v1`
-3. Redeploy (Vercel → Deployments → Redeploy)
+## STEP 5: Website forms → email
 
-### What this unlocks:
-- Live property availability from Hostaway calendar
-- Real-time pricing (Pricelabs feeds into this automatically)
-- Bookings created directly in your Hostaway dashboard
-
----
-
-## STEP 5: Connect Stripe
-
-### Create your Stripe account:
-1. Go to stripe.com → Create account
-2. Complete business verification (required for live payments)
-3. Go to **Developers** → **API Keys**
-
-### Development (test) keys:
-- Copy your `pk_test_...` publishable key
-- Copy your `sk_test_...` secret key
-
-### Add to Vercel Environment Variables:
-- `VITE_STRIPE_PUBLISHABLE_KEY` = `pk_live_...` (or `pk_test_...` for testing)
-- `STRIPE_SECRET_KEY` = `sk_live_...` (NEVER put this in frontend code)
-
-### How payments flow:
-```
-Guest selects dates → Fills guest details
-→ Website calls /api/create-payment-intent (server-side, secret key)
-→ Stripe returns clientSecret
-→ Guest enters card details (Stripe-hosted, PCI compliant)
-→ Payment confirmed → Reservation created in Hostaway
-→ Guest receives email confirmation
-```
-
-### Set up Stripe webhook (optional but recommended):
-1. Stripe → Developers → Webhooks → Add endpoint
-2. URL: `https://yourdomain.com/api/stripe-webhook`
-3. Events to listen for: `payment_intent.succeeded`, `payment_intent.payment_failed`
+`/api/lead` emails every form (with attachments) to info@airstayproperties.com
+through Resend. Install "Resend for Vercel" (vercel.com/marketplace/resend)
+on this project; it adds `RESEND_API_KEY` automatically.
 
 ---
 
