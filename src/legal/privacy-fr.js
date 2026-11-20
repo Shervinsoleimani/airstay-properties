@@ -16,7 +16,7 @@ const privacy = {
   title: 'Politique de',
   titleAccent: 'confidentialité',
   intro: 'Comment AirStay Properties recueille, utilise, communique et protège les renseignements personnels, et comment vous pouvez exercer vos droits.',
-  meta: ['Version 1.0', 'Dernière mise à jour : 18 novembre 2026'],
+  meta: ['Version 1.0', 'Dernière mise à jour : 20 novembre 2026'],
   languageNote: 'Le présent document est offert en français et en anglais. En cas de divergence, la version française prévaut.',
 
   sections: [
@@ -258,6 +258,23 @@ const privacy = {
       ],
     },
 
+    // Sections 17 and 18 (SMS): Isabella's French draft of Nov 20, 2026, pending Daniel's approval.
+    {
+      id: 'sms',
+      title: 'Messages texte (SMS)',
+      blocks: [
+        'Aucune donnée d’adhésion aux messages texte ne sera communiquée à des tiers ou à des sociétés affiliées à des fins de marketing ou de promotion. Toutes les catégories ci-dessus excluent les données d’adhésion aux messages texte et le consentement recueillis par l’expéditeur; ces renseignements ne seront communiqués à aucun tiers.',
+      ],
+    },
+
+    {
+      id: 'sms-terms',
+      title: 'Conditions des messages texte (SMS)',
+      blocks: [
+        'En s’inscrivant aux messages texte, l’utilisateur accepte de recevoir des messages d’AirStay Properties concernant les confirmations de réservation, les renseignements d’arrivée et le soutien aux voyageurs. Il peut se désabonner en répondant STOP ou obtenir plus d’information en répondant HELP. La fréquence des messages varie. Des frais de messagerie texte et de données peuvent s’appliquer. Pour obtenir de l’aide ou pour toute question sur notre service de messages texte, répondez « HELP » à n’importe quel message reçu, ou communiquez avec notre service à la clientèle au [(604) 256-2560](tel:+16042562560) ou à [info@airstayproperties.com](mailto:info@airstayproperties.com).',
+      ],
+    },
+
     {
       id: 'contact',
       title: 'Nous joindre',
@@ -268,7 +285,7 @@ const privacy = {
     },
   ],
 
-  closing: 'AirStay Properties Inc. · Politique de confidentialité · Version du 18 novembre 2026',
+  closing: 'AirStay Properties Inc. · Politique de confidentialité · Version du 20 novembre 2026',
 }
 
 export default privacy

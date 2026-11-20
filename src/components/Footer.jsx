@@ -32,6 +32,7 @@ export default function Footer({ onBook, onOwner }) {
               Boutique stays and complete property care: long-term residences, building management, cleaning, landscaping and maintenance.
             </p>
             <p style={{ fontSize: 12, color: '#C9A96E', marginTop: 16, letterSpacing: '0.1em' }}>info@airstayproperties.com</p>
+            <a href="tel:+16042562560" style={{ display: 'block', fontSize: 12, color: '#C9A96E', marginTop: 8, letterSpacing: '0.1em', textDecoration: 'none' }}>Customer support · (604) 256-2560</a>
             <a href="https://www.instagram.com/airstayproperties/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: 14, fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(242,237,228,0.7)', textDecoration: 'none', borderBottom: '1px solid rgba(201,169,110,0.4)', paddingBottom: 2 }}>Instagram · @airstayproperties</a>
           </div>
 

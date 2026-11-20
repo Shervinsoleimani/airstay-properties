@@ -30,7 +30,7 @@ export const OWNER_SUCCESS = {
 export const CONTACT_FIELDS = [
   { name: 'name', label: 'Full Name', required: true, placeholder: 'Your full name', autoComplete: 'name' },
   { name: 'email', label: 'Email', type: 'email', required: true, placeholder: 'email@example.com', autoComplete: 'email' },
-  { name: 'phone', label: 'Phone', type: 'tel', placeholder: 'Optional', autoComplete: 'tel' },
+  { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: 'Optional', autoComplete: 'tel' },
   { name: 'iAm', label: 'I Am…', type: 'select', placeholder: 'Select one', options: ['A guest or traveller', 'A property owner or investor', 'A hotel or building manager', 'A public or government organisation', 'A partner or supplier', 'A job applicant', 'Press / media'] },
   { name: 'propertyAddress', label: 'Property Address', placeholder: 'If your request concerns a property', span: 2, autoComplete: 'street-address' },
   { name: 'message', label: 'Message', type: 'textarea', required: true, span: 2, placeholder: 'How can we help?' },
@@ -42,6 +42,16 @@ export const CONTACT_SUCCESS = {
   title: 'Message received.',
   body: 'Thank you for writing to AirStay Properties. Your message is with our team.',
   steps: ['We reply within one business day, often much sooner.', 'Guests with a current reservation: please also message us through your booking for the fastest response.'],
+}
+
+// Optional text-message consent on the contact form (Dialpad SMS campaign, Nov 20, 2026).
+// Keep this wording exactly as registered with Dialpad. Change it only together with
+// the Privacy Policy's SMS sections (src/legal/privacy-*.js) and the Dialpad campaign.
+export const SMS_CONSENT = {
+  version: 'SMS consent wording v1, Nov 20, 2026',
+  before: 'I agree to receive communications by text message regarding booking updates and guest support from AirStay Properties. You may opt out by replying STOP or ask for more information by replying HELP. Message frequency varies. Message and data rates may apply. You may review our ',
+  link: 'Privacy Policy',
+  after: ' to learn how your data is used.',
 }
 
 export const LONGTERM_FIELDS = [

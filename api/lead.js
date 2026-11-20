@@ -68,18 +68,39 @@ export default async function handler(req, res) {
     files.push({ filename, content })
   }
 
+  // SMS consent record (Dialpad / CASL): yes or no, the time we received it, the
+  // phone number and the exact wording shown. The record is kept in the email to the
+  // team (subject marked "SMS opt-in" when ticked) and noted in the function log.
+  const smsRows = []
+  let smsOptIn = false
+  if (data.smsConsent != null) {
+    smsOptIn = String(data.smsConsent).toLowerCase() === 'yes'
+    const phone = String(data.phone || '').trim().slice(0, 40)
+    const now = new Date()
+    const montreal = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Toronto', dateStyle: 'long', timeStyle: 'short' }).format(now)
+    smsRows.push(['SMS consent', smsOptIn ? 'Yes, agreed to receive text messages' : 'No, box not ticked'])
+    smsRows.push(['SMS consent time', `${now.toISOString().replace('T', ' ').slice(0, 19)} UTC (${montreal}, Montréal)`])
+    smsRows.push(['SMS consent phone', phone || 'None given'])
+    if (smsOptIn) {
+      const version = data.smsConsentVersion ? ` [${String(data.smsConsentVersion).slice(0, 80)}]` : ''
+      smsRows.push(['SMS consent wording', `${String(data.smsConsentText || '').slice(0, 1000)}${version}`])
+    }
+    console.log('[sms-consent]', JSON.stringify({ reference, consent: smsOptIn ? 'yes' : 'no', at: now.toISOString(), phoneLast4: phone.replace(/\D/g, '').slice(-4) || null }))
+  }
+
   const key = process.env.RESEND_API_KEY
   if (!key) return res.status(503).json({ message: 'Email service not configured', reference })
 
   const entries = Object.entries(data)
-    .filter(([k]) => k !== 'consent')
+    .filter(([k]) => !['consent', 'smsConsent', 'smsConsentText', 'smsConsentVersion'].includes(k))
     .slice(0, 40)
     .map(([k, v]) => [String(k).slice(0, 60), String(v ?? '').slice(0, 5000)])
     .filter(([, v]) => v !== '')
 
   const label = LABELS[type] || 'Website inquiry'
-  const subject = `[${reference}] ${label} – ${String(data.name).slice(0, 80)}${data.city ? ` · ${String(data.city).slice(0, 40)}` : ''}`
-  const rows = entries
+  const subject = `[${reference}] ${label} – ${String(data.name).slice(0, 80)}${data.city ? ` · ${String(data.city).slice(0, 40)}` : ''}${smsOptIn ? ' · SMS opt-in' : ''}`
+  const allRows = [...entries, ...smsRows]
+  const rows = allRows
     .map(([k, v]) => `<tr><td style="padding:10px 16px;color:#8B7355;font:12px/1.5 Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em;vertical-align:top;white-space:nowrap">${esc(pretty(k))}</td><td style="padding:10px 16px;color:#0D0C0A;font:15px/1.6 Arial,sans-serif;white-space:pre-wrap">${esc(v)}</td></tr>`)
     .join('')
   const fileList = files.length
@@ -94,7 +115,7 @@ export default async function handler(req, res) {
 <div style="padding:0 28px 24px">${fileList}
 <p style="font:12px/1.6 Arial,sans-serif;color:#999;margin:20px 0 0">Submitted from airstayproperties.com${page ? esc(page) : ''} on ${new Date().toISOString().replace('T', ' ').slice(0, 16)} UTC. Reply to this email to answer ${esc(data.name)} directly.</p></div>
 </div></div>`
-  const text = `${label} (${reference})\n\n` + entries.map(([k, v]) => `${pretty(k)}: ${v}`).join('\n') + (files.length ? `\n\nAttachments: ${files.map((f) => f.filename).join(', ')}` : '')
+  const text = `${label} (${reference})\n\n` + allRows.map(([k, v]) => `${pretty(k)}: ${v}`).join('\n') + (files.length ? `\n\nAttachments: ${files.map((f) => f.filename).join(', ')}` : '')
 
   try {
     const r = await fetch('https://api.resend.com/emails', {

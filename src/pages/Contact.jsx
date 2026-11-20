@@ -21,6 +21,7 @@ export default function Contact() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 26 }}>
               {[
                 ['Email', <a key="e" href="mailto:info@airstayproperties.com" style={{ color: 'inherit', textDecoration: 'none' }}>info@airstayproperties.com</a>],
+                ['Customer Support', <a key="t" href="tel:+16042562560" style={{ color: 'inherit', textDecoration: 'none' }}>(604) 256-2560</a>],
                 ['Reservations', <a key="r" href={`${BOOKING_URL}/all-listings`} style={{ color: 'inherit', textDecoration: 'none' }}>book.airstayproperties.com</a>],
                 ['Montréal', 'Old Montréal & downtown, Québec'],
                 ['Vancouver', 'Owner enquiries open'],
@@ -49,7 +50,7 @@ export default function Contact() {
           <Reveal><p style={{ ...mono, fontSize: 10, color: '#C9A96E', marginBottom: 10 }}>Write to Us</p></Reveal>
           <Reveal delay={0.05}><h2 style={{ fontFamily: 'Playfair Display', fontSize: 36, fontWeight: 400, color: '#0D0C0A', marginBottom: 40 }}>How can we help?</h2></Reveal>
           <Reveal delay={0.1}>
-            <LeadForm type="contact" fields={CONTACT_FIELDS} files={CONTACT_FILES} success={CONTACT_SUCCESS} submitLabel="Send Message" />
+            <LeadForm type="contact" fields={CONTACT_FIELDS} files={CONTACT_FILES} success={CONTACT_SUCCESS} submitLabel="Send Message" sms />
           </Reveal>
         </div>
       </div>

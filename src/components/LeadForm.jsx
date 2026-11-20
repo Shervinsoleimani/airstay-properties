@@ -1,23 +1,25 @@
 import { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   submitLead, prepareFile, mailtoHref, formatBytes,
   MAX_FILES, MAX_TOTAL_BYTES, ACCEPT, LEAD_EMAIL,
 } from '../lib/submitLead'
+import { SMS_CONSENT } from '../lib/forms'
 
 // One elegant, professional form used across the site.
 // fields: [{ name, label, type: 'text'|'email'|'tel'|'url'|'month'|'select'|'textarea', required, placeholder, options, span: 2 }]
 // files:  { label, hint, required } or null
 // success: { title, body, steps: [] }
+// sms:     true adds the optional text-message consent box (never pre-ticked, never required)
 
 const ERR = '#A4493D'
 
-export default function LeadForm({ type, theme = 'light', fields, files: fileCfg = null, submitLabel = 'Submit Request', success = {}, onClose, extra = {} }) {
+export default function LeadForm({ type, theme = 'light', fields, files: fileCfg = null, submitLabel = 'Submit Request', success = {}, onClose, extra = {}, sms = false }) {
   const dark = theme === 'dark'
   const initial = Object.fromEntries(fields.map(f => [f.name, f.defaultValue || '']))
   const [values, setValues] = useState(initial)
   const [consent, setConsent] = useState(false)
+  const [smsConsent, setSmsConsent] = useState(false) // optional text messages: starts unticked
   const [attached, setAttached] = useState([])
   const [preparing, setPreparing] = useState(false)
   const [dragging, setDragging] = useState(false)
@@ -68,6 +70,7 @@ export default function LeadForm({ type, theme = 'light', fields, files: fileCfg
     }
     if (fileCfg?.required && !attached.length) e.files = 'Please attach a file'
     if (!consent) e.consent = 'Please confirm to continue'
+    if (sms && smsConsent && !String(values.phone || '').trim()) e.phone = 'Please add your mobile number to receive text messages.'
     setErrors(e)
     return !Object.values(e).some(Boolean)
   }
@@ -79,6 +82,15 @@ export default function LeadForm({ type, theme = 'light', fields, files: fileCfg
     setStatus('sending')
     const payload = { ...extra, ...Object.fromEntries(Object.entries(values).map(([k, v]) => [k, String(v).trim()])) }
     payload.privacyConsent = `Agreed to Privacy Policy v1.0 on ${new Date().toISOString().replace('T', ' ').slice(0, 19)} UTC`
+    if (sms) {
+      // Recorded with every message: yes or no, plus the number and the exact wording shown.
+      // /api/lead adds the time it received the consent.
+      payload.smsConsent = smsConsent ? 'Yes' : 'No'
+      if (smsConsent) {
+        payload.smsConsentText = `${SMS_CONSENT.before}${SMS_CONSENT.link}${SMS_CONSENT.after}`
+        payload.smsConsentVersion = SMS_CONSENT.version
+      }
+    }
     const r = await submitLead(type, payload, attached, { honeypot, elapsed: Date.now() - started.current })
     setReference(r.reference)
     setStatus(r.ok ? 'sent' : 'error')
@@ -175,13 +187,31 @@ export default function LeadForm({ type, theme = 'light', fields, files: fileCfg
           </div>
         )}
 
+        {sms && (
+          <div style={{ gridColumn: '1 / -1' }}>
+            <span style={c.label}>Text Messages · Optional</span>
+            <label style={{ display: 'flex', gap: 12, alignItems: 'flex-start', cursor: 'pointer', marginTop: 4 }}>
+              <input type="checkbox" name="smsConsent" checked={smsConsent} disabled={sending}
+                onChange={e => { setSmsConsent(e.target.checked); if (!e.target.checked && errors.phone) setErrors(x => ({ ...x, phone: null })) }}
+                style={{ marginTop: 3, accentColor: '#2C3E35', width: 15, height: 15, flexShrink: 0 }} />
+              <span style={{ fontFamily: 'DM Sans', fontSize: 12.5, fontWeight: 300, color: c.text, lineHeight: 1.7 }}>
+                {SMS_CONSENT.before}
+                <a href="/privacy?lang=en" target="_blank" rel="noopener noreferrer"
+                  style={{ color: dark ? '#8AB4F8' : '#1D4ED8', textDecoration: 'underline', textUnderlineOffset: 2 }}>{SMS_CONSENT.link}</a>
+                {SMS_CONSENT.after}
+              </span>
+            </label>
+            {smsConsent && errors.phone && <p style={{ fontFamily: 'DM Sans', fontSize: 12, color: ERR, marginTop: 6 }}>Please add your mobile number above, or untick this box.</p>}
+          </div>
+        )}
+
         <div style={{ gridColumn: '1 / -1' }}>
           <label style={{ display: 'flex', gap: 12, alignItems: 'flex-start', cursor: 'pointer' }}>
             <input type="checkbox" checked={consent} disabled={sending} onChange={e => { setConsent(e.target.checked); if (errors.consent) setErrors(x => ({ ...x, consent: null })) }}
               style={{ marginTop: 3, accentColor: '#2C3E35', width: 15, height: 15, flexShrink: 0 }} />
             <span style={{ fontFamily: 'DM Sans', fontSize: 12.5, fontWeight: 300, color: c.text, lineHeight: 1.7 }}>
               I agree that AirStay Properties may use the information and files I provide to respond to this request, as described in our{' '}
-              <Link to="/privacy" style={{ color: '#C9A96E', textDecoration: 'none', borderBottom: '1px solid rgba(201,169,110,0.4)' }}>Privacy Policy</Link>.
+              <a href="/privacy?lang=en" target="_blank" rel="noopener noreferrer" style={{ color: '#C9A96E', textDecoration: 'none', borderBottom: '1px solid rgba(201,169,110,0.4)' }}>Privacy Policy</a>.
             </span>
           </label>
           {errors.consent && <p style={{ fontFamily: 'DM Sans', fontSize: 12, color: ERR, marginTop: 6 }}>{errors.consent}</p>}
@@ -199,7 +229,7 @@ export default function LeadForm({ type, theme = 'light', fields, files: fileCfg
               </p>
               <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
                 <button type="submit" style={{ background: 'none', border: 'none', padding: 0, fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#C9A96E', cursor: 'pointer', borderBottom: '1px solid rgba(201,169,110,0.5)' }}>Try again</button>
-                <a href={mailtoHref(type, { ...extra, ...values }, reference)} style={{ fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase', color: c.text, textDecoration: 'none', borderBottom: `1px solid ${c.line}` }}>Email us instead</a>
+                <a href={mailtoHref(type, { ...extra, ...values, ...(sms ? { smsConsent: smsConsent ? 'Yes' : 'No' } : {}) }, reference)} style={{ fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase', color: c.text, textDecoration: 'none', borderBottom: `1px solid ${c.line}` }}>Email us instead</a>
               </div>
             </div>
           </motion.div>

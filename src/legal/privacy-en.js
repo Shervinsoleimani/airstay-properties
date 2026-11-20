@@ -16,7 +16,7 @@ const privacy = {
   title: 'Privacy',
   titleAccent: 'Policy',
   intro: 'How AirStay Properties collects, uses, shares and protects personal information, and how you can exercise your rights.',
-  meta: ['Version 1.0', 'Last updated: November 18, 2026'],
+  meta: ['Version 1.0', 'Last updated: November 20, 2026'],
   languageNote: 'This document is available in French and in English. In case of any discrepancy, the French version prevails.',
 
   sections: [
@@ -259,6 +259,22 @@ const privacy = {
     },
 
     {
+      id: 'sms',
+      title: 'Text messages (SMS)',
+      blocks: [
+        'No mobile opt-in data will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.',
+      ],
+    },
+
+    {
+      id: 'sms-terms',
+      title: 'SMS Terms and Conditions',
+      blocks: [
+        'Upon messaging opt-in, the end user agrees to receive messages from AirStay Properties regarding reservation confirmations, check-in details, and guest support. End users can opt out by replying STOP or request more information by replying HELP. Message frequency varies. Message and data rates may apply. If you need assistance or have questions about our SMS service, reply with ‘HELP’ to any SMS message you receive, or contact our customer support team at [(604) 256-2560](tel:+16042562560) or [info@airstayproperties.com](mailto:info@airstayproperties.com).',
+      ],
+    },
+
+    {
       id: 'contact',
       title: 'Contact us',
       blocks: [
@@ -268,7 +284,7 @@ const privacy = {
     },
   ],
 
-  closing: 'AirStay Properties Inc. · Privacy Policy · Version of November 18, 2026',
+  closing: 'AirStay Properties Inc. · Privacy Policy · Version of November 20, 2026',
 }
 
 export default privacy
