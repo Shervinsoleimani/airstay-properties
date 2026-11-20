@@ -1,6 +1,6 @@
 // Shared form definitions so every page asks for the same, professional details.
 
-const CITIES = ['Montreal', 'Vancouver', 'Other']
+const CITIES = ['Montréal', 'Vancouver', 'Other']
 
 export const OWNER_FIELDS = [
   { name: 'name', label: 'Full Name', required: true, placeholder: 'Your full name', autoComplete: 'name' },
@@ -48,7 +48,7 @@ export const LONGTERM_FIELDS = [
   { name: 'name', label: 'Full Name', required: true, placeholder: 'Your full name', autoComplete: 'name' },
   { name: 'email', label: 'Email', type: 'email', required: true, placeholder: 'email@example.com', autoComplete: 'email' },
   { name: 'phone', label: 'Phone', type: 'tel', placeholder: 'Optional', autoComplete: 'tel' },
-  { name: 'city', label: 'City', type: 'select', options: ['Montreal', 'Vancouver'], placeholder: 'Select city' },
+  { name: 'city', label: 'City', type: 'select', options: ['Montréal', 'Vancouver'], placeholder: 'Select city' },
   { name: 'moveIn', label: 'Move-In Month', type: 'month' },
   { name: 'budget', label: 'Monthly Budget', type: 'select', placeholder: 'Select range', options: ['Under $2,000', '$2,000–$3,500', '$3,500–$5,000', '$5,000–$8,000', '$8,000+'] },
   { name: 'furnished', label: 'Furnished?', type: 'select', placeholder: 'Select', options: ['Furnished', 'Unfurnished', 'Either'] },
@@ -66,7 +66,7 @@ export const CAREERS_FIELDS = (roleOptions) => [
   { name: 'name', label: 'Full Name', required: true, placeholder: 'Your full name', autoComplete: 'name' },
   { name: 'email', label: 'Email', type: 'email', required: true, placeholder: 'email@example.com', autoComplete: 'email' },
   { name: 'phone', label: 'Phone', type: 'tel', placeholder: 'Best number to reach you', autoComplete: 'tel' },
-  { name: 'city', label: 'Preferred City', type: 'select', required: true, placeholder: 'Select a city', options: ['Montreal', 'Vancouver', 'Remote (Canada)', 'Open to either'] },
+  { name: 'city', label: 'Preferred City', type: 'select', required: true, placeholder: 'Select a city', options: ['Montréal', 'Vancouver', 'Remote (Canada)', 'Open to either'] },
   ...(roleOptions ? [{ name: 'role', label: 'Role', type: 'select', required: true, placeholder: 'Select a role', options: roleOptions, span: 2 }] : []),
   { name: 'portfolio', label: 'LinkedIn or Portfolio', type: 'url', placeholder: 'https://', span: 2 },
   { name: 'message', label: 'Why AirStay?', type: 'textarea', span: 2, placeholder: 'Tell us about your experience and what excites you about this role…' },

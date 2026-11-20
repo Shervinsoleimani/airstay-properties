@@ -6,7 +6,7 @@ import { WHY_OWN } from '../lib/data'
 function AssessmentPanel() {
   return (
     <div style={{ position: 'relative', overflow: 'hidden', height: '100%', minHeight: 640, display: 'flex', alignItems: 'flex-end' }}>
-      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/le-moyne-heritage/8.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/saint-paul/5.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,12,10,0.96) 20%, rgba(13,12,10,0.55) 70%, rgba(13,12,10,0.25))' }} />
       <div style={{ position: 'relative', padding: '56px' }}>
         <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: 12 }}>Complimentary Revenue Assessment</p>
@@ -49,12 +49,12 @@ export default function Own() {
           <Reveal><div className="eyebrow" style={{ color: '#C9A96E', marginBottom: 24 }}>For Property Owners</div></Reveal>
           <Reveal delay={0.1}>
             <h1 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 20 }}>
-              Your investment.<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>Our obsession.</em>
+              You own it.<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>We run it.</em>
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
             <p style={{ fontFamily: 'DM Sans', fontSize: 16, fontWeight: 300, color: '#9B9590', maxWidth: 560, lineHeight: 1.9 }}>
-              We care for your property as if we had built it ourselves: maximising revenue, protecting your asset and handling every detail, so you don’t have to.
+              Pricing, guests, tenants, cleaning, repairs and paperwork, handled by one team, with a monthly statement you can check line by line.
             </p>
           </Reveal>
         </div>

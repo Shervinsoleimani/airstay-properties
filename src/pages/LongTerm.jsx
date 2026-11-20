@@ -3,12 +3,12 @@ import LeadForm from '../components/LeadForm'
 import { LONGTERM_FIELDS, LONGTERM_SUCCESS } from '../lib/forms'
 
 const BENEFITS = [
-  { title: 'Furnished or Unfurnished', desc: 'Move-in-ready furnished homes with premium furniture and linens, or unfurnished residences ready for your own touch.' },
-  { title: 'Maintenance Included', desc: 'Something breaks? We fix it. No calls to landlords, no waiting weeks for repairs.' },
+  { title: 'Furnished or Unfurnished', desc: 'Furnished, with linens, ready on the first day. Or unfurnished, ready for your own furniture.' },
+  { title: 'Maintenance Included', desc: 'Something breaks, you tell us, and we send a qualified trade. No chasing a landlord.' },
   { title: 'Terms That Fit', desc: 'Long-term rentals arranged around your timeline. Tell us what you need and we’ll advise on the right option.' },
-  { title: 'Smart Home Tech', desc: 'Keyless entry, smart thermostats, high-speed WiFi — the technology you expect.' },
-  { title: 'Hotel-Grade Cleaning', desc: 'Professional cleaning service available. Your home, maintained to our standard.' },
-  { title: 'Prime Locations', desc: 'Residences in Old Montreal and downtown, with Vancouver now launching. One application, one trusted manager.' },
+  { title: 'Clear Leasing', desc: 'Your lease prepared and explained before you sign, and renewals raised well ahead of time.' },
+  { title: 'Cleaning on Request', desc: 'Our housekeeping team can clean your home on a schedule you choose.' },
+  { title: 'Montréal, Then Vancouver', desc: 'Residences in Montréal today. Vancouver enquiries are welcome. One application, one named contact.' },
 ]
 
 export default function LongTerm({ onBook }) {
@@ -25,12 +25,12 @@ export default function LongTerm({ onBook }) {
               <Reveal><div className="eyebrow" style={{ color: 'rgba(201,169,110,0.7)', marginBottom: 24 }}>Long-Term Rentals</div></Reveal>
               <Reveal delay={0.1}>
                 <h1 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 20 }}>
-                  Live better.<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>Stay longer.</em>
+                  A home,<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>looked after.</em>
                 </h1>
               </Reveal>
               <Reveal delay={0.2}>
                 <p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: 'rgba(242,237,228,0.6)', lineHeight: 1.9, marginBottom: 40 }}>
-                  Professionally managed residences in Montreal, with Vancouver now launching. Furnished or unfurnished, with maintenance included and leasing handled for you: the home you deserve, without the hassle.
+                  Furnished or unfurnished residences in Montréal, with maintenance included and the lease handled for you. Vancouver enquiries are welcome.
                 </p>
               </Reveal>
               <Reveal delay={0.3}>
@@ -43,10 +43,10 @@ export default function LongTerm({ onBook }) {
             <Reveal delay={0.3}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1 }}>
                 {[
-                  ['Inquire', 'Long-Term Rental'],
-                  ['2', 'Cities'],
+                  ['Montréal', 'Where we lease'],
+                  ['Included', 'Maintenance'],
                   ['Your Choice', 'Furnished or Not'],
-                  ['24/7', 'Maintenance'],
+                  ['24/7', 'Emergency line'],
                 ].map(([value, label]) => (
                   <div key={label} style={{ background: 'rgba(13,12,10,0.3)', padding: '32px 28px', backdropFilter: 'blur(10px)' }}>
                     <p style={{ fontFamily: 'Playfair Display', fontSize: 36, fontWeight: 400, color: '#C9A96E' }}>{value}</p>
@@ -63,7 +63,7 @@ export default function LongTerm({ onBook }) {
       <div style={{ padding: '100px 48px' }}>
         <div style={{ maxWidth: 1600, margin: '0 auto' }}>
           <Reveal><div className="eyebrow" style={{ marginBottom: 20 }}>Why Rent with AirStay</div></Reveal>
-          <Reveal delay={0.1}><h2 className="heading-lg" style={{ color: '#0D0C0A', marginBottom: 64 }}>This isn't a typical<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>rental experience.</em></h2></Reveal>
+          <Reveal delay={0.1}><h2 className="heading-lg" style={{ color: '#0D0C0A', marginBottom: 64 }}>What comes<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>with the lease.</em></h2></Reveal>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }}>
             {BENEFITS.map((b, i) => (
@@ -82,28 +82,28 @@ export default function LongTerm({ onBook }) {
       {/* Comparison */}
       <div style={{ padding: '0 48px 100px' }}>
         <div style={{ maxWidth: 1600, margin: '0 auto' }}>
-          <Reveal><h2 className="heading-lg" style={{ color: '#0D0C0A', marginBottom: 48 }}>AirStay vs<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>Traditional Rental</em></h2></Reveal>
+          <Reveal><h2 className="heading-lg" style={{ color: '#0D0C0A', marginBottom: 48 }}>At a<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>glance</em></h2></Reveal>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: 1 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr', gap: 1 }}>
             {/* Headers */}
             <div style={{ background: '#FAF7F2', padding: '20px 24px' }} />
-            {['Traditional Rental', 'AirStay Long-Term'].map((h, i) => (
-              <div key={h} style={{ background: i === 1 ? '#2C3E35' : '#F2EDE4', padding: '20px 24px', textAlign: 'center' }}>
-                <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: i === 1 ? '#C9A96E' : '#9B9590' }}>{h}</p>
+            {['AirStay Long-Term'].map((h) => (
+              <div key={h} style={{ background: '#2C3E35', padding: '20px 24px', textAlign: 'center' }}>
+                <p style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A96E' }}>{h}</p>
               </div>
             ))}
 
             {[
-              ['Furnished Option', 'Rarely offered', 'Furnished or unfurnished'],
-              ['Maintenance', 'Weeks to respond', '24/7 response'],
-              ['Smart Home Tech', 'Rarely included', 'Standard'],
-              ['Clear, Simple Leasing', 'Paperwork on you', 'Handled for you'],
-              ['Professional Cleaning', 'Not included', 'Available'],
-              ['Dedicated Manager', 'Call a hotline', 'Named contact'],
-            ].map(([feature, no, yes]) => (
-              [feature, no, yes].map((cell, ci) => (
-                <div key={`${feature}-${ci}`} style={{ background: ci === 2 ? 'rgba(44,62,53,0.08)' : '#FAF7F2', padding: '18px 24px', borderBottom: '1px solid rgba(13,12,10,0.06)', textAlign: ci === 0 ? 'left' : 'center' }}>
-                  <p style={{ fontFamily: ci === 0 ? 'DM Sans' : 'DM Mono', fontSize: ci === 0 ? 14 : 12, fontWeight: 300, color: ci === 2 ? '#2C3E35' : '#9B9590' }}>{cell}</p>
+              ['Furnishing', 'Furnished or unfurnished, your choice'],
+              ['Repairs', 'Included, with an emergency line 24/7'],
+              ['Lease', 'Prepared and explained before you sign'],
+              ['Renewals', 'Raised well ahead of time'],
+              ['Cleaning', 'Available on request'],
+              ['Contact', 'One named person'],
+            ].map(([feature, detail]) => (
+              [feature, detail].map((cell, ci) => (
+                <div key={`${feature}-${ci}`} style={{ background: ci === 1 ? 'rgba(44,62,53,0.08)' : '#FAF7F2', padding: '18px 24px', borderBottom: '1px solid rgba(13,12,10,0.06)', textAlign: ci === 0 ? 'left' : 'center' }}>
+                  <p style={{ fontFamily: ci === 0 ? 'DM Sans' : 'DM Mono', fontSize: ci === 0 ? 14 : 12, fontWeight: 300, color: ci === 1 ? '#2C3E35' : '#9B9590' }}>{cell}</p>
                 </div>
               ))
             ))}

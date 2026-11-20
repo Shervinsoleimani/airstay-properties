@@ -5,14 +5,14 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Reveal } from '../components/Reveal'
 
 const JOBS = [
-  { id: 1, title: 'Guest Experience Manager', type: 'Full-time', dept: 'Hospitality', desc: 'Be the voice of AirStay for our guests: anticipate needs, coordinate arrivals and make every stay exceed expectations. Hotel front-office or concierge background preferred.' },
-  { id: 2, title: 'Property Operations Lead', type: 'Full-time', dept: 'Operations', desc: 'Oversee day-to-day operations across our residences, leading housekeeping, maintenance and vendor partners to a five-star standard.' },
-  { id: 3, title: 'Maintenance Technician', type: 'Full-time', dept: 'Building Care', desc: 'Keep our buildings in impeccable condition through preventive care and responsive repairs. Trade experience and on-call availability required.' },
-  { id: 4, title: 'Housekeeping Specialist', type: 'Full-time / Part-time', dept: 'Housekeeping', desc: 'Deliver hotel-grade presentation in every suite. Exceptional attention to detail and pride in your work are essential.' },
+  { id: 1, title: 'Guest Experience Manager', type: 'Full-time', dept: 'Hospitality', desc: 'Be the voice of AirStay for our guests: anticipate needs, coordinate arrivals and make each stay run smoothly. Hotel front-office or concierge background preferred.' },
+  { id: 2, title: 'Property Operations Lead', type: 'Full-time', dept: 'Operations', desc: 'Oversee day-to-day operations across our residences, leading housekeeping, maintenance and vendor partners to the AirStay standard.' },
+  { id: 3, title: 'Maintenance Technician', type: 'Full-time', dept: 'Building Care', desc: 'Keep our buildings in good condition through preventive care and responsive repairs. Trade experience and on-call availability required.' },
+  { id: 4, title: 'Housekeeping Specialist', type: 'Full-time / Part-time', dept: 'Housekeeping', desc: 'Deliver hotel-grade presentation in every suite. Close attention to detail and pride in your work are essential.' },
   { id: 5, title: 'Revenue & Pricing Analyst', type: 'Full-time', dept: 'Revenue', desc: 'Shape our pricing and distribution strategy using market data, seasonality and major-event demand to maximise owner returns.' },
   { id: 6, title: 'Business Development Manager', type: 'Full-time', dept: 'Growth', desc: 'Grow our portfolio by building relationships with owners, developers and investors, and presenting tailored management proposals.' },
   { id: 7, title: 'Marketing & Brand Coordinator', type: 'Full-time', dept: 'Marketing', desc: 'Steward the AirStay brand across our website, social channels, photography and partnerships.' },
-  { id: 8, title: 'Open Application', type: 'Flexible', dept: 'General', desc: 'Exceptional people are always welcome. Tell us what you bring and where you would add the most value.' },
+  { id: 8, title: 'Open Application', type: 'Flexible', dept: 'General', desc: 'Good people are always welcome. Tell us what you bring and where you would add the most value.' },
 ]
 
 function ApplyModal({ job, onClose }) {
@@ -42,17 +42,17 @@ export default function Careers() {
     <div className="page-in" style={{ background: '#FAF7F2' }}>
       {/* Hero */}
       <div className="r-pad" style={{ background: '#0D0C0A', padding: '180px 48px 110px', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/bishop/2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/services/amenities-lounge.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(13,12,10,0.92), rgba(44,62,53,0.75))' }} />
         <div className="r-stack" style={{ maxWidth: 1600, margin: '0 auto', position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80 }}>
           <div>
             <Reveal><div className="eyebrow" style={{ color: 'rgba(201,169,110,0.7)', marginBottom: 24 }}>Join the Team</div></Reveal>
             <Reveal delay={0.1}><h1 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 20 }}>Build a career<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>in hospitality.</em></h1></Reveal>
-            <Reveal delay={0.2}><p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: 'rgba(242,237,228,0.6)', lineHeight: 1.9 }}>Join a hospitality house built on a family heritage of building and care. We are growing across Montreal and Vancouver, we promote from within, and we hold ourselves to a five-star standard.</p></Reveal>
+            <Reveal delay={0.2}><p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: 'rgba(242,237,228,0.6)', lineHeight: 1.9 }}>Join a hospitality house built on a family background in building. We work in Montréal, take owner enquiries in Vancouver, and hold every property to one standard.</p></Reveal>
           </div>
           <Reveal delay={0.3}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1 }}>
-              {[['Excellence', 'Every detail matters.'], ['Ownership', 'Act like a founder.'], ['Hospitality', 'People always first.'], ['Growth', 'We promote from within.']].map(([title, desc]) => (
+              {[['Detail', 'A folded towel and a fixed hinge count the same.'], ['Ownership', 'If you see it, fix it or flag it.'], ['Hospitality', 'Answer as if it were your own guest.'], ['Learning', 'Learn the building, not just the booking.']].map(([title, desc]) => (
                 <div key={title} style={{ background: 'rgba(13,12,10,0.3)', padding: '28px', backdropFilter: 'blur(10px)' }}>
                   <p style={{ fontFamily: 'Playfair Display', fontSize: 18, fontWeight: 400, color: '#F2EDE4', marginBottom: 6 }}>{title}</p>
                   <p style={{ fontFamily: 'DM Sans', fontSize: 12, fontWeight: 300, color: 'rgba(242,237,228,0.4)' }}>{desc}</p>

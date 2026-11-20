@@ -8,32 +8,32 @@ const mono = { fontFamily: 'DM Mono', letterSpacing: '0.2em', textTransform: 'up
 const DETAIL = [
   {
     id: 'hospitality', num: '01', title: 'Boutique Hotel & Short-Term Management', image: '/images/services/suite-bedroom.jpg',
-    desc: 'We run furnished suites and boutique hotels the way a five-star house would: thoughtfully presented, precisely priced and impeccably serviced, from the first enquiry to the final review.',
-    items: ['Distribution across Airbnb, Booking.com, Expedia, Hotels.com, Vrbo and our own direct-booking site', 'Dynamic revenue management with event and seasonal strategy', '24/7 guest communication and on-call support', 'Secure keyless arrival and verified direct reservations', 'Hotel-grade housekeeping, linen and amenities', 'Professional photography, listing design and brand standards', 'Front-of-house standards and training for boutique hotels', 'Monthly performance reporting and owner payouts'],
+    desc: 'We run furnished suites and boutique hotels like a small hotel: presented with care, priced every day and answered around the clock, from the first enquiry to the final review.',
+    items: ['Distribution across Airbnb, Booking.com, Expedia, Hotels.com, Vrbo and our own direct-booking site', 'Dynamic revenue management with event and seasonal strategy', '24/7 guest communication and on-call support', 'Secure keyless arrival and verified direct reservations', 'Hotel-style housekeeping, white linen and amenities', 'Professional photography, listing design and brand standards', 'Front-of-house standards and training for boutique hotels', 'Monthly performance reporting and owner payouts'],
   },
   {
     id: 'leasing', num: '02', title: 'Long-Term Leasing & Residences', image: '/images/saint-paul/5.jpg',
-    desc: 'Furnished or unfurnished, we lease and look after long-term homes with the same care we give our guests, so owners enjoy steady income and residents enjoy a well-kept home.',
+    desc: 'Furnished or unfurnished, we lease and look after long-term homes with the same care we give our guests: steady income for owners, a well-kept home for residents.',
     items: ['Marketing, viewings and tenant selection', 'Leases prepared in line with provincial requirements', 'Rent collection and arrears follow-up', 'Furnished or unfurnished management', 'Move-in and move-out inspections with photo records', 'Maintenance coordination and renewals', 'Clear monthly statements'],
   },
   {
     id: 'management', num: '03', title: 'Property & Building Management', image: '/images/services/amenities-lounge.jpg',
-    desc: 'From a single investment condo to a complete building, we operate your asset with institutional discipline and a builder’s understanding of how it was made, for private, commercial and public-sector owners.',
+    desc: 'From a single investment condo to a complete building, we run your property with a builder’s understanding of how it was made, for private, commercial and public-sector owners.',
     items: ['Day-to-day building operations for residential, commercial and public-sector properties', 'Vendor, contractor and service-contract management', 'Budgets, financial reporting and capital planning', 'Regulatory compliance, permits and registrations', 'Lobbies, gyms, lounges, rooftops and other amenities', 'Common-area standards and inspections', 'Emergency response and incident documentation'],
   },
   {
     id: 'cleaning', num: '04', title: 'Cleaning & Housekeeping', image: '/images/services/housekeeping-bath.jpg',
-    desc: 'Our housekeeping teams work to written standards and checklists, so every suite, office and common area is presented exactly as it should be, every single time.',
-    items: ['Hotel-grade turnovers, linen and amenity replenishment', 'Scheduled deep-cleaning programmes', 'Lobbies, corridors and common-area cleaning', 'Move-in and move-out cleaning', 'Written cleaning standards and quality inspections', 'Photo-documented reports after every visit'],
+    desc: 'Our housekeeping teams prepare every suite, office and common area to one standard: beds made hotel-style in white linen, surfaces clear, bins emptied, curtains even.',
+    items: ['Turnovers, linen and amenity replenishment', 'Monthly deep cleans, logged', 'Lobbies, corridors and common-area cleaning', 'Move-in and move-out cleaning', 'Quality inspections', 'Photo reports on request'],
   },
   {
     id: 'landscaping', num: '05', title: 'Landscaping & Grounds Care', image: '/images/services/grounds-rooftop-aerial.jpg',
-    desc: 'First impressions begin outside. We design, plant and maintain courtyards, terraces and green spaces that make a property feel cared for the moment someone arrives.',
+    desc: 'Guests see the entrance before anything else. We design, plant and maintain courtyards, terraces and green walls so a property looks cared for from the street.',
     items: ['Courtyards, gardens and entrance landscaping', 'Rooftop terraces, planters and outdoor lounges', 'Green walls and interior plantscapes', 'Seasonal planting, pruning and refreshes', 'Grounds cleanliness and regular upkeep', 'Outdoor furniture and lighting care'],
   },
   {
     id: 'maintenance', num: '06', title: 'Maintenance & Building Care', image: '/images/bishop/3.jpg',
-    desc: 'We don’t wait for things to break. Preventive care, rapid response and a trusted network of qualified trades keep every property safe, comfortable and in excellent condition.',
+    desc: 'We don’t wait for things to break. Preventive care and qualified trades keep each property safe and comfortable, with a photo and a note after every job.',
     items: ['24/7 emergency response', 'Preventive maintenance schedules', 'Plumbing, electrical, HVAC, carpentry and glass through qualified trades', 'Smart-lock and building-systems support', 'Damage restoration coordination', 'Insurance and warranty claim support', 'Annual property condition reports'],
   },
 ]
@@ -56,12 +56,12 @@ export default function Services({ onOwner }) {
           <Reveal><div className="eyebrow" style={{ color: '#C9A96E', marginBottom: 24 }}>Our Services</div></Reveal>
           <Reveal delay={0.1}>
             <h1 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 24 }}>
-              We take care<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>of everything.</em>
+              From lobby<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>to rooftop.</em>
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
             <p style={{ fontFamily: 'DM Sans', fontSize: 17, fontWeight: 300, color: 'rgba(242,237,228,0.75)', maxWidth: 620, lineHeight: 1.9, marginBottom: 40 }}>
-              Hospitality, leasing, building management, cleaning, landscaping and maintenance: six disciplines delivered by one accountable team for boutique hotels, private owners, commercial buildings and public-sector properties.
+              Hospitality, leasing, building management, cleaning, landscaping and maintenance: six services from one team, for boutique hotels, private owners, commercial buildings and public-sector properties.
             </p>
           </Reveal>
           <Reveal delay={0.3}>
@@ -165,7 +165,7 @@ export default function Services({ onOwner }) {
         <div style={{ position: 'absolute', inset: 0, background: 'rgba(13,12,10,0.8)' }} />
         <div style={{ position: 'relative', maxWidth: 820, margin: '0 auto' }}>
           <Reveal><div className="eyebrow" style={{ color: '#C9A96E', justifyContent: 'center', marginBottom: 20 }}>Let’s Talk</div></Reveal>
-          <Reveal delay={0.1}><h2 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 24 }}>One call. <em style={{ fontStyle: 'italic', color: '#C9A96E' }}>Everything handled.</em></h2></Reveal>
+          <Reveal delay={0.1}><h2 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 24 }}>One call. <em style={{ fontStyle: 'italic', color: '#C9A96E' }}>One team.</em></h2></Reveal>
           <Reveal delay={0.2}><p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: 'rgba(242,237,228,0.7)', lineHeight: 1.9, marginBottom: 40 }}>Tell us about your property or building. We’ll arrange a complimentary walkthrough and a tailored proposal.</p></Reveal>
           <Reveal delay={0.3}>
             <button onClick={onOwner} style={{ background: '#C9A96E', color: '#0D0C0A', fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '18px 48px', border: 'none', cursor: 'pointer' }}>Request a Proposal →</button>

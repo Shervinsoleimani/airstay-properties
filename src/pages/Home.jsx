@@ -68,10 +68,10 @@ function Hero({ onOwner }) {
       <div className="r-pad" style={{ position: 'relative', zIndex: 10, width: '100%', padding: '170px 48px 64px', maxWidth: 1600, margin: '0 auto' }}>
         <motion.div className="eyebrow" style={{ color: '#C9A96E', marginBottom: 30 }}
           initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-          Luxury Hospitality · Property &amp; Building Management
+          Boutique Stays · Property &amp; Building Care
         </motion.div>
 
-        {['Where luxury', 'feels like', 'home.'].map((line, k) => (
+        {['Old Montréal,', 'from the', 'inside.'].map((line, k) => (
           <div key={line} style={{ overflow: 'hidden', marginBottom: k === 2 ? 30 : 6 }}>
             <motion.h1 className="heading-hero"
               style={k === 1 ? { color: 'transparent', WebkitTextStroke: '1px #C9A96E' } : { color: '#F2EDE4' }}
@@ -83,7 +83,7 @@ function Hero({ onOwner }) {
 
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}
           style={{ fontFamily: 'DM Sans', fontSize: 16, fontWeight: 300, color: 'rgba(242,237,228,0.75)', lineHeight: 1.8, maxWidth: 560, marginBottom: 40 }}>
-          Boutique suites in Old Montréal, and complete care for residences, hotels and buildings, from housekeeping and landscaping to full building management.
+          Lofts and suites in four buildings in Old Montréal and downtown, and complete care for residences, hotels and buildings, from housekeeping and landscaping to full building management.
         </motion.p>
 
         {/* Reservation bar */}
@@ -163,7 +163,7 @@ function Intro() {
           </Reveal>
           <Reveal delay={0.15}>
             <p style={{ fontFamily: 'DM Sans', fontSize: 16, fontWeight: 300, color: '#6F6A64', lineHeight: 1.9 }}>
-              AirStay takes care of everything a property needs: guests and tenants, housekeeping and cleaning, landscaping and grounds, maintenance and full building operations. One accountable team, one standard, for boutique hotels, private owners, commercial buildings and public-sector properties.
+              AirStay looks after what a property needs: guests and tenants, housekeeping, landscaping, maintenance and full building operations. One team and one standard, for boutique hotels, private owners, commercial buildings and public-sector properties.
             </p>
           </Reveal>
         </div>
@@ -192,13 +192,13 @@ function FeaturedProperties({ onBook }) {
             <Reveal><div className="eyebrow" style={{ marginBottom: 16 }}>Our Residences</div></Reveal>
             <Reveal delay={0.1}>
               <h2 className="heading-xl" style={{ color: '#0D0C0A' }}>
-                Curated addresses,<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>extraordinary</em> stays.
+                Stone, brick<br />and <em style={{ fontStyle: 'italic', color: '#2C3E35' }}>skylights.</em>
               </h2>
             </Reveal>
           </div>
           <Reveal delay={0.2}>
             <p style={{ fontFamily: 'DM Sans', fontSize: 14, fontWeight: 300, color: '#6F6A64', lineHeight: 1.9, maxWidth: 420 }}>
-              Heritage stone buildings, restored lofts and modern suites in Old Montréal and downtown, each run to the standard of a boutique hotel.
+              Stone-wall lofts on rue Saint-Paul, brick lofts and modern suites on rue Le Moyne, and two residences on rue Bishop. Each building holds its own CITQ registration.
             </p>
           </Reveal>
         </div>
@@ -262,12 +262,12 @@ function ServicesSection() {
           <Reveal>
             <div className="eyebrow" style={{ marginBottom: 20 }}>Full-Service Property Care</div>
             <h2 className="heading-xl" style={{ color: '#0D0C0A' }}>
-              We take care of<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>everything.</em>
+              From lobby<br />to <em style={{ fontStyle: 'italic', color: '#2C3E35' }}>rooftop.</em>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
             <p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: '#6F6A64', lineHeight: 1.9 }}>
-              Six disciplines, one accountable team. Whether you need a single service or complete management, every property in our care receives the attention of a five-star house.
+              Six services from one team. Take a single one, or hand us the whole property.
             </p>
           </Reveal>
         </div>
@@ -307,7 +307,7 @@ function SectorsSection({ onOwner }) {
           </Reveal>
           <Reveal delay={0.2}>
             <p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: 'rgba(242,237,228,0.6)', lineHeight: 1.9, marginBottom: 28 }}>
-              Private owners, investors, independent hotels, commercial landlords and public-sector organisations trust us with the places that matter to them.
+              Private owners, investors, independent hotels, commercial landlords and public-sector organisations: one team for all of it.
             </p>
             <button onClick={onOwner} style={{ background: 'transparent', color: '#C9A96E', fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', border: 'none', borderBottom: '1px solid rgba(201,169,110,0.5)', paddingBottom: 3, cursor: 'pointer' }}>
               Request a proposal →
@@ -353,7 +353,7 @@ function Heritage() {
           </Reveal>
           <Reveal delay={0.2}>
             <p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: '#6F6A64', lineHeight: 1.9, marginBottom: 20, maxWidth: 520 }}>
-              AirStay grew out of a family background in building development, construction management and engineering. We learned early that a great building is never an accident: it is planned, engineered and cared for, detail by detail.
+              AirStay grew out of a family background in building development, construction management and engineering. So we look at a property the way builders do: the structure first, then the finishes.
             </p>
             <p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: '#6F6A64', lineHeight: 1.9, marginBottom: 40, maxWidth: 520 }}>
               Today we bring that same discipline to hospitality and property care, looking after every property as if we had built it ourselves.
@@ -377,7 +377,7 @@ function Process() {
       <div style={{ maxWidth: 1600, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 80 }}>
           <Reveal><div className="eyebrow" style={{ justifyContent: 'center', marginBottom: 20 }}>The AirStay Standard</div></Reveal>
-          <Reveal delay={0.1}><h2 className="heading-xl" style={{ color: '#0D0C0A' }}>Four steps to a property<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>you never worry about.</em></h2></Reveal>
+          <Reveal delay={0.1}><h2 className="heading-xl" style={{ color: '#0D0C0A' }}>From first visit<br /><em style={{ fontStyle: 'italic', color: '#2C3E35' }}>to monthly report.</em></h2></Reveal>
         </div>
         <div className="r-two" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 48 }}>
           {PROCESS.map((p, k) => (
@@ -402,10 +402,10 @@ function Process() {
 // ── TECHNOLOGY (no vendor names) ──────────────────────
 function TechSection() {
   const techs = [
-    { name: 'One Operating Platform', role: 'Reservations & Operations', desc: 'Every reservation, guest, task and channel synchronised in real time across our entire portfolio.' },
-    { name: 'Revenue Intelligence', role: 'Dynamic Pricing', desc: 'Data-driven rates that respond to demand, seasons and major events every day of the year.' },
-    { name: 'Keyless Arrival', role: 'Smart Access & Security', desc: 'Secure smart locks and unique codes for every stay, delivered securely before arrival.' },
-    { name: 'Verified & Secure', role: 'Payments & Identity', desc: 'Bank-grade payment processing and identity verification for direct reservations.' },
+    { name: 'One System', role: 'Reservations & Operations', desc: 'Reservations, guest messages and every booking channel in one place, synchronised in real time.' },
+    { name: 'Daily Pricing', role: 'Revenue', desc: 'Rates reviewed every day against demand, seasons and events like the Grand Prix.' },
+    { name: 'Keyless Arrival', role: 'Smart Access & Security', desc: 'Smart locks with a new code for each stay, sent on arrival day.' },
+    { name: 'Verified Bookings', role: 'Payments & Identity', desc: 'Card payments through a PCI-certified processor, and ID verification on direct bookings.' },
   ]
   return (
     <section className="r-pad" style={{ background: '#0D0C0A', padding: '120px 48px' }}>
@@ -414,12 +414,12 @@ function TechSection() {
           <Reveal><div className="eyebrow" style={{ color: '#C9A96E', justifyContent: 'center', marginBottom: 20 }}>Technology</div></Reveal>
           <Reveal delay={0.1}>
             <h2 className="heading-xl" style={{ color: '#F2EDE4' }}>
-              Industry-leading<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>technology,</em> quietly at work.
+              The systems<br />behind <em style={{ fontStyle: 'italic', color: '#C9A96E' }}>each stay.</em>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
             <p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: '#9B9590', lineHeight: 1.9, maxWidth: 600, margin: '24px auto 0' }}>
-              We operate on the most advanced platforms in hospitality and integrate them into one seamless system, so guests feel effortless service and owners see results.
+              Reservations, pricing, locks and payments are connected, so a booking on any channel updates every calendar at once.
             </p>
           </Reveal>
         </div>
@@ -454,20 +454,20 @@ function OwnersSection({ onOwner }) {
             <Reveal><div className="eyebrow" style={{ marginBottom: 20 }}>For Owners &amp; Investors</div></Reveal>
             <Reveal delay={0.1}>
               <h2 className="heading-xl" style={{ color: '#0D0C0A', marginBottom: 16 }}>
-                Your property.<br />Our <em style={{ fontStyle: 'italic', color: '#2C3E35' }}>expertise.</em>
+                We recommend.<br />You <em style={{ fontStyle: 'italic', color: '#2C3E35' }}>decide.</em>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
               <p style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 300, color: '#6F6A64', lineHeight: 1.9, marginBottom: 48 }}>
-                Short-term, long-term, furnished or unfurnished, a single condo or an entire building: we recommend the strategy that earns you the most, then run it with complete transparency.
+                Short-term, long-term, furnished or unfurnished, one condo or a whole building: we show you the estimates for each option, recommend one, and run it with monthly statements you can check line by line.
               </p>
             </Reveal>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24, marginBottom: 52 }}>
               {[
                 ['200+', 'Properties under our management'],
                 ['4,000+', 'Guest reviews across Airbnb, Booking.com, Expedia, Hotels.com and Vrbo'],
-                ['24/7', 'Guest, tenant and owner care'],
-                ['1', 'Dedicated manager who knows your property by name'],
+                ['24/7', 'Guest care and emergency line'],
+                ['1', 'Named contact who knows your property'],
               ].map(([value, label], k) => (
                 <Reveal key={label} delay={0.1 + k * 0.07}>
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: 20, paddingTop: 20, borderTop: '1px solid rgba(13,12,10,0.08)' }}>
@@ -485,7 +485,7 @@ function OwnersSection({ onOwner }) {
           </div>
           <Reveal delay={0.3}>
             <div style={{ position: 'relative', overflow: 'hidden', minHeight: 600, display: 'flex', alignItems: 'flex-end' }}>
-              <img src={sm('/images/le-moyne-heritage/9.jpg')} alt="" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={sm('/images/le-moyne-heritage/facade.jpg')} alt="" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,12,10,0.95) 10%, rgba(13,12,10,0.4) 60%, rgba(13,12,10,0.15))' }} />
               <div style={{ position: 'relative', padding: '56px' }} className="r-pad">
                 <p style={{ fontFamily: 'Playfair Display', fontSize: 34, fontWeight: 400, color: '#F2EDE4', lineHeight: 1.25, marginBottom: 32 }}>
@@ -514,7 +514,7 @@ function ReviewsBand() {
           <p style={{ fontFamily: 'Playfair Display', fontSize: 'clamp(64px, 10vw, 140px)', fontWeight: 400, color: '#F2EDE4', lineHeight: 1 }}><Counter value="4,000+" /></p>
         </Reveal>
         <Reveal delay={0.2}>
-          <p style={{ fontFamily: 'Playfair Display', fontStyle: 'italic', fontSize: 'clamp(22px, 2.4vw, 32px)', color: '#C9A96E', margin: '16px 0 28px' }}>verified guest reviews, and counting.</p>
+          <p style={{ fontFamily: 'Playfair Display', fontStyle: 'italic', fontSize: 'clamp(22px, 2.4vw, 32px)', color: '#C9A96E', margin: '16px 0 28px' }}>verified guest reviews, across six platforms.</p>
         </Reveal>
         <Reveal delay={0.3}>
           <p style={{ ...mono, fontSize: 11, color: 'rgba(242,237,228,0.6)', lineHeight: 2.2 }}>
@@ -535,8 +535,8 @@ function Gallery() {
     <section style={{ background: '#0D0C0A', padding: '110px 0 120px', overflow: 'hidden' }}>
       <div className="r-pad" style={{ maxWidth: 1600, margin: '0 auto 56px', padding: '0 48px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 24, flexWrap: 'wrap' }}>
         <Reveal>
-          <div className="eyebrow" style={{ color: '#C9A96E', marginBottom: 18 }}>A Glimpse Inside</div>
-          <h2 className="heading-lg" style={{ color: '#F2EDE4' }}>Spaces we <em style={{ fontStyle: 'italic', color: '#C9A96E' }}>care for.</em></h2>
+          <div className="eyebrow" style={{ color: '#C9A96E', marginBottom: 18 }}>Inside</div>
+          <h2 className="heading-lg" style={{ color: '#F2EDE4' }}>Rooms we <em style={{ fontStyle: 'italic', color: '#C9A96E' }}>look after.</em></h2>
         </Reveal>
         <Reveal delay={0.15}>
           <a href={`${BOOKING_URL}/all-listings`} style={{ fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C9A96E', textDecoration: 'none', borderBottom: '1px solid rgba(201,169,110,0.4)', paddingBottom: 3 }}>Explore residences →</a>
@@ -560,8 +560,8 @@ function FinalCTA({ onBook, onOwner }) {
           <Reveal>
             <div>
               <div className="eyebrow" style={{ color: 'rgba(201,169,110,0.75)', marginBottom: 20 }}>Plan Your Stay</div>
-              <h2 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 20 }}>Ready for an<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>elevated</em> stay?</h2>
-              <p style={{ fontFamily: 'DM Sans', fontSize: 14, fontWeight: 300, color: 'rgba(242,237,228,0.65)', lineHeight: 1.8, marginBottom: 36 }}>Reserve directly with us for live availability and a secure, verified booking.</p>
+              <h2 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 20 }}>Choose<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>your dates.</em></h2>
+              <p style={{ fontFamily: 'DM Sans', fontSize: 14, fontWeight: 300, color: 'rgba(242,237,228,0.65)', lineHeight: 1.8, marginBottom: 36 }}>Book on our own site: live availability, secure payment, verified booking.</p>
               <button onClick={onBook} style={{ background: '#C9A96E', color: '#0D0C0A', fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '18px 44px', border: 'none', cursor: 'pointer' }}>
                 Check Availability →
               </button>
@@ -570,7 +570,7 @@ function FinalCTA({ onBook, onOwner }) {
           <Reveal delay={0.2}>
             <div className="r-noborder" style={{ borderLeft: '1px solid rgba(201,169,110,0.2)', paddingLeft: 80 }}>
               <div className="eyebrow" style={{ color: 'rgba(201,169,110,0.75)', marginBottom: 20 }}>For Owners &amp; Buildings</div>
-              <h2 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 20 }}>Let us take care<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>of everything.</em></h2>
+              <h2 className="heading-xl" style={{ color: '#F2EDE4', marginBottom: 20 }}>Tell us about<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>your building.</em></h2>
               <p style={{ fontFamily: 'DM Sans', fontSize: 14, fontWeight: 300, color: 'rgba(242,237,228,0.65)', lineHeight: 1.8, marginBottom: 36 }}>Join the owners and organisations who trust AirStay with more than 200 properties.</p>
               <button onClick={onOwner} style={{ background: 'transparent', color: '#F2EDE4', fontFamily: 'DM Sans', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '17px 44px', border: '1px solid rgba(242,237,228,0.35)', cursor: 'pointer' }}>
                 Request a Proposal →
