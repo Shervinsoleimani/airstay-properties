@@ -54,6 +54,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/fr/contact" element={<Contact lang="fr" />} />
         <Route path="/privacy" element={<Suspense fallback={<div style={{ minHeight: '100vh', background: '#0D0C0A' }} />}><Privacy /></Suspense>} />
         <Route path="/terms" element={<Suspense fallback={<div style={{ minHeight: '100vh', background: '#0D0C0A' }} />}><Terms /></Suspense>} />
         <Route path="*" element={<Home onBook={() => setBookOpen(true)} onOwner={() => setOwnerOpen(true)} />} />

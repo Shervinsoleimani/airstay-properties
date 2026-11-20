@@ -38,6 +38,24 @@ export const CONTACT_FIELDS = [
 
 export const CONTACT_FILES = { label: 'Attachments', hint: 'Optional · up to 5 files · images, PDF, Word or Excel · please do not upload ID documents or payment details' }
 
+// French contact form (/fr/contact): the same fields as the English form.
+export const CONTACT_FIELDS_FR = [
+  { name: 'name', label: 'Nom complet', required: true, placeholder: 'Votre nom complet', autoComplete: 'name' },
+  { name: 'email', label: 'Courriel', type: 'email', required: true, placeholder: 'courriel@exemple.com', autoComplete: 'email' },
+  { name: 'phone', label: 'Numéro de téléphone', type: 'tel', placeholder: 'Facultatif', autoComplete: 'tel' },
+  { name: 'iAm', label: 'Vous êtes…', type: 'select', placeholder: 'Choisir', options: ['Voyageur', 'Propriétaire ou investisseur', 'Gestionnaire d’hôtel ou d’immeuble', 'Organisme public ou gouvernemental', 'Partenaire ou fournisseur', 'Candidat à un emploi', 'Presse ou médias'] },
+  { name: 'propertyAddress', label: 'Adresse de la propriété', placeholder: 'Si votre demande concerne une propriété', span: 2, autoComplete: 'street-address' },
+  { name: 'message', label: 'Message', type: 'textarea', required: true, span: 2, placeholder: 'Votre question ou votre projet' },
+]
+
+export const CONTACT_FILES_FR = { label: 'Pièces jointes', hint: 'Facultatif · jusqu’à 5 fichiers · images, PDF, Word ou Excel · veuillez ne pas téléverser de pièces d’identité ni de renseignements de paiement' }
+
+export const CONTACT_SUCCESS_FR = {
+  title: 'Message reçu.',
+  body: 'Merci d’avoir écrit à AirStay Properties. Votre message est entre les mains de notre équipe.',
+  steps: ['Nous répondons en un jour ouvrable, souvent bien plus tôt.', 'Vous avez une réservation en cours? Écrivez-nous aussi par la messagerie de votre réservation : c’est le moyen le plus rapide.'],
+}
+
 export const CONTACT_SUCCESS = {
   title: 'Message received.',
   body: 'Thank you for writing to AirStay Properties. Your message is with our team.',

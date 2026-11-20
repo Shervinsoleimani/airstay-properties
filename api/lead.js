@@ -98,7 +98,7 @@ export default async function handler(req, res) {
     .filter(([, v]) => v !== '')
 
   const label = LABELS[type] || 'Website inquiry'
-  const subject = `[${reference}] ${label} – ${String(data.name).slice(0, 80)}${data.city ? ` · ${String(data.city).slice(0, 40)}` : ''}${smsOptIn ? ' · SMS opt-in' : ''}`
+  const subject = `[${reference}] ${label} – ${String(data.name).slice(0, 80)}${data.city ? ` · ${String(data.city).slice(0, 40)}` : ''}${data.formLanguage === 'French' ? ' · FR' : ''}${smsOptIn ? ' · SMS opt-in' : ''}`
   const allRows = [...entries, ...smsRows]
   const rows = allRows
     .map(([k, v]) => `<tr><td style="padding:10px 16px;color:#8B7355;font:12px/1.5 Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em;vertical-align:top;white-space:nowrap">${esc(pretty(k))}</td><td style="padding:10px 16px;color:#0D0C0A;font:15px/1.6 Arial,sans-serif;white-space:pre-wrap">${esc(v)}</td></tr>`)
