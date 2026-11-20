@@ -260,7 +260,9 @@ const privacy = {
       ],
     },
 
-    // Sections 17 and 18 (SMS): Daniel's final French wording, Nov 20, 2026. STOP and HELP until Dialpad confirms ARRÊT and AIDE.
+    // Sections 17 and 18 (SMS): Daniel's final French wording, Nov 20, 2026. STOP and HELP are the
+    // only keywords (Dialpad, Nov 20: carriers may not recognize French keywords). Add « STOP (ou ARRÊT) »
+    // only if Dialpad confirms that an ARRÊT reply opts people out automatically.
     {
       id: 'sms',
       title: 'Messages texte (SMS)',
