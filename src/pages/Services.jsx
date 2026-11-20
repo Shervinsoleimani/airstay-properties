@@ -6,7 +6,7 @@ export default function Services() {
     <div className="page-in" style={{ background: '#FAF7F2' }}>
       {/* Hero */}
       <div className="r-pad" style={{ background: '#0D0C0A', padding: '180px 48px 110px', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/le-moyne-modern/9.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/services/landscaping-rooftop.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(13,12,10,0.93), rgba(13,12,10,0.5))' }} />
         <div style={{ maxWidth: 1600, margin: '0 auto', position: 'relative' }}>
           <Reveal><div className="eyebrow" style={{ color: '#C9A96E', marginBottom: 24 }}>Our Services</div></Reveal>
@@ -26,7 +26,7 @@ export default function Services() {
       {/* Services detail */}
       {[
         {
-          num: '01', title: 'Short-Term Rental Management', color: '#2C3E35', image: '/images/notre-dame/4.jpg',
+          num: '01', title: 'Short-Term Rental Management', color: '#2C3E35', image: '/images/le-moyne-heritage/5.jpg',
           items: ['Multi-channel distribution (Airbnb, Booking.com, Expedia, Hotels.com, Vrbo and direct)', 'Dynamic, data-driven pricing with event and seasonal strategy', 'Guest communications & 24/7 support', 'Professional photography and listing copywriting', 'Keyless smart lock management and automated check-in', 'Hotel-grade cleaning and linen service', 'Damage protection and guest vetting', 'Monthly performance reports and owner payouts'],
           desc: 'We manage your short-term rental like a boutique hotel — because that\'s what guests expect. From the moment they book to the moment they leave, every touchpoint is handled with care and professionalism.',
         },
@@ -36,7 +36,7 @@ export default function Services() {
           desc: 'Long-term rental management done properly. We find quality tenants, handle all communications, maintain the property, and keep you informed with transparent monthly reporting.',
         },
         {
-          num: '03', title: 'Property & Building Management', color: '#1A1915', image: '/images/notre-dame/7.jpg',
+          num: '03', title: 'Property & Building Management', color: '#1A1915', image: '/images/le-moyne-heritage/8.jpg',
           items: ['Full building operations (single units to 100+ unit buildings)', 'Staff management (concierge, cleaning, security)', 'Vendor and contractor management', 'Budget planning and financial reporting', 'Regulatory compliance and licensing', 'Capital improvement planning', 'Owner portal and real-time reporting', 'Multi-property and portfolio management'],
           desc: 'From a single investment condo to an entire building, we operate your asset with institutional-grade professionalism and a builder’s understanding of how it was made. Think of us as your dedicated management company, without the overhead.',
         },

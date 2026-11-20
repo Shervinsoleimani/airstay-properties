@@ -17,7 +17,7 @@ function Hero({ onBook, onOwner }) {
       <motion.div style={{ position: 'absolute', inset: '-8% 0 0 0', y }}>
         <motion.div
           initial={{ scale: 1.12 }} animate={{ scale: 1 }} transition={{ duration: 2.4, ease: EASE }}
-          style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/saint-paul/1.jpg)', backgroundSize: 'cover', backgroundPosition: 'center 40%' }} />
+          style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/saint-paul/1-top.jpg)', backgroundSize: 'cover', backgroundPosition: 'center 35%' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(13,12,10,0.92) 0%, rgba(13,12,10,0.7) 45%, rgba(13,12,10,0.35) 100%), linear-gradient(to top, rgba(13,12,10,0.95) 0%, transparent 45%)' }} />
       </motion.div>
 
@@ -111,7 +111,7 @@ function FeaturedProperties({ onBook }) {
             <Reveal key={p.id} delay={i * 0.08}>
               <div className="prop-card" onClick={onBook} style={{ background: p.coverGradient }}>
                 <div className="prop-card-img" style={{ aspectRatio: '4/5', background: p.coverGradient, position: 'relative' }}>
-                  <img src={p.images[0]} alt={`AirStay ${p.name}, ${p.neighbourhood}`} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  <img src={p.cover || p.images[0]} alt={`AirStay ${p.name}, ${p.neighbourhood}`} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                     onError={e => { e.target.style.display = 'none' }} />
                 </div>
                 <div className="prop-card-overlay" />
@@ -122,7 +122,7 @@ function FeaturedProperties({ onBook }) {
                   <p style={{ ...mono, fontSize: 9, letterSpacing: '0.2em', color: '#C9A96E', marginBottom: 6 }}>{p.city} · {p.neighbourhood}</p>
                   <p style={{ fontFamily: 'Playfair Display', fontSize: 24, fontWeight: 400, color: '#F2EDE4', marginBottom: 4 }}>{p.brand} {p.name}</p>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 10 }}>
-                    <span style={{ fontFamily: 'DM Sans', fontSize: 12, fontWeight: 300, color: 'rgba(242,237,228,0.65)' }}>From ${p.basePrice} / night</span>
+                    <span style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.12em', color: 'rgba(242,237,228,0.55)' }}>CITQ {p.citq}</span>
                     <span style={{ ...mono, fontSize: 10, color: '#C9A96E' }}>Reserve →</span>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ function FeaturedProperties({ onBook }) {
           ))}
           <Reveal delay={0.4}>
             <a href={`${BOOKING_URL}/all-listings`} style={{ position: 'relative', display: 'flex', aspectRatio: '4/5', height: '100%', alignItems: 'flex-end', textDecoration: 'none', overflow: 'hidden', background: '#0D0C0A' }} className="svc-card">
-              <div className="svc-card-bg" style={{ backgroundImage: 'url(/images/le-moyne-modern/6.jpg)', opacity: 0.35 }} />
+              <div className="svc-card-bg" style={{ backgroundImage: 'url(/images/le-moyne-heritage/5.jpg)', opacity: 0.35 }} />
               <div style={{ position: 'relative', padding: '40px 32px' }}>
                 <p style={{ ...mono, fontSize: 10, letterSpacing: '0.2em', color: '#C9A96E', marginBottom: 16 }}>35 Residences · Live Availability</p>
                 <p style={{ fontFamily: 'Playfair Display', fontSize: 34, fontWeight: 400, color: '#F2EDE4', lineHeight: 1.15, marginBottom: 24 }}>View every<br /><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>residence.</em></p>
@@ -159,7 +159,7 @@ function Heritage() {
     <section className="r-pad" style={{ background: '#0D0C0A', padding: '0 48px', position: 'relative', overflow: 'hidden' }}>
       <div className="r-stack" style={{ maxWidth: 1600, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, alignItems: 'stretch' }}>
         <FadeIn>
-          <div style={{ minHeight: 560, height: '100%', backgroundImage: 'url(/images/le-moyne-heritage/4.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+          <div style={{ minHeight: 560, height: '100%', backgroundImage: 'url(/images/le-moyne-heritage/facade.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
         </FadeIn>
         <div style={{ padding: '120px 0 120px 80px' }} className="r-noborder">
           <Reveal><div className="eyebrow" style={{ color: '#C9A96E', marginBottom: 24 }}>Our Heritage</div></Reveal>
@@ -339,7 +339,7 @@ function OwnersSection({ onOwner }) {
 function ReviewsBand() {
   return (
     <section className="r-pad" style={{ position: 'relative', overflow: 'hidden', padding: '140px 48px' }}>
-      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/notre-dame/1.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }} />
+      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/images/le-moyne-heritage/8.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }} />
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(13,12,10,0.78)' }} />
       <div style={{ position: 'relative', maxWidth: 1100, margin: '0 auto', textAlign: 'center' }}>
         <Reveal><div className="eyebrow" style={{ color: '#C9A96E', justifyContent: 'center', marginBottom: 24 }}>Trusted by Guests</div></Reveal>

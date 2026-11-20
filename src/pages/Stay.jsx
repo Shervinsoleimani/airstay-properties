@@ -54,7 +54,7 @@ export default function Stay({ onBook }) {
             <Reveal key={p.id} delay={i * 0.07}>
               <div className="prop-card" onClick={onBook} style={{ background: '#0D0C0A' }}>
                 <div style={{ aspectRatio: '3/4', background: p.coverGradient, position: 'relative', overflow: 'hidden' }}>
-                  <img src={p.images[0]} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.8s cubic-bezier(0.22,1,0.36,1)' }} className="prop-card-img"
+                  <img src={p.cover || p.images[0]} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.8s cubic-bezier(0.22,1,0.36,1)' }} className="prop-card-img"
                     onError={e => { e.target.style.display = 'none' }} />
                 </div>
                 <div className="prop-card-overlay" />
@@ -66,7 +66,7 @@ export default function Stay({ onBook }) {
                   <p style={{ fontFamily: 'Playfair Display', fontSize: 22, fontWeight: 400, color: '#F2EDE4', marginBottom: 4 }}>{p.brand} {p.name}</p>
                   <p style={{ fontFamily: 'DM Sans', fontSize: 12, fontWeight: 300, color: 'rgba(242,237,228,0.5)', marginBottom: 12 }}>{p.type}</p>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontFamily: 'DM Sans', fontSize: 12, fontWeight: 300, color: 'rgba(242,237,228,0.7)' }}>From ${p.basePrice} / night</span>
+                    <span style={{ fontFamily: 'DM Mono', fontSize: 9, letterSpacing: '0.12em', color: 'rgba(242,237,228,0.6)' }}>CITQ {p.citq}</span>
                     <span style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A96E' }}>Reserve →</span>
                   </div>
                 </div>
