@@ -89,27 +89,9 @@ const ALL_PROPERTIES = [
     images: Array.from({length:5}, (_,i) => `/images/saint-paul/${i+1}.jpg`),
     amenities: ['Green Wall', 'Stone Walls', 'Black-Framed Windows', 'Pool Table (Top-Floor Loft)'],
   },
-  {
-    id: 'notre-dame',
-    name: 'Notre-Dame',
-    brand: 'AirStay',
-    city: 'Montréal',
-    country: 'Canada',
-    neighbourhood: 'Old Montréal',
-    type: 'Boutique Hotel',
-    tag: 'Most Romantic',
-    basePrice: 210,
-    currency: 'CAD',
-    bedrooms: '1',
-    description: 'Candlelit garden terrace, four-poster beds, original stone walls. The most romantic address in Old Montreal.',
-    coverGradient: 'linear-gradient(155deg, #3D2A1A 0%, #150D06 100%)',
-    images: Array.from({length:8}, (_,i) => `/images/notre-dame/${i+1}.jpg`),
-    amenities: ['Garden Terrace', 'Four-Poster Beds', 'Stone Walls', 'Gold & Black Bathrooms'],
-  },
 ]
 
 // Only residences with a CITQ registration are advertised for short stays.
-// (Notre-Dame is kept for imagery but not listed until its registration is confirmed.)
 export const PROPERTIES = ALL_PROPERTIES.filter(p => p.citq)
 
 export const STATS = [
