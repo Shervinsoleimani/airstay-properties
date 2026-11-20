@@ -51,7 +51,18 @@ export const SMS_CONSENT = {
   version: 'SMS consent wording v1, Nov 20, 2026',
   before: 'I agree to receive communications by text message regarding booking updates and guest support from AirStay Properties. You may opt out by replying STOP or ask for more information by replying HELP. Message frequency varies. Message and data rates may apply. You may review our ',
   link: 'Privacy Policy',
+  href: '/privacy?lang=en',
   after: ' to learn how your data is used.',
+}
+
+// French wording for the French contact form (the French site is not built yet).
+// Daniel's final wording, Nov 20, 2026. STOP and HELP until Dialpad confirms ARRÊT and AIDE.
+export const SMS_CONSENT_FR = {
+  version: 'Libellé du consentement SMS v1, 20 novembre 2026',
+  before: 'J’accepte de recevoir des messages texte d’AirStay Properties au numéro fourni, au sujet de ma réservation et du soutien aux voyageurs. La fréquence des messages varie. Des frais de messagerie texte et de données peuvent s’appliquer. Répondez STOP pour vous désabonner ou HELP pour obtenir de l’aide. Ce consentement est facultatif. Consultez notre ',
+  link: 'Politique de confidentialité',
+  href: '/privacy',
+  after: ' pour savoir comment vos renseignements sont utilisés.',
 }
 
 export const LONGTERM_FIELDS = [

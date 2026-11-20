@@ -67,6 +67,7 @@ const privacy = {
 
         { h: 'Formulaires et fichiers téléversés sur le site Web', id: 'forms' },
         'Lorsque vous communiquez avec nous, demandez une réservation, soumettez une demande de propriétaire, de location de longue durée ou de services, ou posez votre candidature à un emploi, nous recueillons vos nom, adresse courriel et numéro de téléphone, ainsi que les renseignements que vous choisissez de fournir, comme votre ville, l’adresse de la propriété et ses caractéristiques, les dates et le nombre de voyageurs, votre budget ou la date d’emménagement souhaitée, votre message et tout fichier que vous téléversez (par exemple des photos, des documents, un curriculum vitæ ou un portfolio). Nous enregistrons aussi la page à partir de laquelle le formulaire a été envoyé et l’heure d’envoi, et nous utilisons des indicateurs techniques limités pour filtrer les pourriels.',
+        'Si vous cochez la case Messages texte, nous conservons une preuve de votre consentement : votre choix, la date et l’heure, le numéro de téléphone et le texte exact de la case affichée.',
         'Ne téléversez aucune pièce d’identité ni aucun renseignement de paiement au moyen des formulaires du site Web.',
 
         { h: 'Réservations et séjours', id: 'bookings' },
@@ -187,6 +188,7 @@ const privacy = {
         '**Pièces d’identité.** Lors de l’enregistrement en ligne, nous recueillons une photo de votre pièce d’identité, un égoportrait, le numéro de la pièce et votre date de naissance. Ces renseignements sont conservés dans la fiche du voyageur de notre plateforme de réservation et servent à confirmer votre identité, à prévenir la fraude et à répondre aux contestations, rétrofacturations et réclamations. Ils sont conservés jusqu’à trois ans après votre départ, soit le délai de prescription applicable aux réclamations (art. 2925 C.c.Q.), ou plus longtemps tant qu’une réclamation est en cours, puis détruits ou anonymisés. L’accès est limité aux membres de l’équipe qui en ont besoin, et ces renseignements ne sont jamais transmis par courriel ni par messagerie.',
         '**Comparaison faciale.** L’égoportrait est conservé avec votre fiche, comme le décrit le paragraphe précédent.',
         '**Dossiers de réservation et éléments de preuve.** Les renseignements sur la réservation, les preuves de votre acceptation de nos conditions, les messages et les résultats de la vérification sont conservés pendant au moins 180 jours après le départ, ou plus longtemps tant qu’une contestation, une rétrofacturation ou une réclamation est en cours, et plus longtemps lorsque la loi l’exige. Les registres d’accès de la serrure sont conservés selon les paramètres de notre fournisseur de serrures intelligentes et, lorsqu’ils se rapportent à une contestation ou à une réclamation, aussi longtemps que nécessaire.',
+        '**Consentement aux messages texte.** Les preuves de consentement aux messages texte sont conservées tant que vous êtes inscrit et pendant 3 ans après votre désabonnement.',
         '**Autres renseignements.** Nous ne conservons les autres renseignements personnels que le temps nécessaire à la réalisation des fins pour lesquelles ils ont été recueillis, y compris le règlement des différends et des réclamations, ou plus longtemps lorsque la loi l’exige, par exemple pour les documents fiscaux et comptables.',
         'Lorsque les renseignements ne sont plus nécessaires, nous les détruisons de façon sécuritaire ou les anonymisons conformément à la loi.',
       ],
@@ -258,12 +260,12 @@ const privacy = {
       ],
     },
 
-    // Sections 17 and 18 (SMS): Isabella's French draft of Nov 20, 2026, pending Daniel's approval.
+    // Sections 17 and 18 (SMS): Daniel's final French wording, Nov 20, 2026. STOP and HELP until Dialpad confirms ARRÊT and AIDE.
     {
       id: 'sms',
       title: 'Messages texte (SMS)',
       blocks: [
-        'Aucune donnée d’adhésion aux messages texte ne sera communiquée à des tiers ou à des sociétés affiliées à des fins de marketing ou de promotion. Toutes les catégories ci-dessus excluent les données d’adhésion aux messages texte et le consentement recueillis par l’expéditeur; ces renseignements ne seront communiqués à aucun tiers.',
+        'Aucun renseignement relatif à votre téléphone mobile ne sera communiqué à des tiers ou à des sociétés affiliées à des fins de marketing ou de promotion. Toutes les catégories ci-dessus excluent les données d’adhésion aux messages texte et le consentement recueillis par l’expéditeur; ces renseignements ne seront communiqués à aucun tiers, sauf aux fournisseurs de services qui transmettent les messages pour notre compte (notre fournisseur de téléphonie et de messagerie et les opérateurs mobiles), qui ne peuvent les utiliser qu’à cette fin.',
       ],
     },
 
@@ -271,7 +273,7 @@ const privacy = {
       id: 'sms-terms',
       title: 'Conditions des messages texte (SMS)',
       blocks: [
-        'En s’inscrivant aux messages texte, l’utilisateur accepte de recevoir des messages d’AirStay Properties concernant les confirmations de réservation, les renseignements d’arrivée et le soutien aux voyageurs. Il peut se désabonner en répondant STOP ou obtenir plus d’information en répondant HELP. La fréquence des messages varie. Des frais de messagerie texte et de données peuvent s’appliquer. Pour obtenir de l’aide ou pour toute question sur notre service de messages texte, répondez « HELP » à n’importe quel message reçu, ou communiquez avec notre service à la clientèle au [(604) 256-2560](tel:+16042562560) ou à [info@airstayproperties.com](mailto:info@airstayproperties.com).',
+        'En cochant la case Messages texte, vous acceptez de recevoir des messages d’AirStay Properties concernant les confirmations de réservation, les renseignements d’arrivée, les avis liés à votre séjour et le soutien aux voyageurs. Nous n’envoyons pas de messages texte de marketing. La fréquence des messages varie. Des frais de messagerie texte et de données peuvent s’appliquer. Vous pouvez vous désabonner en tout temps en répondant STOP; vous recevrez un message de confirmation, puis plus aucun message. Pour obtenir de l’aide, répondez HELP à n’importe quel message ou communiquez avec notre service à la clientèle au [(604) 256-2560](tel:+16042562560) ou à [info@airstayproperties.com](mailto:info@airstayproperties.com). Les opérateurs mobiles ne sont pas responsables des messages retardés ou non livrés.',
       ],
     },
 

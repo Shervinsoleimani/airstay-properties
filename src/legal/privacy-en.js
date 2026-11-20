@@ -67,6 +67,7 @@ const privacy = {
 
         { h: 'Website forms and uploads', id: 'forms' },
         'When you contact us, request a booking, submit an owner, long-term rental or service request, or apply for a job, we collect your name, email address and phone number, and the details you choose to provide, such as your city, the property address and its characteristics, dates and number of guests, budget or move-in date, your message, and any files you upload (for example, photos, documents, a CV or a portfolio). We also record the page from which the form was sent and the time it was sent, and use limited technical signals to filter spam.',
+        'If you tick the text-message box, we keep a record of your consent: your choice, the date and time, the phone number and the exact wording shown.',
         'Do not upload identity documents or payment information through website forms.',
 
         { h: 'Bookings and stays', id: 'bookings' },
@@ -187,6 +188,7 @@ const privacy = {
         '**ID documents.** During online check-in, we collect a photo of your ID, a selfie, the ID number and your date of birth. This information is kept in the guest record of our reservation platform and is used to confirm your identity, prevent fraud and respond to disputes, chargebacks and claims. It is kept for up to three years after check-out, which is the limitation period for claims (art. 2925 C.C.Q.), or longer while a claim is open, and is then destroyed or anonymized. Access is limited to team members who need it, and this information is never sent by email or chat.',
         '**Facial comparison.** The selfie is kept with your guest record, as described above.',
         '**Booking and evidence records.** Booking details, records of your acceptance of our terms, messages and verification results are kept for at least 180 days after check-out, or longer while a dispute, chargeback or claim is open, and longer where the law requires it. Door access logs are kept according to our smart-lock provider’s settings and are preserved for as long as needed when they relate to a dispute or claim.',
+        '**Text-message consent.** Text-message consent records are kept while you are subscribed and for 3 years after you unsubscribe.',
         '**Other information.** We keep other personal information only as long as needed for the purposes for which it was collected, including the resolution of disputes and claims, or longer where the law requires it, for example for tax and accounting records.',
         'When information is no longer needed, we destroy it securely or anonymize it in accordance with the law.',
       ],
@@ -258,11 +260,12 @@ const privacy = {
       ],
     },
 
+    // Sections 17 and 18 (SMS): Dialpad's wording with Daniel's edits, Nov 20, 2026.
     {
       id: 'sms',
       title: 'Text messages (SMS)',
       blocks: [
-        'No mobile opt-in data will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.',
+        'No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties, except the service providers that transmit the messages on our behalf (our telephone and messaging provider and mobile carriers), who may use it only for that purpose.',
       ],
     },
 
@@ -270,7 +273,7 @@ const privacy = {
       id: 'sms-terms',
       title: 'SMS Terms and Conditions',
       blocks: [
-        'Upon messaging opt-in, the end user agrees to receive messages from AirStay Properties regarding reservation confirmations, check-in details, and guest support. End users can opt out by replying STOP or request more information by replying HELP. Message frequency varies. Message and data rates may apply. If you need assistance or have questions about our SMS service, reply with ‘HELP’ to any SMS message you receive, or contact our customer support team at [(604) 256-2560](tel:+16042562560) or [info@airstayproperties.com](mailto:info@airstayproperties.com).',
+        'Upon messaging opt-in, the end user agrees to receive messages from AirStay Properties regarding reservation confirmations, check-in details, and guest support. We do not send marketing text messages. End users can opt out by replying STOP or request more information by replying HELP. Message frequency varies. Message and data rates may apply. If you need assistance or have questions about our SMS service, reply with ‘HELP’ to any SMS message you receive, or contact our customer support team at [(604) 256-2560](tel:+16042562560) or [info@airstayproperties.com](mailto:info@airstayproperties.com). Carriers are not liable for delayed or undelivered messages.',
       ],
     },
 

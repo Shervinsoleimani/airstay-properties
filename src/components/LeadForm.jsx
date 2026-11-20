@@ -196,7 +196,7 @@ export default function LeadForm({ type, theme = 'light', fields, files: fileCfg
                 style={{ marginTop: 3, accentColor: '#2C3E35', width: 15, height: 15, flexShrink: 0 }} />
               <span style={{ fontFamily: 'DM Sans', fontSize: 12.5, fontWeight: 300, color: c.text, lineHeight: 1.7 }}>
                 {SMS_CONSENT.before}
-                <a href="/privacy?lang=en" target="_blank" rel="noopener noreferrer"
+                <a href={SMS_CONSENT.href} target="_blank" rel="noopener noreferrer"
                   style={{ color: dark ? '#8AB4F8' : '#1D4ED8', textDecoration: 'underline', textUnderlineOffset: 2 }}>{SMS_CONSENT.link}</a>
                 {SMS_CONSENT.after}
               </span>
